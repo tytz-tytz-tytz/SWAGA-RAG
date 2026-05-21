@@ -1,0 +1,13 @@
+{
+  "run": { "name": "ontology_wide_recall", "append_timestamp": false, "out_dir": "artifacts/swaga_rag_results" },
+  "drill": { "top_r": 12, "top_k": 5, "tau_local": 0.18, "tau_child": 0.22, "margin": 0.10 },
+  "expand": { "max_depth": 2, "max_nodes": 1600, "allowed_relations": ["HAS_SUBSECTION", "HAS_CHUNK"] },
+  "score": {
+    "mode": "full",
+    "w_text": 1.0, "w_type": 0.05, "w_level": 0.03, "w_dist": 0.03,
+    "type_bonus": { "list_item": 1.0, "chunk": 0.6, "section_title": 0.8, "caption": 0.2 },
+    "level_bonus": { "1": 0.1, "2": 0.2, "3": 0.3 },
+    "aggregation": "mean"
+  },
+  "output": { "top_k_text": 50, "save_debug": false }
+}

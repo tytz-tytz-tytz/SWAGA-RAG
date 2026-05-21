@@ -1,0 +1,28 @@
+{
+  "queries_file": "../../../data/eval/queries.jsonl",
+  "output_dir": "../../../artifacts/judge_payloads/rag_5way",
+  "methods": [
+    { "method": "bm25", "dir": "../../../artifacts/bm25_rag_results" },
+    { "method": "bm25_heuristic", "dir": "../../../artifacts/bm25_rag_heuristic_results" },
+    { "method": "classic_dense", "dir": "../../../artifacts/classic_rag_results" },
+    { "method": "classic_dense_heuristic", "dir": "../../../artifacts/classic_rag_heuristic_results" },
+    { "method": "ontology_stable_baseline", "dir": "../../../artifacts/swaga_rag_results/param_experiments/stable_baseline" }
+  ],
+  "clean_cap": {
+    "top_k_chunks": 7,
+    "token_budget_per_method": 350,
+    "encoding_name": "cl100k_base",
+    "joiner": "\n\n---\n\n",
+    "min_chars": 20,
+    "min_chunk_chars": 5,
+    "allow_first_chunk_trim": true
+  },
+  "shuffle": {
+    "enabled": true,
+    "seed": 42,
+    "keys": ["A", "B", "C", "D", "E"],
+    "mode": "seed_plus_queryid_hash"
+  },
+  "debug": { "enabled": false }
+}
+

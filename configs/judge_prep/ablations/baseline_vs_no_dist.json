@@ -1,0 +1,12 @@
+{
+  "queries_file": "../../../data/eval/queries.jsonl",
+  "output_dir": "../../../artifacts/judge_payloads/ablation_pairs/baseline_vs_no_dist",
+  "methods": [
+    { "method": "stable_baseline", "dir": "../../../artifacts/swaga_rag_results/param_experiments/stable_baseline" },
+    { "method": "stable_no_dist", "dir": "../../../artifacts/swaga_rag_results/param_experiments/stable_no_dist" }
+  ],
+  "clean_cap": { "top_k_chunks": 5, "token_budget_per_method": 350, "encoding_name": "cl100k_base", "joiner": "\n\n---\n\n" },
+  "shuffle": { "enabled": true, "seed": 42, "keys": ["A", "B"], "mode": "seed_plus_queryid_hash" },
+  "debug": { "enabled": false }
+}
+

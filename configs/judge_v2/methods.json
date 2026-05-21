@@ -1,0 +1,13 @@
+{
+  "queries_file": "data/eval/queries_5rag.jsonl",
+  "token_budget": 2000,
+  "encoding_name": "cl100k_base",
+  "methods": [
+    { "name": "swaga_windows",   "dir": "artifacts/swaga_rag_results/queries_5rag_subgraphs" },
+    { "name": "swaga_chunks",    "dir": "artifacts/swaga_rag_results/queries_5rag_top80" },
+    { "name": "bm25",            "dir": "artifacts/bm25_rag_results/queries_5rag_topk100" },
+    { "name": "bm25_heuristic",  "dir": "artifacts/bm25_rag_heuristic_results/queries_5rag_topk50" },
+    { "name": "dense",           "dir": "artifacts/classic_rag_results/queries_5rag_topk100" },
+    { "name": "dense_heuristic", "dir": "artifacts/classic_rag_heuristic_results/queries_5rag_topk50" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "output_dir": "../artifacts/judge_payloads",
+  "queries_file": "../data/eval/queries.jsonl",
+
+  "methods": [
+    {"method": "BM25", "dir": "../artifacts/bm25_rag_results"},
+    {"method": "BM25+heur", "dir": "../artifacts/bm25_rag_heuristic_results"},
+    {"method": "ClassicDense", "dir": "../artifacts/classic_rag_results"},
+    {"method": "ClassicDense+heur", "dir": "../artifacts/classic_rag_heuristic_results"},
+    {"method": "swaga-rag", "dir": "../artifacts/swaga_rag_results"}
+  ],
+
+  "shuffle": {
+    "enabled": true,
+    "seed": 42,
+    "keys": ["A", "B", "C", "D", "E"],
+    "mode": "seed_plus_queryid_hash"
+  },
+
+  "clean_cap": {
+    "token_budget_per_method": 350,
+    "min_chars": 20,
+    "drop_trailing_colon_fragments": false
+  }
+}
+

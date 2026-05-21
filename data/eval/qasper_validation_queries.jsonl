@@ -1,0 +1,1005 @@
+{"id": "1912.01214__b6f15fb6279b82e34a5bf4828b7b5ddabfdf1d54", "query": "which multilingual approaches do they compare with?"}
+{"id": "1912.01214__f5e6f43454332e0521a778db0b769481e23e7682", "query": "what are the pivot-based baselines?"}
+{"id": "1912.01214__9a05a5f4351db75da371f7ac12eb0b03607c4b87", "query": "which datasets did they experiment with?"}
+{"id": "1912.01214__5eda469a8a77f028d0c5f1acd296111085614537", "query": "what language pairs are explored?"}
+{"id": "1810.08699__18c5d366b1da8447b5404eab71f4cc658ba12e6f", "query": "what ner models were evaluated?"}
+{"id": "1810.08699__b5e4866f0685299f1d7af267bbcc4afe2aab806f", "query": "what is the source of the news sentences?"}
+{"id": "1810.08699__1f085b9bb7bfd0d6c8cba1a9d73f08fcf2da7590", "query": "did they use a crowdsourcing platform for manual annotations?"}
+{"id": "1609.00425__b6ae8e10c6a0d34c834f18f66ab730b670fb528c", "query": "what are the topics pulled from Reddit?"}
+{"id": "1609.00425__a87a009c242d57c51fc94fe312af5e02070f898b", "query": "What predictive model do they build?"}
+{"id": "1801.05147__ef4dba073d24042f24886580ae77add5326f2130", "query": "What accuracy does the proposed system achieve?"}
+{"id": "1801.05147__2df4a045a9cd7b44874340b6fdf9308d3c55327a", "query": "What crowdsourcing platform is used?"}
+{"id": "1811.00383__a313e98994fc039a82aa2447c411dda92c65a470", "query": "How do they match words before reordering them?"}
+{"id": "1811.00383__37861be6aecd9242c4fdccdfcd06e48f3f1f8f81", "query": "On how many language pairs do they show that preordering assisting language sentences helps translation quality?"}
+{"id": "1811.00383__7e62a53823aba08bc26b2812db016f5ce6159565", "query": "Which dataset(s) do they experiment with?"}
+{"id": "1909.09067__9eabb54c2408dac24f00f92cf1061258c7ea2e1a", "query": "Which information about text structure is included in the corpus?"}
+{"id": "1909.09067__3d013f15796ae7fed5272183a166c45f16e24e39", "query": "Which information about typography is included in the corpus?"}
+{"id": "1704.06194__9ee07edc371e014df686ced4fb0c3a7b9ce3d5dc", "query": "On which benchmarks they achieve the state of the art?"}
+{"id": "1704.06194__d3aa0449708cc861a51551b128d73e11d62207d2", "query": "What they use in their propsoed framework?"}
+{"id": "1704.06194__cfbec1ef032ac968560a7c76dec70faf1269b27c", "query": "What does KBQA abbreviate for"}
+{"id": "1704.06194__c0e341c4d2253eb42c8840381b082aae274eddad", "query": "What is te core component for KBQA?"}
+{"id": "1909.00512__1ec152119cf756b16191b236c85522afeed11f59", "query": "What experiments are proposed to test that upper layers produce context-specific embeddings?"}
+{"id": "1909.00512__891c2001d6baaaf0da4e65b647402acac621a7d2", "query": "How do they calculate a static embedding for each word?"}
+{"id": "2003.03106__66c96c297c2cffdf5013bab5e95b59101cb38655", "query": "What is the performance of BERT on the task?"}
+{"id": "2003.03106__6b53e1f46ae4ba9b75117fc6e593abded89366be", "query": "What are the other algorithms tested?"}
+{"id": "2003.03106__c0bee6539eb6956a7347daa9d2419b367bd02064", "query": "Does BERT reach the best performance among all the algorithms compared?"}
+{"id": "2003.03106__3de0487276bb5961586acc6e9f82934ef8cb668c", "query": "What are the clinical datasets used in the paper?"}
+{"id": "1708.01464__113d791df6fcfc9cecfb7b1bebaf32cc2e4402ab", "query": "how is model compactness measured?"}
+{"id": "1708.01464__0752d71a0a1f73b3482a888313622ce9e9870d6e", "query": "what was the baseline?"}
+{"id": "1708.01464__55c8f7acbfd4f5cde634aaecd775b3bb32e9ffa3", "query": "what evaluation metrics were used?"}
+{"id": "1708.01464__4eaf9787f51cd7cdc45eb85cf223d752328c6ee4", "query": "what datasets did they use?"}
+{"id": "2002.03407__fb2b536dc8e442dffab408db992b971e86548158", "query": "What is the interannotator agreement for the human evaluation?"}
+{"id": "2002.03407__31735ec3d83c40b79d11df5c34154849aeb3fb47", "query": "Who were the human evaluators used?"}
+{"id": "2002.03407__10d450960907091f13e0be55f40bcb96f44dd074", "query": "Is the template-based model realistic?"}
+{"id": "2002.03407__b5608076d91450b0d295ad14c3e3a90d7e168d0e", "query": "Is the student reflection data very different from the newspaper data?"}
+{"id": "2002.03407__c21b87c97d1afac85ece2450ee76d01c946de668", "query": "What is the recent abstractive summarization method in this paper?"}
+{"id": "1909.11687__d087539e6a38c42f0a521ff2173ef42c0733878e", "query": "Why are prior knowledge distillation techniques models are ineffective in producing student models with vocabularies different from the original teacher models?"}
+{"id": "1909.11687__efe9bad55107a6be7704ed97ecce948a8ca7b1d2", "query": "What state-of-the-art compression techniques were used in the comparison?"}
+{"id": "1605.06083__71e4ba4e87e6596aeca187127c0d088df6570c57", "query": "What evaluations methods do they take?"}
+{"id": "1605.06083__7561a968470a8936d10e1ba722d2f38b5a9a4d38", "query": "What is the size of the dataset?"}
+{"id": "1605.06083__6d4400f45bd97b812e946b8a682b018826e841f1", "query": "Which methods are considered to find examples of biases and unwarranted inferences??"}
+{"id": "1605.06083__26c2e1eb12143d985e4fb50543cf0d1eb4395e67", "query": "What biases are found in the dataset?"}
+{"id": "1804.05918__f17ca24b135f9fe6bb25dc5084b13e1637ec7744", "query": "What discourse relations does it work best/worst for?"}
+{"id": "1804.05918__bd5bd1765362c2d972a762ca12675108754aa437", "query": "How much does this model improve state-of-the-art?"}
+{"id": "1809.04267__d9b6c61fc6d29ad399d27b931b6cb7b1117b314a", "query": "Where is a question generation model used?"}
+{"id": "1901.05287__d27438b11bc70e706431dda0af2b1c0b0d209f96", "query": "Were any of these tasks evaluated in any previous work?"}
+{"id": "1612.06685__8d4ac4afbf5b14f412171729ceb5e822afcfa3f4", "query": "Do they build a model to automatically detect demographic, lingustic or psycological dimensons of people?"}
+{"id": "1612.06685__3c93894c4baf49deacc6ed2a14ef5e0f13b7d96f", "query": "Which demographic dimensions of people do they obtain?"}
+{"id": "1612.06685__07d15501a599bae7eb4a9ead63e9df3d55b3dc35", "query": "How do they obtain psychological dimensions of people?"}
+{"id": "1912.04961__99e78c390932594bd833be0f5c890af5c605d808", "query": "What is the baseline?"}
+{"id": "1912.04961__861187338c5ad445b9acddba8f2c7688785667b1", "query": "Is the data de-identified?"}
+{"id": "1912.04961__f161e6d5aecf8fae3a26374dcb3e4e1b40530c95", "query": "What embeddings are used?"}
+{"id": "1910.10781__12c50dea84f9a8845795fa8b8c1679328bd66246", "query": "What datasets did they use for evaluation?"}
+{"id": "1910.10781__0810b43404686ddfe4ca84783477ae300fdd2ea4", "query": "On top of BERT does the RNN layer work better or the transformer layer?"}
+{"id": "1603.09631__455d4ef8611f62b1361be4f6387b222858bb5e56", "query": "How was this data collected?"}
+{"id": "1603.09631__bc16ce6e9c61ae13d46970ebe6c4728a47f8f425", "query": "What is the average length of dialog?"}
+{"id": "1911.06964__1ff0fccf0dca95a6630380c84b0422bed854269a", "query": "How are models evaluated in this human-machine communication game?"}
+{"id": "1911.06964__3d7d865e905295d11f1e85af5fa89b210e3e9fdf", "query": "How many participants were trying this communication game?"}
+{"id": "1911.06964__2ad4d3d222f5237ed97923640bc8e199409cbe52", "query": "What user variations have been tested?"}
+{"id": "1911.06964__3fad42be0fb2052bb404b989cc7d58b440cd23a0", "query": "What are the baselines used?"}
+{"id": "2001.02284__ee417fea65f9b1029455797671da0840c8c1abbe", "query": "Do they use off-the-shelf NLP systems to build their assitant?"}
+{"id": "2001.02284__ca5a82b54cb707c9b947aa8445aac51ea218b23a", "query": "How does the IPA label data after interacting with users?"}
+{"id": "2001.02284__da55bd769721b878dd17f07f124a37a0a165db02", "query": "What kind of repetitive and time-consuming activities does their assistant handle?"}
+{"id": "2002.01664__feb448860918ef5b905bb25d7b855ba389117c1f", "query": "How was the audio data gathered?"}
+{"id": "2002.01664__4bc2784be43d599000cb71d31928908250d4cef3", "query": "What is the GhostVLAD approach?"}
+{"id": "2002.01664__75df70ce7aa714ec4c6456d0c51f82a16227f2cb", "query": "Which 7 Indian languages do they experiment with?"}
+{"id": "1808.09111__6424e442b34a576f904d9649d63acf1e4fdefdfc", "query": "What datasets do they evaluate on?"}
+{"id": "1808.09111__5eabfc6cc8aa8a99e6e42514ef9584569cb75dec", "query": "Do they evaluate only on English datasets?"}
+{"id": "1808.09111__887c6727e9f25ade61b4853a869fe712fe0b703d", "query": "What is the invertibility condition?"}
+{"id": "1906.08593__6236762b5631d9e395f81e1ebccc4bf3ab9b24ac", "query": "Do they show on which examples how conflict works better than attention?"}
+{"id": "1906.08593__31d695ba855d821d3e5cdb7bea638c7dbb7c87c7", "query": "Which neural architecture do they use as a base for their attention conflict mechanisms?"}
+{"id": "1906.08593__b14217978ad9c3c9b6b1ce393b1b5c6e7f49ecab", "query": "On which tasks do they test their conflict method?"}
+{"id": "1809.00540__a99fdd34422f4231442c220c97eafc26c76508dd", "query": "Do they use graphical models?"}
+{"id": "1809.00540__2c78993524ca62bf1f525b60f2220a374d0e3535", "query": "What are the sources of the datasets?"}
+{"id": "1809.00540__d604f5fb114169f75f9a38fab18c1e866c5ac28b", "query": "What metric is used for evaluation?"}
+{"id": "2004.03354__1d3e914d0890fc09311a70de0b20974bf7f0c9fe", "query": "Which eight NER tasks did they evaluate on?"}
+{"id": "2004.03354__16535db1d73a9373ffe9d6eedaa2369cefd91ac4", "query": "What in-domain text did they use?"}
+{"id": "1611.04798__de0b650022ad8693465242ded169313419eed7d9", "query": "Does their framework automatically optimize for hyperparameters?"}
+{"id": "1611.04798__2b3cac7af10d358d4081083962d03ea2798cf622", "query": "Does their framework always generate purely attention-based models?"}
+{"id": "1611.04798__897ba53ef44f658c128125edd26abf605060fb13", "query": "Do they test their framework performance on commonly used language pairs, such as English-to-German?"}
+{"id": "1611.04798__41ac23e32bf208b69414f4b687c4f324c6132464", "query": "Which languages do they test on for the under-resourced scenario?"}
+{"id": "1912.13337__e97186c51d4af490dba6faaf833d269c8256426c", "query": "Are the automatically constructed datasets subject to quality control?"}
+{"id": "1912.13337__5bb3c27606c59d73fd6944ba7382096de4fa58d8", "query": "Do they focus on Reading Comprehension or multiple choice question answering?"}
+{"id": "1912.13337__8de9f14c7c4f37ab103bc8a639d6d80ade1bc27b", "query": "After how many hops does accuracy decrease?"}
+{"id": "1912.13337__85590bb26fed01a802241bc537d85ba5ef1c6dc2", "query": "How do they control for annotation artificats?"}
+{"id": "1912.13337__75ff6e425ce304a35f18c0230c0d13d3913a31a9", "query": "Is WordNet useful for taxonomic reasoning for this task?"}
+{"id": "1809.01541__5cb610d3d5d7d447b4cd5736d6a7d8262140af58", "query": "How do they perform multilingual training?"}
+{"id": "1809.01541__c32adef59efcb9d1a5b10e1d7c999a825c9e6d9a", "query": "What languages are evaluated?"}
+{"id": "1809.01541__b9d168da5321a7d7b812c52bb102a05210fe45bd", "query": "Does the model have attention?"}
+{"id": "1809.01541__0c234db3b380c27c4c70579a5d6948e1e3b24ff1", "query": "What architecture does the decoder have?"}
+{"id": "1809.01541__fa527becb8e2551f4fd2ae840dbd4a68971349e0", "query": "What architecture does the encoder have?"}
+{"id": "1809.01541__32a3c248b928d4066ce00bbb0053534ee62596e7", "query": "What is MSD prediction?"}
+{"id": "1809.01541__c9b8d3858c112859eabee54248b874331c48f71b", "query": "What type of inflections are considered?"}
+{"id": "1809.09194__45e9533586199bde19313cd43b3d0ecadcaf7a33", "query": "Do they use attention?"}
+{"id": "1809.09194__d3dbb5c22ef204d85707d2d24284cc77fa816b6c", "query": "What other models do they compare to?"}
+{"id": "1809.09194__a5e49cdb91d9fd0ca625cc1ede236d3d4672403c", "query": "What is the architecture of the span detector?"}
+{"id": "1604.05372__aefa333b2cf0a4000cd40566149816f5b36135e7", "query": "What evaluation metric do they use?"}
+{"id": "2002.08795__c5abe97625b9e1c8de8208e15d59c704a597b88c", "query": "What are the results from these proposed strategies?"}
+{"id": "2002.08795__eb2d5edcdfe18bd708348283f92a32294bb193a5", "query": "What are the baselines?"}
+{"id": "2002.08795__88ab7811662157680144ed3fdd00939e36552672", "query": "What are the two new strategies?"}
+{"id": "1802.06024__cb196725edc9cdb2c54b72364f3bbf7c76471490", "query": "Do they report results only on English data?"}
+{"id": "1802.06024__286078813136943dfafb5155ee15d2429e7601d9", "query": "How much better than the baseline is LiLi?"}
+{"id": "1802.06024__8f16dc7d7be0d284069841e456ebb2c69575b32b", "query": "What baseline is used in the experiments?"}
+{"id": "1802.06024__a7d020120a45c39bee624f65443e09b895c10533", "query": "In what way does LiLi imitate how humans acquire knowledge and perform inference during an interactive conversation?"}
+{"id": "1802.06024__585626d18a20d304ae7df228c2128da542d248ff", "query": "What metrics are used to establish that this makes chatbots more knowledgeable and better at learning and conversation?"}
+{"id": "1802.06024__bfc2dc913e7b78f3bd45e5449d71383d0aa4a890", "query": "What are the components of the general knowledge learning engine?"}
+{"id": "1809.00530__6aa2a1e2e3666f2b2a1f282d4cbdd1ca325eb9de", "query": "How many labels do the datasets have?"}
+{"id": "1809.00530__b46c0015a122ee5fb95c2a45691cb97f80de1bb6", "query": "What is the architecture of the model?"}
+{"id": "1809.00530__5b7a4994bfdbf8882f391adf1cd2218dbc2255a0", "query": "What are the baseline methods?"}
+{"id": "1809.00530__9176d2ba1c638cdec334971c4c7f1bb959495a8e", "query": "What are the source and target domains?"}
+{"id": "1710.07960__0ba3ea93eef5660a79ea3c26c6a270eac32dfa4c", "query": "Did they use a crowdsourcing platform for annotations?"}
+{"id": "1710.07960__5e324846a99a5573cd2e843d1657e87f4eb22fa6", "query": "How do they deal with unknown distribution senses?"}
+{"id": "1912.03804__2ccc26e11df4eb26fcccdd1f446dc749aff5d572", "query": "Do they report results only on English data?"}
+{"id": "1912.03804__f318a2851d7061f05a5b32b94251f943480fbd15", "query": "What conclusions do the authors draw from their finding that the emotional appeal of ISIS and Catholic materials are similar?"}
+{"id": "1912.03804__6bbbb9933aab97ce2342200447c6322527427061", "query": "How id Depechemood trained?"}
+{"id": "1912.03804__2007bfb8f66e88a235c3a8d8c0a3b3dd88734706", "query": "How are similarities and differences between the texts from violent and non-violent religious groups analyzed?"}
+{"id": "1912.03804__d859cc37799a508bbbe4270ed291ca6394afce2c", "query": "How are prominent topics idenified in Dabiq and Rumiyah?"}
+{"id": "1912.08960__50e80cfa84200717921840fddcf3b051a9216ad8", "query": "Are the images from a specific domain?"}
+{"id": "1912.08960__b1bc9ae9d40e7065343c12f860a461c7c730a612", "query": "Which datasets are used?"}
+{"id": "1912.08960__63a1cbe66fd58ff0ead895a8bac1198c38c008aa", "query": "Which existing models are evaluated?"}
+{"id": "1912.08960__509af1f11bd6f3db59284258e18fdfebe86cae47", "query": "How is diversity measured?"}
+{"id": "2002.11910__23e16c1173b7def2c5cb56053b57047c9971e3bb", "query": "What state-of-the-art deep neural network is used?"}
+{"id": "2002.11910__d78f7f84a76a07b777d4092cb58161528ca3803c", "query": "What boundary assembling method is used?"}
+{"id": "2002.11910__9da1e124d28b488b0d94998d32aa2fa8a5ebec51", "query": "What are previous state of the art results?"}
+{"id": "1909.09587__37be0d479480211291e068d0d3823ad0c13321d3", "query": "What is the model performance on target language reading comprehension?"}
+{"id": "1909.09587__a3d9b101765048f4b61cbd3eaa2439582ebb5c77", "query": "What source-target language pairs were used in this work?"}
+{"id": "1909.09587__009ce6f2bea67e7df911b3f93443b23467c9f4a1", "query": "What model is used as a baseline?"}
+{"id": "1909.09587__55569d0a4586d20c01268a80a7e31a17a18198e2", "query": "what does the model learn in zero-shot setting?"}
+{"id": "1802.07862__7cd22ca9e107d2b13a7cc94252aaa9007976b338", "query": "Do they inspect their model to see if their model learned to associate image parts with words related to entities?"}
+{"id": "1802.07862__adbf33c6144b2f5c40d0c6a328a92687a476f371", "query": "Does their NER model learn NER from both text and images?"}
+{"id": "1802.07862__f7a89b9cd2792f23f2cb43d50a01b8218a6fbb24", "query": "Which types of named entities do they recognize?"}
+{"id": "1802.07862__a0543b4afda15ea47c1e623c7f00d4aaca045be0", "query": "Can named entities in SnapCaptions be discontigious?"}
+{"id": "1802.07862__1591068b747c94f45b948e12edafe74b5e721047", "query": "How large is their MNER SnapCaptions dataset?"}
+{"id": "2004.01853__193ee49ae0f8827a6e67388a10da59e137e7769f", "query": "What is masked document generation?"}
+{"id": "2004.01853__ed2eb4e54b641b7670ab5a7060c7b16c628699ab", "query": "Which of the three pretraining tasks is the most helpful?"}
+{"id": "1710.03348__beac555c4aea76c88f19db7cc901fa638765c250", "query": "What useful information does attention capture?"}
+{"id": "1710.03348__91e326fde8b0a538bc34d419541b5990d8aae14b", "query": "What datasets are used?"}
+{"id": "1710.03348__044f922604b4b3f42ae381419fd5cd5624fa0637", "query": "In what cases is attention different from alignment?"}
+{"id": "1612.03226__f94b53db307685d572aefad52cd55f53d23769c2", "query": "How do they calculate variance from the model outputs?"}
+{"id": "1612.03226__aa7d327ef98f9f9847b447d4def04889b4508d7a", "query": "How much data samples do they start with before obtaining the initial model labels?"}
+{"id": "1612.03226__b8d7d055ddb94f5826a9aad7479b4a92a9c8a2f0", "query": "Which model do they use for end-to-end speech recognition?"}
+{"id": "1612.03226__551457ed34ca7fc0878c85bc664b135c21059b58", "query": "Which dataset do they use?"}
+{"id": "1809.02286__0ad4359e3e7e5e5f261c2668fe84c12bc762b3b8", "query": "Which baselines did they compare against?"}
+{"id": "1809.01202__4cbe5a36b492b99f9f9fea8081fe4ba10a7a0e94", "query": "What baselines did they consider?"}
+{"id": "1809.01202__a4d115220438c0ded06a91ad62337061389a6747", "query": "What types of social media did they consider?"}
+{"id": "1909.02027__2c7e94a65f5f532aa31d3e538dcab0468a43b264", "query": "How was the dataset annotated?"}
+{"id": "1909.02027__149da739b1c19a157880d9d4827f0b692006aa2c", "query": "Which classifiers are evaluated?"}
+{"id": "1909.02027__27de1d499348e17fec324d0ef00361a490659988", "query": "What is the size of this dataset?"}
+{"id": "1909.02027__cfcdd73e712caf552ba44d0aa264d8dace65a589", "query": "Where does the data come from?"}
+{"id": "1911.02855__23b2901264bda91045258b5d4120879ae292e950", "query": "What are method improvements of F1 for paraphrase identification?"}
+{"id": "1911.02855__b5bc34e1e381dbf972d0b594fe8c66ff75305d71", "query": "What are method's improvements of F1 for NER task for English and Chinese datasets?"}
+{"id": "1911.02855__72f7ef55e150e16dcf97fe443aff9971a32414ef", "query": "What are method's improvements of F1 w.r.t. baseline BERT tagger for Chinese POS datasets?"}
+{"id": "1911.02855__20e38438471266ce021817c6364f6a46d01564f2", "query": "How are weights dynamically adjusted?"}
+{"id": "1906.01081__28067da818e3f61f8b5152c0d42a531bf0f987d4", "query": "Ngrams of which length are aligned using PARENT?"}
+{"id": "1906.01081__bf3b27a4f4be1f9ae31319877fd0c75c03126fd5", "query": "How many people participated in their evaluation study of table-to-text models?"}
+{"id": "1906.01081__ffa7f91d6406da11ddf415ef094aaf28f3c3872d", "query": "By how much more does PARENT correlate with human judgements in comparison to other text generation metrics?"}
+{"id": "1812.10479__b634ff1607ce5756655e61b9a6f18bc736f84c83", "query": "Which stock market sector achieved the best performance?"}
+{"id": "1611.01576__2f901dab6b757e12763b23ae8b37ae2e517a2271", "query": "What languages pairs are used in machine translation?"}
+{"id": "1611.01576__b591853e938984e6069d738371500ebdec50d256", "query": "What sentiment classification dataset is used?"}
+{"id": "1611.01576__a130306c6662ff489df13fb3f8faa7cba8c52a21", "query": "What pooling function is used?"}
+{"id": "1904.09535__b1cf5739467ba90059add58d11b73d075a11ec86", "query": "Do they report results only on English?"}
+{"id": "1904.09535__2ea4347f1992b0b3958c4844681ff0fe4d0dd1dd", "query": "What neural network modules are included in NeuronBlocks?"}
+{"id": "1904.09535__4f253dfced6a749bf57a1b4984dc962ce9550184", "query": "How do the authors evidence the claim that many engineers find it a big overhead to choose from multiple frameworks, models and optimization techniques?"}
+{"id": "1911.03059__dc1cec824507fc85ac1ba87882fe1e422ff6cffb", "query": "what datasets did they use?"}
+{"id": "1911.03059__f428618ca9c017e0c9c2a23515dab30a7660f65f", "query": "what ml based approaches were compared?"}
+{"id": "1706.08198__8ce11515634236165cdb06ba80b9a36a8b9099a2", "query": "Is pre-training effective in their evaluation?"}
+{"id": "1706.08198__6024039bbd1118c5dab86c41cce1175d99f10a25", "query": "What parallel corpus did they use?"}
+{"id": "1909.08089__de5b6c25e35b3a6c5e40e350fc5e52c160b33490", "query": "How much does their model outperform existing models?"}
+{"id": "1909.08089__b66c9a4021b6c8529cac1a2b54dacd8ec79afa5f", "query": "What do they mean by global and local context?"}
+{"id": "1910.09982__6bfba3ddca5101ed15256fca75fcdc95a53cece7", "query": "What are the 18 propaganda techniques?"}
+{"id": "1910.09982__df5a4505edccc0ee11349ed6e7958cf6b84c9ed4", "query": "What dataset was used?"}
+{"id": "1910.09982__fd753ab5177d7bd27db0e0afc12411876ee607df", "query": "What was the baseline for this task?"}
+{"id": "1609.00559__88e62ea7a4d1d2921624b8480b5c6b50cfa5ad42", "query": "What is a second order co-ocurrence matrix?"}
+{"id": "1609.00559__4dcf67b5e7bd1422e7e70c657f6eacccd8de06d3", "query": "How many humans participated?"}
+{"id": "1609.00559__8b3d3953454c88bde88181897a7a2c0c8dd87e23", "query": "What embedding techniques are explored in the paper?"}
+{"id": "1604.00727__784ce5a983c5f2cc95a2c60ce66f2a8a50f3636f", "query": "Do the authors also try the model on other datasets?"}
+{"id": "1604.00727__7705dd04acedaefee30d8b2c9978537afb2040dc", "query": "What word level and character level model baselines are used?"}
+{"id": "1612.02482__44497509fdf5e87cff05cdcbe254fbd288d857ad", "query": "By how much do they improve the efficacy of the attention mechanism?"}
+{"id": "1612.02482__0ee73909ac638903da4a0e5565c8571fc794ab96", "query": "How were the human judgements assembled?"}
+{"id": "1608.01084__1f07e837574519f2b696f3d6fa3230af0b931e5d", "query": "Did they only experiment with one language pair?"}
+{"id": "1904.10503__5a65ad10ff954d0f27bb3ccd9027e3d8f7f6bb76", "query": "Which other approaches do they compare their model with?"}
+{"id": "1904.10503__729694a9fe1e05d329b7a4078a596fe606bc5a95", "query": "What results do they achieve using their proposed approach?"}
+{"id": "1904.10503__1c997c268c68149ae6fb43d83ffcd53f0e7fe57e", "query": "How do they combine a deep learning model with a knowledge base?"}
+{"id": "1912.01772__5cc2daca2a84ddccba9cdd9449e51bb3f64b3dde", "query": "What are the models used for the baseline of the three NLP tasks?"}
+{"id": "1912.01772__f9bf6bef946012dd42835bf0c547c0de9c1d229f", "query": "How is non-standard pronunciation identified?"}
+{"id": "1603.01987__6a633811019e9323dc8549ad540550d27aa6d972", "query": "Is it valid to presume a bad medical wikipedia article should not contain much domain-specific jargon?"}
+{"id": "1908.06941__6b9b9e5d154cb963f6d921093539490daa5ebbae", "query": "What novel PMI variants are introduced?"}
+{"id": "1908.06941__bc4dca3e1e83f3b4bbb53a31557fc5d8971603b2", "query": "What semantic and syntactic tasks are used as probes?"}
+{"id": "1908.06941__d46c0ea1ba68c649cc64d2ebb6af20202a74a3c7", "query": "What are the disadvantages to clipping negative PMI?"}
+{"id": "1908.06941__6844683935d0d8f588fa06530f5068bf3e1ed0c0", "query": "Why are statistics from finite corpora unreliable?"}
+{"id": "1702.03856__8acab64ba72831633e8cc174d5469afecccf3ae9", "query": "what is the domain of the corpus?"}
+{"id": "1702.03856__53aa07cc4cc4e7107789ae637dbda8c9f6c1e6aa", "query": "what challenges are identified?"}
+{"id": "1702.03856__72755c2d79210857cfff60bfbcb55f83c71ada51", "query": "what is the size of the speech corpus?"}
+{"id": "1904.01548__7d2f812cb345bb3ab91eb8cbbdeefd4b58f65569", "query": "Which two pairs of ERPs from the literature benefit from joint training?"}
+{"id": "1904.01548__bd6dc38a9ac8d329114172194b0820766458dacc", "query": "What datasets are used?"}
+{"id": "1606.03676__3ddff6b707767c3dd54d7104fe88b628765cae58", "query": "which datasets did they experiment with?"}
+{"id": "1606.03676__0a5ffe4697913a57fda1fd5a188cd5ed59bdc5c7", "query": "which languages are explored?"}
+{"id": "1802.00396__06be47e2f50b902b05ebf1ff1c66051925f5c247", "query": "Do they use number of votes as an indicator of preference?"}
+{"id": "1802.00396__003d6f9722ddc2ee13e879fefafc315fb8e87cb9", "query": "What does a node in the network approach repesent?"}
+{"id": "1802.00396__c88a846197b72d25e04ec55f00ee3e72f655504c", "query": "Which dataset do they use?"}
+{"id": "1909.04002__4d28c99750095763c81bcd5544491a0ba51d9070", "query": "What kind of celebrities do they obtain tweets from?"}
+{"id": "1911.03343__78292bc57ee68fdb93ed45430d80acca25a9e916", "query": "How did they extend LAMA evaluation framework to focus on negation?"}
+{"id": "1712.00991__443d2448136364235389039cbead07e80922ec5c", "query": "What summarization algorithms did the authors experiment with?"}
+{"id": "1712.00991__aa6d956c2860f58fc9baea74c353c9d985b05605", "query": "What evaluation metrics were used for the summarization task?"}
+{"id": "1712.00991__4c18081ae3b676cc7831403d11bc070c10120f8e", "query": "What clustering algorithms were used?"}
+{"id": "1712.00991__fb3d30d59ed49e87f63d3735b876d45c4c6b8939", "query": "What evaluation metrics are looked at for classification tasks?"}
+{"id": "1712.00991__197b276d0610ebfacd57ab46b0b29f3033c96a40", "query": "What methods were used for sentence classification?"}
+{"id": "1712.00991__e025061e199b121f2ac8f3d9637d9bf987d65cd5", "query": "What is the average length of the sentences?"}
+{"id": "1712.00991__61652a3da85196564401d616d251084a25ab4596", "query": "What is the size of the real-life dataset?"}
+{"id": "1805.08241__14b74ad5a6f5b0506511c9b454e9c464371ef8c4", "query": "What are the language pairs explored in this paper?"}
+{"id": "1907.04433__5f2bade0881c719ab026bc2e2962e2ada96cdb25", "query": "Do they experiment with the toolkits?"}
+{"id": "2003.04642__5c88d601e8fca96bffebfa9ef22331ecf31c6d75", "query": "Have they made any attempt to correct MRC gold standards according to their findings?"}
+{"id": "2003.04642__71bd5db79635d48a0730163a9f2e8ef19a86cd66", "query": "What features are absent from MRC gold standards that can result in potential lexical ambiguity?"}
+{"id": "2003.04642__9ecde59ffab3c57ec54591c3c7826a9188b2b270", "query": "What modern MRC gold standards are analyzed?"}
+{"id": "2003.04642__005cca3c8ab6c3a166e315547a2259020f318ffb", "query": "How does proposed qualitative annotation schema looks like?"}
+{"id": "2001.09215__bcc0cd4e262f2db4270429ab520971bcf39414cf", "query": "How many tweets were collected?"}
+{"id": "2001.09215__f641f561ad2ea2794a52e4e4bdd62e1f353ab797", "query": "What language is explored in this paper?"}
+{"id": "1909.07575__af34051bf3e628c1e2a00b110bb84e5f018b419f", "query": "What are the baselines?"}
+{"id": "1909.07575__022c365a14fdec406c7a945a1a18e7e79df37f08", "query": "What is the attention module pretrained on?"}
+{"id": "1701.04056__5260cb56b7d127772425583c5c28958c37cb9bea", "query": "How long of dialog history is captured?"}
+{"id": "1904.07904__9b97805a0c093df405391a85e4d3ab447671c86a", "query": "What evaluation metrics were used?"}
+{"id": "1904.07904__38f58f13c7f23442d5952c8caf126073a477bac0", "query": "What was the score of the proposed model?"}
+{"id": "1904.07904__7ee5c45b127fb284a4a9e72bb9b980a602f7445a", "query": "What was the previous best model?"}
+{"id": "1904.07904__ddf5e1f600b9ce2e8f63213982ef4209bab01fd8", "query": "Which datasets did they use for evaluation?"}
+{"id": "2003.11645__27275fe9f6a9004639f9ac33c3a5767fea388a98", "query": "What hyperparameters are explored?"}
+{"id": "2003.11645__ef3567ce7301b28e34377e7b62c4ec9b496f00bf", "query": "What Named Entity Recognition dataset is used?"}
+{"id": "2003.11645__7595260c5747aede0b32b7414e13899869209506", "query": "What sentiment analysis dataset is used?"}
+{"id": "2003.11645__c2d1387e08cf25cb6b1f482178cca58030e85b70", "query": "Do they test both skipgram and c-bow?"}
+{"id": "1909.02304__5a22293b055f5775081d6acdc0450f7bd5f5de04", "query": "What is the state-of-the-art model for the task?"}
+{"id": "1909.02304__03c967763e51ef2537793db7902e2c9c17e43e95", "query": "What is the strong baseline?"}
+{"id": "1604.03114__26327ccebc620a73ba37a95aabe968864e3392b2", "query": "what aspects of conversation flow do they look at?"}
+{"id": "1604.03114__ababb79dd3c301f4541beafa181f6a6726839a10", "query": "what debates dataset was used?"}
+{"id": "1608.06757__c2b8ee872b99f698b3d2082d57f9408a91e1b4c1", "query": "what is the state of the art?"}
+{"id": "1608.06757__8eefa116e3c3d3db751423cc4095d1c4153d3a5f", "query": "what standard dataset were used?"}
+{"id": "2001.03131__133eb4aa4394758be5f41744c60c99901b2bc01c", "query": "Do they perform error analysis?"}
+{"id": "2001.03131__3fff37b9f68697d080dbd9d9008a63907137644e", "query": "How do their results compare to state-of-the-art?"}
+{"id": "2001.03131__a778b8204a415b295f73b93623d09599f242f202", "query": "What is the Random Kitchen Sink approach?"}
+{"id": "1606.02891__642e8cf1d39faa1cd985d16750cdc6696c52db2f", "query": "what are the baseline systems?"}
+{"id": "1803.09123__493e971ee3f57a821ef1f67ef3cd47ade154e7c4", "query": "What word embeddings do they test?"}
+{"id": "1803.09123__8dd8e5599fc56562f2acbc16dd8544689cddd938", "query": "How do they define similar equations?"}
+{"id": "1910.01863__abe2393415e533cb06311e74ed1c5674cff8571f", "query": "What evaluation criteria and metrics were used to evaluate the generated text?"}
+{"id": "1701.08229__00c57e45ac6afbdfa67350a57e81b4fad0ed2885", "query": "Do they evaluate only on English datasets?"}
+{"id": "1701.08229__22714f6cad2d5c54c28823e7285dc85e8d6bc109", "query": "What are the three steps to feature elimination?"}
+{"id": "1701.08229__82642d3111287abf736b781043d49536fe48c350", "query": "How is the dataset annotated?"}
+{"id": "1701.08229__5a81732d52f64e81f1f83e8fd3514251227efbc7", "query": "What dataset is used for this study?"}
+{"id": "1912.06262__9a8b9ea3176d30da2453cac6e9347737c729a538", "query": "what were their performance results?"}
+{"id": "1912.06262__4477bb513d56e57732fba126944073d414d1f75f", "query": "where did they obtain the annotated clinical notes from?"}
+{"id": "1709.07814__1b23c4535a6c10eb70bbc95313c465e4a547db5e", "query": "Which architecture do they use for the encoder and decoder?"}
+{"id": "1709.07814__0a75a52450ed866df3a304077769e1725a995bb7", "query": "How does their decoder generate text?"}
+{"id": "1709.07814__fd0a3e9c210163a55d3ed791e95ae3875184b8f8", "query": "Which dataset do they use?"}
+{"id": "1806.00738__c37f65c9f0d543a35c784263b79236ccf1c44fac", "query": "What model is used to encode the images?"}
+{"id": "1806.00738__584af673429c7f8621c6bf83362a37048daa0e5d", "query": "How is the sequential nature of the story captured?"}
+{"id": "1806.00738__1be54c5b3ea67d837ffba2290a40c1e720d9587f", "query": "Is the position in the sequence part of the input?"}
+{"id": "1806.00738__b08f88d1facefceb87e134ba2c1fa90035018e83", "query": "Do the decoder LSTMs all have the same weights?"}
+{"id": "1811.00147__b06512c17d99f9339ffdab12cedbc63501ff527e", "query": "Is fine-tuning required to incorporate these embeddings into existing models?"}
+{"id": "1811.00147__fd8e23947095fe2230ffe1a478945829b09c8c95", "query": "How are meaningful chains in the graph selected?"}
+{"id": "1806.04330__8bf7f1f93d0a2816234d36395ab40c481be9a0e0", "query": "Do the authors also analyze transformer-based architectures?"}
+{"id": "1610.09225__3611a72f754de1e256fbd25b012197e1c24e8470", "query": "Do they remove seasonality from the time series?"}
+{"id": "1610.09225__4c07c33dfaf4f3e6db55e377da6fa69825d0ba15", "query": "What is the dimension of the embeddings?"}
+{"id": "1610.09225__b1ce129678e37070e69f01332f1a8587e18e06b0", "query": "What dataset is used to train the model?"}
+{"id": "2003.08380__7fb27d8d5a8bb351f97236a1f6dcd8b2613b16f1", "query": "What is the previous state of the art?"}
+{"id": "1811.05711__0689904db9b00a814e3109fb1698086370a28fa2", "query": "Which text embedding methodologies are used?"}
+{"id": "1805.04508__cc354c952b5aaed2d4d1e932175e008ff2d801dd", "query": "Which race and gender are given higher sentiment intensity predictions?"}
+{"id": "1805.04508__0f12dc077fe8e5b95ca9163cea1dd17195c96929", "query": "What criteria are used to select the 8,640 English sentences?"}
+{"id": "1904.03288__2ddb51b03163d309434ee403fef42d6b9aecc458", "query": "what were the baselines?"}
+{"id": "1904.03288__e587559f5ab6e42f7d981372ee34aebdc92b646e", "query": "what competitive results did they obtain?"}
+{"id": "1909.13714__f68508adef6f4bcdc0cc0a3ce9afc9a2b6333cc5", "query": "By how much is performance improved with multimodality?"}
+{"id": "1909.13714__5563a3538d311c979c2fb83c1cc9afc66ff6fffc", "query": "Is collected multimodal in cabin dataset public?"}
+{"id": "1910.05603__ceb4bac1f6c506b5dab37607354530faee02ccac", "query": "What is the performance reported for the best models in the VLSP 2018 and VLSP 2019 challenges?"}
+{"id": "1910.05603__91bc8c0bc1634045177065536dd311f89134630b", "query": "Is the model tested against any baseline?"}
+{"id": "1910.05603__fe1dcd6ef1f8618bbceee418f07cafe63a8efe08", "query": "What is the language model combination technique used in the paper?"}
+{"id": "1910.05603__53f74250948015c394e7b8438a2041fdeb330911", "query": "What are the deep learning architectures used in the task?"}
+{"id": "1909.03405__bdc91d1283a82226aeeb7a2f79dbbc57d3e84a1a", "query": "How much is performance improved on NLI?"}
+{"id": "1909.03405__7b4fb6da74e6bd1baea556788a02969134cf0800", "query": "Do they train their model starting from a checkpoint?"}
+{"id": "1909.03405__bc31a3d2f7c608df8c019a64d64cb0ccc5669210", "query": "What BERT model do they test?"}
+{"id": "1801.07887__f67b9bda14ec70feba2e0d10c400b2b2025a0a6a", "query": "What downstream tasks are evaluated?"}
+{"id": "1801.07887__1cfed6b0c9b5a079a51166209649a987e7553e4e", "query": "What is active learning?"}
+{"id": "1907.03060__761de1610e934189850e8fda707dc5239dd58092", "query": "what was the baseline?"}
+{"id": "2002.04095__f8da63df16c4c42093e5778c01a8e7e9b270142e", "query": "How is segmentation quality evaluated?"}
+{"id": "1710.04203__c09a92e25e6a81369fcc4ae6045491f2690ccc10", "query": "How do they compare lexicons?"}
+{"id": "1804.00720__63c3550c6fb42f41a0c93133e9fca12ac00df9b3", "query": "Is it possible to convert a cloze-style questions to a naturally-looking questions?"}
+{"id": "1911.10049__603fee7314fa65261812157ddfc2c544277fcf90", "query": "How larger are the training sets of these versions of ELMo compared to the previous ones?"}
+{"id": "1911.10049__09a1173e971e0fcdbf2fbecb1b077158ab08f497", "query": "What is the improvement in performance for Estonian in the NER task?"}
+{"id": "1812.06864__70e9210fe64f8d71334e5107732d764332a81cb1", "query": "what is the state of the art on WSJ?"}
+{"id": "1911.01371__051df74dc643498e95d16e58851701628fdfd43e", "query": "How did they obtain the OSG dataset?"}
+{"id": "1911.01371__33554065284110859a8ea3ca7346474ab2cab100", "query": "How large is the Twitter dataset?"}
+{"id": "1811.12254__57f23dfc264feb62f45d9a9e24c60bd73d7fe563", "query": "what is the size of the augmented dataset?"}
+{"id": "1909.09551__54830abe73fef4e629a36866ceeeca10214bd2c8", "query": "How they utilize LDA and Gibbs sampling to evaluate ISWC and WWW publications?"}
+{"id": "1701.02962__2fbb6322e485e7743ec3fb4bb02d44bf4b5ea8a6", "query": "What dataset do they use to evaluate their method?"}
+{"id": "1806.05504__ef7212075e80bf35b7889dc8dd52fcbae0d1400a", "query": "Why are current ELS's not sufficiently effective?"}
+{"id": "1908.05828__567dc9bad8428ea9a2658c88203a0ed0f8da0dc3", "query": "What is the best model?"}
+{"id": "1908.05828__d51dc36fbf6518226b8e45d4c817e07e8f642003", "query": "How many sentences does the dataset contain?"}
+{"id": "1908.05828__d8627ba08b7342e473b8a2b560baa8cdbae3c7fd", "query": "Do the authors train a Naive Bayes classifier on their dataset?"}
+{"id": "1908.05828__cb77d6a74065cb05318faf57e7ceca05e126a80d", "query": "What is the baseline?"}
+{"id": "1908.05828__8a7615fc6ff1de287d36ab21bf2c6a3b2914f73d", "query": "Which machine learning models do they explore?"}
+{"id": "1908.05828__a1b3e2107302c5a993baafbe177684ae88d6f505", "query": "What is the size of the dataset?"}
+{"id": "1908.05828__bb2de20ee5937da7e3e6230e942bec7b6e8f61ee", "query": "What is the source of their dataset?"}
+{"id": "1908.05828__1170e4ee76fa202cabac9f621e8fbeb4a6c5f094", "query": "Do they try to use byte-pair encoding representations?"}
+{"id": "1908.05828__1462eb312944926469e7cee067dfc7f1267a2a8c", "query": "How many different types of entities exist in the dataset?"}
+{"id": "1908.05828__f59f1f5b528a2eec5cfb1e49c87699e0c536cc45", "query": "How big is the new Nepali NER dataset?"}
+{"id": "1908.05828__9bd080bb2a089410fd7ace82e91711136116af6c", "query": "What is the performance improvement of the grapheme-level representation model over the character-level model?"}
+{"id": "1908.05828__6d1217b3d9cfb04be7fcd2238666fa02855ce9c5", "query": "Which models are used to solve NER for Nepali?"}
+{"id": "1909.13104__1e775cf30784e6b1c2b573294a82e145a3f959bb", "query": "What language(s) is/are represented in the dataset?"}
+{"id": "1909.13104__392fb87564c4f45d0d8d491a9bb217c4fce87f03", "query": "What baseline model is used?"}
+{"id": "1909.13104__203337c15bd1ee05763c748391d295a1f6415b9b", "query": "Which variation provides the best results on this dataset?"}
+{"id": "1909.13104__d004ca2e999940ac5c1576046e30efa3059832fa", "query": "What are the different variations of the attention-based approach which are examined?"}
+{"id": "1909.13104__21548433abd21346659505296fb0576e78287a74", "query": "What dataset is used for this work?"}
+{"id": "1909.13104__f0b2289cb887740f9255909018f400f028b1ef26", "query": "What types of online harassment are studied?"}
+{"id": "1909.13104__51b1142c1d23420dbf6d49446730b0e82b32137c", "query": "What was the baseline?"}
+{"id": "1909.13104__58355e2a782bf145b61ee2a3e0e426119985c179", "query": "What were the datasets used in this paper?"}
+{"id": "2002.02070__25c1c4a91f5dedd4e06d14121af3b5921db125e9", "query": "Is car-speak language collection of abstract features that classifier is later trained on?"}
+{"id": "2002.02070__f88036174b4a0dbf4fe70ddad884d16082c5748d", "query": "Is order of \"words\" important in car speak language?"}
+{"id": "2002.02070__a267d620af319b48e56c191aa4c433ea3870f6fb", "query": "What are labels in car speak language dataset?"}
+{"id": "2002.02070__899ed05c460bf2aa0aa65101cad1986d4f622652", "query": "How big is dataset of car-speak language?"}
+{"id": "2002.02070__d53299fac8c94bd0179968eb868506124af407d1", "query": "What is the performance of classifiers?"}
+{"id": "2002.02070__29f2954098f055fb19d9502572f085862d75bf61", "query": "What classifiers have been trained?"}
+{"id": "2002.02070__6bf93968110c6e3e3640360440607744007a5228", "query": "How does car speak pertains to a car's physical attributes?"}
+{"id": "1611.03599__37a79be0148e1751ffb2daabe4c8ec6680036106", "query": "What topic is covered in the Chinese Facebook data?"}
+{"id": "1611.03599__518dae6f936882152c162058895db4eca815e649", "query": "How many layers does the UTCNN model have?"}
+{"id": "1611.03599__e44a6bf67ce3fde0c6608b150030e44d87eb25e3", "query": "What topics are included in the debate data?"}
+{"id": "1611.03599__6a31db1aca57a818f36bba9002561724655372a7", "query": "What is the size of the Chinese data?"}
+{"id": "1611.03599__e330e162ec29722f5ec9f83853d129c9e0693d65", "query": "Did they collected the two datasets?"}
+{"id": "1611.03599__d3093062aebff475b4deab90815004051e802aa6", "query": "What are the baselines?"}
+{"id": "1908.10084__4944cd597b836b62616a4e37c045ce48de8c82ca", "query": "What transfer learning tasks are evaluated?"}
+{"id": "1908.10084__a29c071065d26e5ee3c3bcd877e7f215c59d1d33", "query": "What metrics are used for the STS tasks?"}
+{"id": "1908.10084__7f207549c75f5c4388efc15ed28822672b845663", "query": "How much time takes its training?"}
+{"id": "1908.10084__596aede2b311deb8cb0a82d2e7de314ef6e83e4e", "query": "How many GPUs are used for the training of SBERT?"}
+{"id": "1908.10084__2e89ebd2e4008c67bb2413699589ee55f59c4f36", "query": "How are the siamese networks trained?"}
+{"id": "1908.10084__e2db361ae9ad9dbaa9a85736c5593eb3a471983d", "query": "What other sentence embeddings methods are evaluated?"}
+{"id": "1707.06806__252a645af9876241fb166e5822992ce17fec6eb6", "query": "What is the average length of the title text?"}
+{"id": "1707.06806__ed67359889cf61fa11ee291d6c378cccf83d599d", "query": "Which pretrained word vectors did they use?"}
+{"id": "1707.06806__425bd2ccfd95ead91d8f2b1b1c8ab9fc3446cb82", "query": "What evaluation metrics are used?"}
+{"id": "1707.06806__955de9f7412ba98a0c91998919fa048d339b1d48", "query": "Which shallow approaches did they experiment with?"}
+{"id": "1707.06806__3b371ea554fa6639c76a364060258454e4b931d4", "query": "Where do they obtain the news videos from?"}
+{"id": "1707.06806__ddb23a71113cbc092cbc158066d891cae261e2c6", "query": "What is the source of the news articles?"}
+{"id": "1806.04511__e79a5b6b6680bd2f63e9f4adbaae1d7795d81e38", "query": "which non-english language had the best performance?"}
+{"id": "1806.04511__c7486d039304ca9d50d0571236429f4f6fbcfcf7", "query": "which non-english language was the had the worst results?"}
+{"id": "1806.04511__f1f1dcc67b3e4d554bfeb508226cdadb3c32d2e9", "query": "what datasets were used in evaluation?"}
+{"id": "1806.04511__a103636c8d1dbfa53341133aeb751ffec269415c", "query": "what are the baselines?"}
+{"id": "1806.04511__55139fcfe04ce90aad407e2e5a0067a45f31e07e", "query": "how did the authors translate the reviews to other languages?"}
+{"id": "1806.04511__fbaf060004f196a286fef67593d2d76826f0304e", "query": "what dataset was used for training?"}
+{"id": "1904.04358__7ae38f51243cb80b16a1df14872b72a1f8a2048f", "query": "How do they demonstrate that this type of EEG has discriminative information about the intended articulatory movements responsible for speech?"}
+{"id": "1904.04358__deb89bca0925657e0f91ab5daca78b9e548de2bd", "query": "What are the five different binary classification tasks?"}
+{"id": "1904.04358__9c33b340aefbc1f15b6eb6fb3e23ee615ce5b570", "query": "How was the spatial aspect of the EEG signal computed?"}
+{"id": "1904.04358__e6583c60b13b87fc37af75ffc975e7e316d4f4e0", "query": "What data was presented to the subjects to elicit event-related responses?"}
+{"id": "1904.04358__c7b6e6cb997de1660fd24d31759fe6bb21c7863f", "query": "How many electrodes were used on the subject in EEG sessions?"}
+{"id": "1904.04358__f9f59c171531c452bd2767dc332dc74cadee5120", "query": "How many subjects does the EEG data come from?"}
+{"id": "1912.00667__4ac2c3c259024d7cd8e449600b499f93332dab60", "query": "Do they report results only on English data?"}
+{"id": "1912.00667__bc730e4d964b6a66656078e2da130310142ab641", "query": "What type of classifiers are used?"}
+{"id": "1912.00667__3941401a182a3d6234894a5c8a75d48c6116c45c", "query": "Which real-world datasets are used?"}
+{"id": "1912.00667__67e9e147b2cab5ba43572ce8a17fc863690172f0", "query": "How are the interpretability merits of the approach demonstrated?"}
+{"id": "1912.00667__a74190189a6ced2a2d5b781e445e36f4e527e82a", "query": "How are the accuracy merits of the approach demonstrated?"}
+{"id": "1912.00667__43f074bacabd0a355b4e0f91a1afd538c0a6244f", "query": "How is the keyword specific expectation elicited from the crowd?"}
+{"id": "1912.08904__58ef2442450c392bfc55c4dc35f216542f5f2dbb", "query": "Does the paper provide any case studies to illustrate how one can use Macaw for CIS research?"}
+{"id": "1912.08904__78a5546e87d4d88e3d9638a0a8cd0b7debf1f09d", "query": "What functionality does Macaw provide?"}
+{"id": "1912.08904__375b281e7441547ba284068326dd834216e55c07", "query": "What is a wizard of oz setup?"}
+{"id": "1912.08904__05c49b9f84772e6df41f530d86c1f7a1da6aa489", "query": "What interface does Macaw currently have?"}
+{"id": "1912.08904__6ecb69360449bb9915ac73c0a816c8ac479cbbfc", "query": "What modalities are supported by Macaw?"}
+{"id": "1912.08904__68df324e5fa697baed25c761d0be4c528f7f5cf7", "query": "What are the different modules in Macaw?"}
+{"id": "1703.10344__77c34f1033702278f7f044806c1eba0c6ecb8b04", "query": "Do they report results only on English data?"}
+{"id": "1703.10344__2ee715c7c6289669f11a79743a6b2b696073805d", "query": "What baseline model is used?"}
+{"id": "1703.10344__61a9ea36ddc37c60d1a51dabcfff9445a2225725", "query": "What news article sources are used?"}
+{"id": "1703.10344__cc850bc8245a7ae790e1f59014371d4f35cd46d7", "query": "How do they determine the exact section to use the input article?"}
+{"id": "1703.10344__984fc3e726848f8f13dfe72b89e3770d00c3a1af", "query": "What features are used to represent the novelty of news articles to entity pages?"}
+{"id": "1703.10344__fb1227b3681c69f60eb0539e16c5a8cd784177a7", "query": "What features are used to represent the salience and relative authority of entities?"}
+{"id": "2003.13032__8df35c24af9efc3348d3b8d746df116480dfe661", "query": "Do they experiment with other tasks?"}
+{"id": "2003.13032__277a7e916e65dfefd44d2d05774f95257ac946ae", "query": "What baselines do they introduce?"}
+{"id": "2003.13032__2916bbdb95ef31ab26527ba67961cf5ec94d6afe", "query": "How large is the corpus?"}
+{"id": "2003.13032__f2e8497aa16327aa297a7f9f7d156e485fe33945", "query": "How was annotation performed?"}
+{"id": "2003.13032__9b76f428b7c8c9fc930aa88ee585a03478bff9b3", "query": "How many documents are in the new corpus?"}
+{"id": "2003.13032__dd6b378d89c05058e8f49e48fd48f5c458ea2ebc", "query": "What baseline systems are proposed?"}
+{"id": "1910.06592__e35c2fa99d5c84d8cb5d83fca2b434dcd83f3851", "query": "How did they obtain the dataset?"}
+{"id": "1910.06592__c00ce1e3be14610fb4e1f0614005911bb5ff0302", "query": "What activation function do they use in their model?"}
+{"id": "1910.06592__71fe5822d9fccb1cb391c11283b223dc8aa1640c", "query": "What baselines do they compare to?"}
+{"id": "1910.06592__97d0f9a1540a48e0b4d30d7084a8c524dd09a4c3", "query": "How are chunks defined?"}
+{"id": "1910.06592__1062a0506c3691a93bb914171c2701d2ae9621cb", "query": "What features are extracted?"}
+{"id": "1910.06592__8e12b5c459fa963b3e549deadb864c244879fe82", "query": "How many layers does their model have?"}
+{"id": "1910.06592__483a699563efcb8804e1861b18809279f21c7610", "query": "Was the approach used in this work to detect fake news fully supervised?"}
+{"id": "1910.06592__d3ff2986ca8cb85a9a5cec039c266df756947b43", "query": "Based on this paper, what is the more predictive set of features to detect fake news?"}
+{"id": "1910.06592__3e1829e96c968cbd8ad8e9ce850e3a92a76b26e4", "query": "How big is the dataset used in this work?"}
+{"id": "1910.06592__2317ca8d475b01f6632537b95895608dc40c4415", "query": "How is a \"chunk of posts\" defined in this work?"}
+{"id": "1910.06592__3e88fb3d28593309a307eb97e875575644a01463", "query": "What baselines were used in this work?"}
+{"id": "1706.01678__0767ca8ff1424f7a811222ca108a33b6411aaa8a", "query": "What is the performance of their method?"}
+{"id": "1706.01678__e8f969ffd637b82d04d3be28c51f0f3ca6b3883e", "query": "Which evaluation methods are used?"}
+{"id": "1706.01678__46227b4265f1d300a5ed71bf40822829de662bc2", "query": "What dataset is used in this paper?"}
+{"id": "1706.01678__a6a48de63c1928238b37c2a01c924b852fe752f8", "query": "Which other methods do they compare with?"}
+{"id": "1706.01678__b65a83a24fc66728451bb063cf6ec50134c8bfb0", "query": "How are sentences selected from the summary graph?"}
+{"id": "1902.09666__8c852fc29bda014d28c3ee5b5a7e449ab9152d35", "query": "What models are used in the experiment?"}
+{"id": "1902.09666__682e26262abba473412f68cbeb5f69aa3b9968d7", "query": "What are the differences between this dataset and pre-existing ones?"}
+{"id": "1902.09666__5daeb8d4d6f3b8543ec6309a7a35523e160437eb", "query": "In what language are the tweets?"}
+{"id": "1902.09666__74fb77a624ea9f1821f58935a52cca3086bb0981", "query": "What is the size of the new dataset?"}
+{"id": "1902.09666__d015faf0f8dcf2e15c1690bbbe2bf1e7e0ce3751", "query": "What kinds of offensive content are explored?"}
+{"id": "1902.09666__55bd59076a49b19d3283af41c5e3ccb875f3eb0c", "query": "What is the best performing model?"}
+{"id": "1902.09666__521280a87c43fcdf9f577da235e7072a23f0673e", "query": "How many annotators participated?"}
+{"id": "1902.09666__5a8cc8f80509ea77d8213ed28c5ead501c68c725", "query": "What is the definition of offensive language?"}
+{"id": "1902.09666__290ee79b5e3872e0496a6a0fc9b103ab7d8f6c30", "query": "What are the three layers of the annotation scheme?"}
+{"id": "1902.09666__1b72aa2ec3ce02131e60626639f0cf2056ec23ca", "query": "How long is the dataset for each step of hierarchy?"}
+{"id": "1604.00400__c49ee6ac4dc812ff84d255886fd5aff794f53c39", "query": "Do the authors report results only on English data?"}
+{"id": "1604.00400__3f856097be2246bde8244add838e83a2c793bd17", "query": "In the proposed metric, how is content relevance measured?"}
+{"id": "1604.00400__bf52c01bf82612d0c7bbf2e6a5bb2570c322936f", "query": "What different correlations result when using different variants of ROUGE scores?"}
+{"id": "1604.00400__74e866137b3452ec50fb6feaf5753c8637459e62", "query": "What manual Pyramid scores are used?"}
+{"id": "1604.00400__184b0082e10ce191940c1d24785b631828a9f714", "query": "What is the common belief that this paper refutes? (c.f. 'contrary to the common belief, ROUGE is not much [sic] reliable'"}
+{"id": "1905.12801__c59078efa7249acfb9043717237c96ae762c0a8c", "query": "which existing strategies are compared?"}
+{"id": "1905.12801__73bddaaf601a4f944a3182ca0f4de85a19cdc1d2", "query": "what dataset was used?"}
+{"id": "1905.12801__d4e5e3f37679ff68914b55334e822ea18e60a6cf", "query": "what kinds of male and female words are looked at?"}
+{"id": "1905.12801__5f60defb546f35d25a094ff34781cddd4119e400", "query": "how is mitigation of gender bias evaluated?"}
+{"id": "1905.12801__90d946ccc3abf494890e147dd85bd489b8f3f0e8", "query": "what bias evaluation metrics are used?"}
+{"id": "1810.12196__b962cc817a4baf6c56150f0d97097f18ad6cd9ed", "query": "What kind of questions are present in the dataset?"}
+{"id": "1810.12196__fb5fb11e7d01b9f9efe3db3417b8faf4f8d6931f", "query": "What baselines are presented?"}
+{"id": "1810.12196__52f8a3e3cd5d42126b5307adc740b71510a6bdf5", "query": "What tasks were evaluated?"}
+{"id": "1810.12196__2236386729105f5cf42f73cc055ce3acdea2d452", "query": "What language are the reviews in?"}
+{"id": "1810.12196__18942ab8c365955da3fd8fc901dfb1a3b65c1be1", "query": "Where are the hotel reviews from?"}
+{"id": "1707.05236__7b4992e2d26577246a16ac0d1efc995ab4695d24", "query": "What was the baseline used?"}
+{"id": "1707.05236__ab9b0bde6113ffef8eb1c39919d21e5913a05081", "query": "What are their results on both datasets?"}
+{"id": "1707.05236__9a9d225f9ac35ed35ea02f554f6056af3b42471d", "query": "What textual patterns are extracted?"}
+{"id": "1707.05236__ea56148a8356a1918bedcf0a99ae667c27792cfe", "query": "Which annotated corpus did they use?"}
+{"id": "1707.05236__cd32a38e0f33b137ab590e1677e8fb073724df7f", "query": "Which languages are explored in this paper?"}
+{"id": "1810.04428__2c6b50877133a499502feb79a682f4023ddab63e", "query": "what language does this paper focus on?"}
+{"id": "1810.04428__f651cd144b7749e82aa1374779700812f64c8799", "query": "what evaluation metrics did they use?"}
+{"id": "1810.04428__4625cfba3083346a96e573af5464bc26c34ec943", "query": "by how much did their model improve?"}
+{"id": "1810.04428__326588b1de9ba0fd049ab37c907e6e5413e14acd", "query": "what state of the art methods did they compare with?"}
+{"id": "1810.04428__ebf0d9f9260ed61cbfd79b962df3899d05f9ebfb", "query": "what are the sizes of both datasets?"}
+{"id": "2004.02192__55507f066073b29c1736b684c09c045064053ba9", "query": "What are the distinctive characteristics of how Arabic speakers use offensive language?"}
+{"id": "2004.02192__e838275bb0673fba0d67ac00e4307944a2c17be3", "query": "How did they analyze which topics, dialects and gender are most associated with tweets?"}
+{"id": "2004.02192__8dda1ef371933811e2a25a286529c31623cca0c6", "query": "How many annotators tagged each tweet?"}
+{"id": "2004.02192__b3de9357c569fb1454be8f2ac5fcecaea295b967", "query": "How many tweets are in the dataset?"}
+{"id": "2004.02192__59e58c6fc63cf5b54b632462465bfbd85b1bf3dd", "query": "In what way is the offensive dataset not biased by topic, dialect or target?"}
+{"id": "1909.06200__5c3e98e3cebaecd5d3e75ec2c9fc3dd267ac3c83", "query": "What experiments are conducted?"}
+{"id": "1909.06200__3f0ae9b772eeddfbfd239b7e3196dc6dfa21365f", "query": "What is the combination of rewards for reinforcement learning?"}
+{"id": "1909.06200__14b8ae5656e7d4ee02237288372d9e682b24fdb8", "query": "What are the difficulties in modelling the ironic pattern?"}
+{"id": "1909.06200__e3a2d8886f03e78ed5e138df870f48635875727e", "query": "How did the authors find ironic data on twitter?"}
+{"id": "1909.06200__62f27fe08ddb67f16857fab2a8a721926ecbb6fb", "query": "Who judged the irony accuracy, sentiment preservation and content preservation?"}
+{"id": "1706.06894__9ca447c8959a693a3f7bdd0a2c516f4b86f95718", "query": "How were the tweets annotated?"}
+{"id": "1706.06894__05887a8466e0a2f0df4d6a5ffc5815acd7d9066a", "query": "Which SVM approach resulted in the best performance?"}
+{"id": "1706.06894__c87fcc98625e82fdb494ff0f5309319620d69040", "query": "What are hashtag features?"}
+{"id": "1706.06894__500a8ec1c56502529d6e59ba6424331f797f31f0", "query": "How many tweets did they collect?"}
+{"id": "1706.06894__ff6c9af28f0e2bb4fb6a69f124665f8ceb966fbc", "query": "Which sports clubs are the targets?"}
+{"id": "1908.11047__f2155dc4aeab86bf31a838c8ff388c85440fce6e", "query": "Does this method help in sentiment classification task improvement?"}
+{"id": "1908.11047__ed6a15f0f7fa4594e51d5bde21cc0c6c1bedbfdc", "query": "For how many probe tasks the shallow-syntax-aware contextual embedding perform better than ELMo’s embedding?"}
+{"id": "1908.11047__4d706ce5bde82caf40241f5b78338ea5ee5eb01e", "query": "What are the black-box probes used?"}
+{"id": "1908.11047__86bf75245358f17e35fc133e46a92439ac86d472", "query": "What are improvements for these two approaches relative to ELMo-only baselines?"}
+{"id": "1908.11047__9132d56e26844dc13b3355448d0f14b95bd2178a", "query": "Which syntactic features are obtained automatically on downstream task data?"}
+{"id": "1908.09246__f3c204723da53c7c8ef4dc1018ffbee545e81056", "query": "Do they report results only on English data?"}
+{"id": "1908.09246__0602a974a879e6eae223cdf048410b5a0111665e", "query": "What baseline approaches does this approach out-perform?"}
+{"id": "1908.09246__56b034c303983b2e276ed6518d6b080f7b8abe6a", "query": "What datasets are used?"}
+{"id": "1908.09246__15e481e668114e4afe0c78eefb716ffe1646b494", "query": "What alternative to Gibbs sampling is used?"}
+{"id": "1908.09246__3d7a982c718ea6bc7e770d8c5da564fbb9d11951", "query": "How does this model overcome the assumption that all words in a document are generated from a single event?"}
+{"id": "1612.08205__692c9c5d9ff9cd3e0ce8b5e4fa68dda9bd23dec1", "query": "How many users do they look at?"}
+{"id": "1612.08205__935d6a6187e6a0c9c0da8e53a42697f853f5c248", "query": "What do they mean by a person's industry?"}
+{"id": "1612.08205__3b77b4defc8a139992bd0b07b5cf718382cb1a5f", "query": "What model did they use for their system?"}
+{"id": "1612.08205__01a41c0a4a7365cd37d28690735114f2ff5229f2", "query": "What social media platform did they look at?"}
+{"id": "1612.08205__cd2878c5a52542ddf080b20bec005d9a74f2d916", "query": "What are the industry classes defined in this paper?"}
+{"id": "1907.09369__fd2c6c26fd0ab3c10aae4f2550c5391576a77491", "query": "Do they report results only on English data?"}
+{"id": "1907.09369__6b6d498546f856ac20958f666fc3fd55811347e2", "query": "What are the hyperparameters of the bi-GRU?"}
+{"id": "1907.09369__de3b1145cb4111ea2d4e113f816b537d052d9814", "query": "What baseline is used?"}
+{"id": "1907.09369__132f752169adf6dc5ade3e4ca773c11044985da4", "query": "What data is used in experiments?"}
+{"id": "1907.09369__1d9aeeaa6efa1367c22be0718f5a5635a73844bd", "query": "What meaningful information does the GRU model capture, which traditional ML models do not?"}
+{"id": "1911.07555__012b8a89aea27485797373adbcda32f16f9d7b54", "query": "What is the approach of previous work?"}
+{"id": "1911.07555__c598028815066089cc1e131b96d6966d2610467a", "query": "Is the lexicon the same for all languages?"}
+{"id": "1911.07555__ca4daafdc23f4e23d933ebabe682e1fe0d4b95ed", "query": "How do they obtain the lexicon?"}
+{"id": "1911.07555__0ab3df10f0b7203e859e9b62ffa7d6d79ffbbe50", "query": "What evaluation metric is used?"}
+{"id": "1911.07555__92dfacbbfa732ecea006e251be415a6f89fb4ec6", "query": "Which languages are similar to each other?"}
+{"id": "1911.07555__c8541ff10c4e0c8e9eb37d9d7ea408d1914019a9", "query": "Which datasets are employed for South African languages LID?"}
+{"id": "1911.07555__307e8ab37b67202fe22aedd9a98d9d06aaa169c5", "query": "Does the paper report the performance of a baseline model on South African languages LID?"}
+{"id": "1911.07555__6415f38a06c2f99e8627e8ba6251aa4b364ade2d", "query": "What are the languages represented in the DSL datasets?"}
+{"id": "1911.07555__e5c8e9e54e77960c8c26e8e238168a603fcdfcc6", "query": "Does the algorithm improve on the state-of-the-art methods?"}
+{"id": "1503.00841__50be4a737dc0951b35d139f51075011095d77f2a", "query": "What background knowledge do they leverage?"}
+{"id": "1503.00841__6becff2967fe7c5256fe0b00231765be5b9db9f1", "query": "What are the three regularization terms?"}
+{"id": "1503.00841__76121e359dfe3f16c2a352bd35f28005f2a40da3", "query": "What NLP tasks do they consider?"}
+{"id": "1503.00841__02428a8fec9788f6dc3a86b5d5f3aa679935678d", "query": "How do they define robustness of a model?"}
+{"id": "1804.11346__7793805982354947ea9fc742411bec314a6998f6", "query": "Are the annotations automatic or manually created?"}
+{"id": "1804.11346__007b13f05d234d37966d1aa7d85b5fd78564ff45", "query": "Do the errors of the model reflect linguistic similarity between different L1s?"}
+{"id": "1804.11346__2ceced87af4c8fdebf2dc959aa700a5c95bd518f", "query": "Is the dataset balanced between speakers of different L1s?"}
+{"id": "1804.11346__72ed5fed07ace5e3ffe9de6c313625705bc8f0c7", "query": "How long are the essays on average?"}
+{"id": "1611.08661__2e37e681942e28b5b05639baaff4cd5129adb5fb", "query": "How large are the textual descriptions of entities?"}
+{"id": "1611.08661__b49598b05358117ab1471b8ebd0b042d2f04b2a4", "query": "What neural models are used to encode the text?"}
+{"id": "1611.08661__932b39fd6c47c6a880621a62e6a978491d881d60", "query": "What baselines are used for comparison?"}
+{"id": "1611.08661__b36f867fcda5ad62c46d23513369337352aa01d2", "query": "What datasets are used to evaluate this paper?"}
+{"id": "1910.07601__c6a0b9b5dabcefda0233320dd1548518a0ae758e", "query": "Which approach out of two proposed in the paper performed better in experiments?"}
+{"id": "1910.07601__1e185a3b8cac1da939427b55bf1ba7e768c5dae4", "query": "What classification baselines are used for comparison?"}
+{"id": "1910.07601__26e2d4d0e482e6963a76760323b8e1c26b6eee91", "query": "What TIMIT datasets are used for testing?"}
+{"id": "1910.07601__b80a3fbeb49a8968e149955bdcf199556478eeff", "query": "How does this approach compares to the state-of-the-art results on these tasks?"}
+{"id": "1909.00175__badc9db40adbbf2ea7bac29f2e4e3b6b9175b1f9", "query": "What state-of-the-art results are achieved?"}
+{"id": "1909.00175__67b66fe67a3cb2ce043070513664203e564bdcbd", "query": "What baselines do they compare with?"}
+{"id": "1909.00175__f56d07f73b31a9c72ea737b40103d7004ef6a079", "query": "What datasets are used in evaluation?"}
+{"id": "1909.00175__38e4aaeabf06a63a067b272f8950116733a7895c", "query": "What is the tagging scheme employed?"}
+{"id": "1910.06036__1d197cbcac7b3f4015416f0152a6692e881ada6c", "query": "How they extract \"structured answer-relevant relation\"?"}
+{"id": "1910.06036__92294820ac0d9421f086139e816354970f066d8a", "query": "How big are significant improvements?"}
+{"id": "1910.06036__477d9d3376af4d938bb01280fe48d9ae7c9cf7f7", "query": "What metrics do they use?"}
+{"id": "1910.06036__f225a9f923e4cdd836dd8fe097848da06ec3e0cc", "query": "On what datasets are experiments performed?"}
+{"id": "2002.01984__ff338921e34c15baf1eae0074938bf79ee65fdd2", "query": "What was the baseline model?"}
+{"id": "2002.01984__e807d347742b2799bc347c0eff19b4c270449fee", "query": "What dataset did they use?"}
+{"id": "2002.01984__31b92c03d5b9be96abcc1d588d10651703aff716", "query": "What was their highest recall score?"}
+{"id": "2002.01984__9ec1f88ceec84a10dc070ba70e90a792fba8ce71", "query": "What was their highest MRR score?"}
+{"id": "1909.00326__384bf1f55c34b36cb03f916f50bbefade6c86a75", "query": "Does their model suffer exhibit performance drops when incorporating word importance?"}
+{"id": "1909.00326__aef607d2ac46024be17b1ddd0ed3f13378c563a6", "query": "How do they measure which words are under-translated by NMT models?"}
+{"id": "1909.00326__93beae291b455e5d3ecea6ac73b83632a3ae7ec7", "query": "How do their models decide how much improtance to give to the output words?"}
+{"id": "1909.00326__6c91d44d5334a4ac80100eead4e105d34e99a284", "query": "Which model architectures do they test their word importance approach on?"}
+{"id": "1910.14599__a69a59b6c0ab27bcee1a780d6867df21e30aec08", "query": "Do they compare human-level performance to model performance for their dataset?"}
+{"id": "1910.14599__b3d01ac226ee979e188a4141877a6d2a5482de98", "query": "What are the weaknesses found by non-expert annotators of current state-of-the-art NLI models?"}
+{"id": "1910.14599__af5730d82535464cedfa707a03415ac2e7a21295", "query": "What data sources do they use for creating their dataset?"}
+{"id": "1910.14599__ee2c9bc24d70daa0c87e38e0558e09ab97feb4f2", "query": "Do they use active learning to create their dataset?"}
+{"id": "1906.00790__b249b60a8c94d0e40d65f1ffdfcac527dab57516", "query": "Do the hashtag and SemEval datasets contain only English data?"}
+{"id": "1906.00790__0f567251a6566f65170a1329eeeb5105932036b2", "query": "What current state of the art method was used for comparison?"}
+{"id": "1906.00790__4aa9b60c0ccd379c6fb089c84a6c7b872ee9ec4f", "query": "What set of approaches to hashtag segmentation are proposed?"}
+{"id": "1906.00790__60ce4868af45753c9e124e64e518c32376f12694", "query": "How is the dataset of hashtags sourced?"}
+{"id": "1903.03530__1b1a30e9e68a9ae76af467e60cefb180d135e285", "query": "How big is their created dataset?"}
+{"id": "1903.03530__2c85865a65acd429508f50b5e4db9674813d67f2", "query": "Which data do they use as a starting point for the dialogue dataset?"}
+{"id": "1903.03530__73a7acf33b26f5e9475ee975ba00d14fd06f170f", "query": "What labels do they create on their dataset?"}
+{"id": "1903.03530__dd53baf26dad3d74872f2d8956c9119a27269bd5", "query": "How do they select instances to their hold-out test set?"}
+{"id": "1712.05608__218bc82796eb8d91611996979a4a42500131a936", "query": "Which models/frameworks do they compare to?"}
+{"id": "1712.05608__b21bc09193699dc9cfad523f3d5542b0b2ff1b8e", "query": "Which classification algorithm do they use for s2sL?"}
+{"id": "1712.05608__352bc6de5c5068c6c19062bad1b8f644919b1145", "query": "Up to how many samples do they experiment with?"}
+{"id": "1712.05608__d667731ea20605580c398a1224a0094d1155ebbb", "query": "Do they use pretrained models?"}
+{"id": "1809.03449__8bb0011ad1d63996d5650770f3be18abdd9f7fc6", "query": "Do they report results only on English datasets?"}
+{"id": "1809.03449__b0dbe75047310fec4d4ce787be5c32935fc4e37b", "query": "How do the authors examine whether a model is robust to noise or not?"}
+{"id": "1809.03449__d64383e39357bd4177b49c02eb48e12ba7ffd4fb", "query": "What type of model is KAR?"}
+{"id": "1809.03449__52f9cd05d8312ae3c7a43689804bac63f7cac34b", "query": "Do the authors hypothesize that humans' robustness to noise is due to their general knowledge?"}
+{"id": "1806.05513__dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596", "query": "What type of system does the baseline classification use?"}
+{"id": "1806.05513__955cbea7e5ead36fb89cd6229a97ccb3febcf8bc", "query": "What experiments were carried out on the corpus?"}
+{"id": "1806.05513__04d1b3b41fb62a7b896afe55e0e8bc5ffb8c6e39", "query": "How many annotators tagged each text?"}
+{"id": "1806.05513__15cdd9ea4bae8891c1652da2ed34c87bbbd0edb8", "query": "Where did the texts in the corpus come from?"}
+{"id": "1903.09722__ab0fd94dfc291cf3e54e9b7a7f78b852ddc1a797", "query": "What is the previous state-of-the-art in summarization?"}
+{"id": "1903.09722__6ca938324dc7e1742a840d0a54dc13cc207394a1", "query": "What dataset do they use?"}
+{"id": "1903.09722__4fa6fbb9df1a4c32583d4ef70d2b29ece4b3d802", "query": "What other models do they compare to?"}
+{"id": "1903.09722__4d47bef19afd70c10bbceafd1846516546641a2f", "query": "What language model architectures are used?"}
+{"id": "1806.11432__506d21501d54a12d0c9fd3dbbf19067802439a04", "query": "What are the user-defined keywords?"}
+{"id": "1806.11432__701571680724c05ca70c11bc267fb1160ea1460a", "query": "Does the method achieve sota performance on this dataset?"}
+{"id": "1806.11432__600b097475b30480407ce1de81c28c54a0b3b2f8", "query": "What are the baselines used in the paper?"}
+{"id": "1806.11432__ee7e9a948ee6888aa5830b1a3d0d148ff656d864", "query": "What is the size of the Airbnb?"}
+{"id": "1910.14537__5fda8539a97828e188ba26aad5cda1b9dd642bc8", "query": "How better is performance compared to previous state-of-the-art models?"}
+{"id": "1910.14537__709feae853ec0362d4e883db8af41620da0677fe", "query": "How does Gaussian-masked directional multi-head attention works?"}
+{"id": "1910.14537__186b7978ee33b563a37139adff1da7d51a60f581", "query": "What is meant by closed test setting?"}
+{"id": "1910.14537__fabcd71644bb63559d34b38d78f6ef87c256d475", "query": "What are strong baselines model is compared to?"}
+{"id": "1808.10245__da9c0637623885afaf023a319beee87898948fe9", "query": "Does the dataset feature only English language data?"}
+{"id": "1808.10245__8a1c0ef69b6022a0642ca131a8eacb5c97016640", "query": "What additional features and context are proposed?"}
+{"id": "1808.10245__48088a842f7a433d3290eb45eb0d4c6ab1d8f13c", "query": "What learning models are used on the dataset?"}
+{"id": "1808.10245__4907096cf16d506937e592c50ae63b642da49052", "query": "What examples of the difficulties presented by the context-dependent nature of online aggression do they authors give?"}
+{"id": "1910.12574__8748e8f64af57560d124c7b518b853bf2711c13e", "query": "Do they report results only on English data?"}
+{"id": "1910.12574__893ec40b678a72760b6802f6abf73b8f487ae639", "query": "What evidence do the authors present that the model can capture some biases in data annotation and collection?"}
+{"id": "1910.12574__c81f215d457bdb913a5bade2b4283f19c4ee826c", "query": "Which publicly available datasets are used?"}
+{"id": "1910.12574__e101e38efaa4b931f7dd75757caacdc945bb32b4", "query": "What baseline is used?"}
+{"id": "1910.12574__afb77b11da41cd0edcaa496d3f634d18e48d7168", "query": "What new fine-tuning methods are presented?"}
+{"id": "1910.12574__41b2355766a4260f41b477419d44c3fd37f3547d", "query": "What are the existing biases?"}
+{"id": "1910.12574__96a4091f681872e6d98d0efee777d9e820cb8dae", "query": "What biases does their model capture?"}
+{"id": "1910.12574__81a35b9572c9d574a30cc2164f47750716157fc8", "query": "What existing approaches do they compare to?"}
+{"id": "1702.03342__f4496316ddd35ee2f0ccc6475d73a66abf87b611", "query": "What is the benchmark dataset?"}
+{"id": "1702.03342__e8a32460fba149003566969f92ab5dd94a8754a4", "query": "What are the two neural embedding models?"}
+{"id": "1702.03342__2a6003a74d051d0ebbe62e8883533a5f5e55078b", "query": "which neural embedding model works better?"}
+{"id": "1702.03342__1b1b0c71f1a4b37c6562d444f75c92eb2c727d9b", "query": "What is the degree of dimension reduction of the efficient aggregation method?"}
+{"id": "1805.03710__9c44df7503720709eac933a15569e5761b378046", "query": "For which languages do they build word embeddings for?"}
+{"id": "1805.03710__b7381927764536bd97b099b6a172708125364954", "query": "How do they evaluate their resulting word embeddings?"}
+{"id": "1805.03710__df95b3cb6aa0187655fd4856ae2b1f503d533583", "query": "What types of subwords do they incorporate in their model?"}
+{"id": "1805.03710__f7ed3b9ed469ed34f46acde86b8a066c52ecf430", "query": "Which matrix factorization methods do they use?"}
+{"id": "1807.07279__c7eb71683f53ab7acffd691a36cad6edc7f5522e", "query": "Do they report results only on English data?"}
+{"id": "1807.07279__17a1eff7993c47c54eddc7344e7454fbe64191cd", "query": "What experiments do they use to quantify the extent of interpretability?"}
+{"id": "1807.07279__a5e5cda1f6195ab1336855f1e39a609d61326d62", "query": "Along which dimension do the semantically related words take larger values?"}
+{"id": "1807.07279__32d99dcd8d46e2cda04a9a9fa0e6693d2349a7a9", "query": "What is the additive modification to the objective function?"}
+{"id": "1706.09673__eda4869c67fe8bbf83db632275f053e7e0241e8c", "query": "Which dataset do they use?"}
+{"id": "1706.09673__2c7494d47b2a69f182e83455fe4c75ae3b2893e9", "query": "Do they evaluate their learned representations on downstream tasks?"}
+{"id": "1706.09673__4d7ff4e5d06902de85b0e9a364dc455196d06a7d", "query": "Which representation learning architecture do they adopt?"}
+{"id": "1706.09673__ecc63972b2783ee39b3e522653cfb6dc5917d522", "query": "How do they encourage understanding of literature as part of their objective function?"}
+{"id": "1906.07662__8d074aabf4f51c8455618c5bf7689d3f62c4da1d", "query": "What are the limitations of existing Vietnamese word segmentation systems?"}
+{"id": "1906.07662__fe2666ace293b4bfac3182db6d0c6f03ea799277", "query": "Why challenges does word segmentation in Vietnamese pose?"}
+{"id": "1906.07662__70a1b0f9f26f1b82c14783f1b76dfb5400444aa4", "query": "How successful are the approaches used to solve word segmentation in Vietnamese?"}
+{"id": "1906.07662__d3ca5f1814860a88ff30761fec3d860d35e39167", "query": "Which approaches have been applied to solve word segmentation in Vietnamese?"}
+{"id": "2002.12612__dd20d93166c14f1e57644cd7fa7b5e5738025cd0", "query": "Which two news domains are country-independent?"}
+{"id": "2002.12612__dc2a2c177cd5df6da5d03e6e74262bf424850ec9", "query": "How is the political bias of different sources included in the model?"}
+{"id": "2002.12612__ae90c5567746fe25af2fcea0cc5f355751e05c71", "query": "What are the two large-scale datasets used?"}
+{"id": "2002.12612__d7644c674887ca9708eb12107acd964ae53b216d", "query": "What are the global network features which quantify different aspects of the sharing process?"}
+{"id": "1908.05441__a3bb9a936f61bafb509fa12ac0a61f91abcc5106", "query": "Which datasets are used for evaluation?"}
+{"id": "1908.05441__df6d327e176740da9edcc111a06374c54c8e809c", "query": "What previous methods is their model compared to?"}
+{"id": "1908.05441__49764eee7fb523a6a28375cc699f5e0220b81766", "query": "Did they use a crowdsourcing platform?"}
+{"id": "1908.05441__3321d8d0e190d25958e5bfe0f3438b5c2ba80fd1", "query": "How was the dataset collected?"}
+{"id": "1811.08603__bb3267c3f0a12d8014d51105de5d81686afe5f1b", "query": "Which datasets do they use?"}
+{"id": "1811.08603__114934e1a1e818630ff33ac5c4cd4be6c6f75bb2", "query": "How effective is their NCEL approach overall?"}
+{"id": "1811.08603__2439b6b92d73f660fe6af8d24b7bbecf2b3a3d72", "query": "How do they verify generalization ability?"}
+{"id": "1811.08603__b8d0e4e0e820753ffc107c1847fe1dfd48883989", "query": "Do they only use adjacent entity mentions or use more than that in some cases (next to adjacent)?"}
+{"id": "1909.03135__5aa12b4063d6182a71870c98e4e1815ff3dc8a72", "query": "Do the authors mention any downside of lemmatizing input before training ELMo?"}
+{"id": "1909.03135__22815878083ebd2f9e08bc33a5e733063dac7a0f", "query": "What other examples of morphologically-rich languages do the authors give?"}
+{"id": "1909.03135__220d11a03897d85af91ec88a9b502815c7d2b6f3", "query": "Why is lemmatization not necessary in English?"}
+{"id": "1909.03135__d509081673f5667060400eb325a8050fa5db7cc8", "query": "How big was the corpora they trained ELMo on?"}
+{"id": "1804.07789__c2e475adeddcdc4d637ef0d4f5065b6a9b299827", "query": "What metrics are used for evaluation?"}
+{"id": "1804.07789__cb6a8c642575d3577d1840ca2f4cd2cc2c3397c5", "query": "Do they use pretrained embeddings?"}
+{"id": "1804.07789__6cd25c637c6b772ce29e8ee81571e8694549c5ab", "query": "What dataset is used?"}
+{"id": "1804.07789__1088255980541382a2aa2c0319427702172bbf84", "query": "What is a bifocal attention mechanism?"}
+{"id": "1905.11268__0d9fcc715dee0ec85132b3f4a730d7687b6a06f4", "query": "What does the \"sensitivity\" quantity denote?"}
+{"id": "1905.11268__8910ee2236a497c92324bbbc77c596dba39efe46", "query": "What end tasks do they evaluate on?"}
+{"id": "1905.11268__2c59528b6bc5b5dc28a7b69b33594b274908cca6", "query": "What is a semicharacter architecture?"}
+{"id": "1905.11268__6b367775a081f4d2423dc756c9b65b6eef350345", "query": "Do they experiment with offering multiple candidate corrections and voting on the model output, since this seems highly likely to outperform a one-best correction?"}
+{"id": "1905.11268__bc01853512eb3c11528e33003ceb233d7c1d7038", "query": "Why is the adversarial setting appropriate for misspelling recognition?"}
+{"id": "1905.11268__67ec8ef85844e01746c13627090dc2706bb2a4f3", "query": "Why do they experiment with RNNs instead of transformers for this task?"}
+{"id": "1905.11268__ba539cab80d25c3e20f39644415ed48b9e4e4185", "query": "How do the backoff strategies work?"}
+{"id": "1603.01514__6bf5620f295b5243230bc97b340fae6e92304595", "query": "What baseline model is used?"}
+{"id": "1603.01514__4986f420884f917d1f60d3cea04dc8e64d3b5bf1", "query": "Which additional latent variables are used in the model?"}
+{"id": "1603.01514__747b847d687f703cc20a87877c5b138f26ff137d", "query": "Which parallel corpora are used?"}
+{"id": "1603.01514__111afb77cfbf4c98e0458606378fa63a0e965e36", "query": "Overall, does having parallel data improve semantic role induction across multiple languages?"}
+{"id": "1603.01514__6568a31241167f618ef5ede939053feaa2fb0d7e", "query": "Do they add one latent variable for each language pair in their Bayesian model?"}
+{"id": "1603.01514__50cc6c5f2dcf5fb87b56007f6a825fa7c90b64ed", "query": "What does an individual model consist of?"}
+{"id": "1603.01514__0fc2b5bc2ead08a6fe0280fb3a47477c6df1587c", "query": "Do they improve on state-of-the-art semantic role induction?"}
+{"id": "1908.04042__4dc268e3d482e504ca80d2ab514e68fd9b1c3af1", "query": "how many tags do they look at?"}
+{"id": "1908.04042__ab54cd2dc83141bad3cb3628b3f0feee9169a556", "query": "which algorithm was the highest performer?"}
+{"id": "1908.04042__249c805ee6f2ebe4dbc972126b3d82fb09fa3556", "query": "how is diversity measured?"}
+{"id": "1908.04042__b4f881331b975e6e4cab1868267211ed729d782d", "query": "how large is the vocabulary?"}
+{"id": "1908.04042__79413ff5d98957c31866f22179283902650b5bb6", "query": "what dataset was used?"}
+{"id": "1908.04042__29c014baf99fb9f40b5171aab3e2c7f12a748f79", "query": "what algorithms did they use?"}
+{"id": "1610.00956__09c86ef78e567033b725fc56b85c5d2602c1a7c3", "query": "How does their ensemble method work?"}
+{"id": "1610.00956__d67c01d9b689c052045f3de1b0918bab18c3f174", "query": "How large are the improvements of the Attention-Sum Reader model when using the BookTest dataset?"}
+{"id": "1610.00956__e5bc73974c79d96eee2b688e578a9de1d0eb38fd", "query": "How do they show there is space for further improvement?"}
+{"id": "1601.02403__2cd37743bcc7ea3bd405ce6d91e79e5339d7642e", "query": "Do they report results only on English data?"}
+{"id": "1601.02403__eac9dae3492e17bc49c842fb566f464ff18c049b", "query": "What argument components do the ML methods aim to identify?"}
+{"id": "1601.02403__7697baf8d8d582c1f664a614f6332121061f87db", "query": "Which machine learning methods are used in experiments?"}
+{"id": "1601.02403__1cb100182508cf55b3509283c0e2bbcd527d625e", "query": "How is the data in the new corpus come sourced?"}
+{"id": "1601.02403__206739417251064b910ae9e5ff096e867ee10fb8", "query": "What argumentation phenomena encounter in actual data are now accounted for by this work?"}
+{"id": "1601.02403__d6401cece55a14d2a35ba797a0878dfe2deabedc", "query": "What challenges do different registers and domains pose to this task?"}
+{"id": "1912.03627__ee2ad0ab64579cffb60853db6a8c0f971d7cf0ff", "query": "who transcribed the corpus?"}
+{"id": "1912.03627__fde700d5134a9ae8f7579bea1f1b75f34d7c1c4c", "query": "how was the speech collected?"}
+{"id": "1912.03627__b1a068c1050e2bed12d5c9550c73e59cd5b1f78d", "query": "what accents are present in the corpus?"}
+{"id": "1912.03627__f9edd8f9c13b54d8b1253ed30e7decc1999602da", "query": "what evaluation protocols are provided?"}
+{"id": "1912.03627__d93c0e78a3fe890cd534a11276e934be68583f4b", "query": "what age range is in the data?"}
+{"id": "1912.03627__30af1926559079f59b0df055da76a3a34df8336f", "query": "what is the source of the data?"}
+{"id": "1810.12085__ceb767e33fde4b927e730f893db5ece947ffb0d8", "query": "what topics did they label?"}
+{"id": "1810.12085__c2cb6c4500d9e02fc9a1bdffd22c3df69655189f", "query": "did they compare with other extractive summarization methods?"}
+{"id": "1810.12085__c571deefe93f0a41b60f9886db119947648e967c", "query": "what datasets were used?"}
+{"id": "1610.07809__06eb9f2320451df83e27362c22eb02f4a426a018", "query": "what levels of document preprocessing are looked at?"}
+{"id": "1610.07809__e54257585cc75564341eb02bdc63ff8111992f82", "query": "what keyphrase extraction models were reassessed?"}
+{"id": "1610.07809__2a3e36c220e7b47c1b652511a4fdd7238a74a68f", "query": "how many articles are in the dataset?"}
+{"id": "2003.03044__9658b5ffb5c56e5a48a3fea0342ad8fc99741908", "query": "Is this dataset publicly available for commercial use?"}
+{"id": "2003.03044__46c9e5f335b2927db995a55a18b7c7621fd3d051", "query": "How many different phenotypes are present in the dataset?"}
+{"id": "2003.03044__ce0e2a8675055a5468c4c54dbb099cfd743df8a7", "query": "What are 10 other phenotypes that are annotated?"}
+{"id": "1610.08815__3a6e843c6c81244c14730295cfb8b865cd7ede46", "query": "What are the state of the art models?"}
+{"id": "1610.08815__fabf6fdcfb4c4c7affaa1e4336658c1e6635b1bf", "query": "Which benchmark datasets are used?"}
+{"id": "1610.08815__1beb4a590fa6127a138f4ed1dd13d5d51cc96809", "query": "What are the network's baseline features?"}
+{"id": "1909.00015__5c5aeee83ea3b34f5936404f5855ccb9869356c1", "query": "What tasks are used for evaluation?"}
+{"id": "1909.00015__f8c1b17d265a61502347c9a937269b38fc3fcab1", "query": "HOw does the method perform compared with baselines?"}
+{"id": "1909.00015__5913930ce597513299e4b630df5e5153f3618038", "query": "How does their model improve interpretability compared to softmax transformers?"}
+{"id": "2001.01269__81d193672090295e687bc4f4ac1b7a9c76ea35df", "query": "What baseline method is used?"}
+{"id": "2001.01269__cf171fad0bea5ab985c53d11e48e7883c23cdc44", "query": "What details are given about the Twitter dataset?"}
+{"id": "2001.01269__2a564b092916f2fabbfe893cf13de169945ef2e1", "query": "What details are given about the movie domain dataset?"}
+{"id": "2001.01269__0d34c0812f1e69ea33f76ca8c24c23b0415ebc8d", "query": "Which hand-crafted features are combined with word2vec?"}
+{"id": "2001.01269__73e83c54251f6a07744413ac8b8bed6480b2294f", "query": "What word-based and dictionary-based feature are used?"}
+{"id": "2001.01269__3355918bbdccac644afe441f085d0ffbbad565d7", "query": "How are the supervised scores of the words calculated?"}
+{"id": "1708.06185__e48e750743aef36529fbea4328b8253dbe928b4d", "query": "what dataset was used?"}
+{"id": "1708.06185__c08aab979dcdc8f4fe8ec1337c3c8290ab13414e", "query": "how many total combined features were there?"}
+{"id": "1708.06185__8756b7b9ff5e87e4efdf6c2f73a0512f05b5ae3f", "query": "what pretrained word embeddings were used?"}
+{"id": "1705.01214__cc608df2884e1e82679f663ed9d9d67a4b6c03f3", "query": "What evaluation metrics did look at?"}
+{"id": "1705.01214__3e432d71512ffbd790a482c716e7079ee78ce732", "query": "What datasets are used?"}
+{"id": "1705.01214__dd76130ec5fac477123fe8880472d03fbafddef6", "query": "What is the state of the art described in the paper?"}
+{"id": "1908.07195__43eecc576348411b0634611c81589f618cd4fddf", "query": "What GAN models were used as baselines to compare against?"}
+{"id": "1908.07195__79f9468e011670993fd162543d1a4b3dd811ac5d", "query": "How much improvement is gained from Adversarial Reward Augmented Maximum Likelihood (ARAML)?"}
+{"id": "1908.07195__c262d3d1c5a8b6fef6b594d5eee86bc2b09e3baf", "query": "Is the discriminator's reward made available at each step to the generator?"}
+{"id": "2001.07786__902b3123aec0f3a39319ffa9d05ab8e08a2eb567", "query": "What is the algorithm used to create word embeddings?"}
+{"id": "2001.07786__1038542243efe5ab3e65c89385e53c4831cd9981", "query": "What is the corpus used for the task?"}
+{"id": "2001.07786__e2b0cd30cf56a4b13f96426489367024310c3a05", "query": "How is evaluation performed?"}
+{"id": "1912.00903__e831041d50f3922265330fcbee5a980d0e2586dd", "query": "What is a normal reading paradigm?"}
+{"id": "1912.00903__7438b6b146e41c08cf8f4c5e1d130c3b4cfc6d93", "query": "Did they experiment with this new dataset?"}
+{"id": "1912.00903__ac7f6497be4bcca64e75f28934b207c9e8097576", "query": "What kind of sentences were read?"}
+{"id": "1903.11437__87bb3105e03ed6ac5abfde0a7ca9b8de8985663c", "query": "why are their techniques cheaper to implement?"}
+{"id": "1903.11437__d9980676a83295dda37c20cfd5d58e574d0a4859", "query": "what data simulation techniques were introduced?"}
+{"id": "1903.11437__9225b651e0fed28d4b6261a9f6b443b52597e401", "query": "what is their explanation for the effectiveness of back-translation?"}
+{"id": "1903.11437__565189b672efee01d22f4fc6b73cd5287b2ee72c", "query": "what dataset is used?"}
+{"id": "1903.11437__b6f7fadaa1bb828530c2d6780289f12740229d84", "query": "what language pairs are explored?"}
+{"id": "1903.11437__7b9ca0e67e394f1674f0bcf1c53dfc2d474f8613", "query": "what language is the data in?"}
+{"id": "1703.04001__4e1a67f8dc68b55a5ce18e6cd385ae9ab90d891f", "query": "Does the experiments focus on a specific domain?"}
+{"id": "1703.04001__6c96e910bd98c9fd58ba2050f99b9c9bac69840a", "query": "how many training samples do you have for training?"}
+{"id": "1703.04001__9af3142630b350c93875441e1e1767312df76d17", "query": "Do the answered questions measure for the usefulness of the answer?"}
+{"id": "1909.10012__e374169ee10f835f660ab8403a5701114586f167", "query": "What profile metadata is used for this analysis?"}
+{"id": "1909.10012__82595ca5d11e541ed0c3353b41e8698af40a479b", "query": "What are the organic and inorganic ways to show political affiliation through profile changes?"}
+{"id": "1909.10012__d4db7df65aa4ece63e1de813e5ce98ce1b4dbe7f", "query": "How do profile changes vary for influential leads and their followers over the social movement?"}
+{"id": "1907.06292__53dfcd5d7d2a81855ec1728f0d8e6e24c5638f1e", "query": "What evaluation metrics do they use?"}
+{"id": "1907.06292__869feb7f47606105005efdb6bea1c549824baea0", "query": "What is the size of this dataset?"}
+{"id": "1907.06292__c497e8701060583d91bb64b9f9202d40047effc4", "query": "How do they determine if tweets have been used by journalists?"}
+{"id": "1703.07090__8060a773f6a136944f7b59758d08cc6f2a59693b", "query": "how small of a dataset did they train on?"}
+{"id": "1703.07090__1bb7eb5c3d029d95d1abf9f2892c1ec7b6eef306", "query": "what was their character error rate?"}
+{"id": "1703.07090__c0af8b7bf52dc15e0b33704822c4a34077e09cd1", "query": "which lstm models did they compare with?"}
+{"id": "1810.04635__9de2f73a3db0c695e5e0f5a3d791fdc370b1df6e", "query": "Do they use datasets with transcribed text or do they determine text from the audio?"}
+{"id": "1810.04635__e0122fc7b0143d5cbcda2120be87a012fb987627", "query": "By how much does their model outperform the state of the art results?"}
+{"id": "1810.04635__5da26954fbcd3cf6a7dba9f8b3c9a4b0391f67d4", "query": "How do they combine audio and text sequences in their RNN?"}
+{"id": "1707.03569__37edc25e39515ffc2d92115d2fcd9e6ceb18898b", "query": "What was the baseline?"}
+{"id": "1707.03569__e431661f17347607c3d3d9764928385a8f3d9650", "query": "By how much did they improve?"}
+{"id": "1707.03569__876700622bd6811d903e65314ac75971bbe23dcc", "query": "What dataset did they use?"}
+{"id": "1903.07406__312e9cc11b9036a6324bdcb64eca6814053ffa17", "query": "What is the reported agreement for the annotation?"}
+{"id": "1903.07406__1c0ba6958da09411deded4a14dfea5be55687619", "query": "How many annotators participated?"}
+{"id": "1903.07406__1eef2d2c296fdd10b08bf7b4ff7792cccf177d3b", "query": "What features are used?"}
+{"id": "1912.10011__d915b401bb96c9f104a0353bef9254672e6f5a47", "query": "What future possible improvements are listed?"}
+{"id": "1912.10011__79a44a68bb57b375d8a57a0a7f522d33476d9f33", "query": "Which qualitative metric are used for evaluation?"}
+{"id": "1912.10011__664db503509b8236bc4d3dc39cebb74498365750", "query": "What is quantitative improvement of proposed method (the best variant) w.r.t. baseline (the best variant)?"}
+{"id": "2003.11563__64af7f5c109ed10eda4fb1b70ecda21e6d5b96c8", "query": "How is \"propaganda\" defined for the purposes of this study?"}
+{"id": "2003.11563__b0a18628289146472aa42f992d0db85c200ec64b", "query": "What metrics are used in evaluation?"}
+{"id": "2003.11563__72ce05546c81ada05885026470f4c8c218805055", "query": "Which natural language(s) are studied in this paper?"}
+{"id": "1909.09534__f20a389ace2267aa61eddcc235535452ccdae0e6", "query": "Do they report results only on English data?"}
+{"id": "1909.09534__6411622cc8b2fbedbfa468859d453596d3bd2f03", "query": "What objective function is used in the GAN?"}
+{"id": "1909.09534__fc77d70c305fa80447b191248aba93da63ac3704", "query": "Which datasets are used?"}
+{"id": "1909.00105__5b551ba47d582f2e6467b1b91a8d4d6a30c343ec", "query": "What metrics are used for evaluation?"}
+{"id": "1909.00105__3cf1edfa6d53a236cf4258afd87c87c0a477e243", "query": "What natural language(s) are the recipes written in?"}
+{"id": "1909.00105__9bfebf8e5bc0bacf0af96a9a951eb7b96b359faa", "query": "What were their results on the new dataset?"}
+{"id": "1909.00105__34dc0838632d643f33c8dbfe7bd4b656586582a2", "query": "What are the baseline models?"}
+{"id": "1909.00105__c77359fb9d3ef96965a9af0396b101f82a0a9de6", "query": "How did they obtain the interactions?"}
+{"id": "1909.00105__1bdc990c7e948724ab04e70867675a334fdd3051", "query": "Where do they get the recipes from?"}
+{"id": "2001.02885__78536da059b884d6ad04680baeb894895458055c", "query": "What were the baselines?"}
+{"id": "2001.02885__96b07373756d7854bccc3c12e8d41454ab8741f5", "query": "Does RoBERTa outperform BERT?"}
+{"id": "2001.02885__511517efc96edcd3e91e7783821c9d6d5a6562af", "query": "Which multiple datasets did they train on during joint training?"}
+{"id": "2001.02885__9122de265577e8f6b5160cd7d28be9e22da752b2", "query": "What were the previously reported results?"}
+{"id": "2001.02885__e86130c5b9ab28f0ec539c2bed1b1ae9efb99b7d", "query": "What is the size of SFU Review corpus?"}
+{"id": "2001.02885__45be665a4504f0c7f458cf3f75a95d5a75eefd42", "query": "What is the size of bioScope corpus?"}
+{"id": "1801.10293__22b740cc3c8598247ee102279f96575bdb10d53f", "query": "Do they study numerical properties of their obtained vectors (such as orthogonality)?"}
+{"id": "1801.10293__74b4779de437c697fe702e51f23e2b0538b0f631", "query": "How do they score phrasal compositionality?"}
+{"id": "1801.10293__435570723b37ee1f5898c1a34ef86a0b2e8701bb", "query": "Which translation systems do they compare against?"}
+{"id": "1809.06537__aa2948209cc33b071dbf294822e72bb136678345", "query": "what are their results on the constructed dataset?"}
+{"id": "1809.06537__d9412dda3279729e95fcb35cbed09e61577a896e", "query": "what evaluation metrics are reported?"}
+{"id": "1809.06537__41b70699514703820435b00efbc3aac4dd67560a", "query": "what civil field is the dataset about?"}
+{"id": "1809.06537__e3c9e4bc7bb93461856e1f4354f33010bc7d28d5", "query": "what are the state-of-the-art models?"}
+{"id": "1809.06537__06cc8fcafc0880cf69a2514bb7341642b9833041", "query": "what is the size of the real-world civil case dataset?"}
+{"id": "1809.06537__d650101712e36594bd77b45930a990402a455222", "query": "what datasets are used in the experiment?"}
+{"id": "2003.03014__cb384dc5366b693f28680374d31ff45356af0461", "query": "Do they model semantics"}
+{"id": "2003.03014__d41e20ec716b5904a272938e5a8f5f3f15a7779e", "query": "How do they identify discussions of LGBTQ people in the New York Times?"}
+{"id": "2003.03014__0682bf049f96fa603d50f0fdad0b79a5c55f6c97", "query": "Do they analyze specific derogatory words?"}
+{"id": "1908.08345__97d1ac71eed13d4f51f29aac0e1a554007907df8", "query": "What is novel about their document-level encoder?"}
+{"id": "1908.08345__c17b609b0b090d7e8f99de1445be04f8f66367d4", "query": "What rouge score do they achieve?"}
+{"id": "1908.08345__53014cfb506f6fffb22577bf580ae6f4d5317ce5", "query": "What are the datasets used for evaluation?"}
+{"id": "1611.02988__fa30a938b58fc05131c3854f12efe376cbad887f", "query": "What was their performance on emotion detection?"}
+{"id": "1611.02988__f875337f2ecd686cd7789e111174d0f14972638d", "query": "Which existing benchmarks did they compare to?"}
+{"id": "1611.02988__de53af4eddbc30c808d90b8a11a29217d377569e", "query": "Which Facebook pages did they look at?"}
+{"id": "1604.08504__dac087e1328e65ca08f66d8b5307d6624bf3943f", "query": "LDA is an unsupervised method; is this paper introducing an unsupervised approach to spam detection?"}
+{"id": "1604.08504__a1645d0ba50e4c29f0feb806521093e7b1459081", "query": "What is the benchmark dataset and is its quality high?"}
+{"id": "1604.08504__3cd185b7adc835e1c4449eff81222f5fc15c8500", "query": "How do they detect spammers?"}
+{"id": "1802.08636__f03112b868b658c954db62fc64430bebbaa7d9e0", "query": "Do they use other evaluation metrics besides ROUGE?"}
+{"id": "1802.08636__5152b78f5dfee26f1b13f221c1405ffa9b9ba3a4", "query": "What is their ROUGE score?"}
+{"id": "1802.08636__a6d3e57de796172c236e33a6ceb4cca793dc2315", "query": "What are the baselines?"}
+{"id": "2001.07820__395b61d368e8766014aa960fde0192e4196bcb85", "query": "What datasets do they use?"}
+{"id": "2001.07820__92bb41cf7bd1f7886784796a8220ed5aa07bc49b", "query": "What other factors affect the performance?"}
+{"id": "2001.07820__4ef11518b40cc55d86c485f14e24732123b0d907", "query": "What are the benchmark attacking methods?"}
+{"id": "2002.01320__6a219d7c58451842aa5d6819a7cdf51c55e9fc0f", "query": "What domains are covered in the corpus?"}
+{"id": "2002.01320__cee8cfaf26e49d98e7d34fa1b414f8f31d6502ad", "query": "What is the architecture of their model?"}
+{"id": "2002.01320__f8f4e4a50d2b3fbd193327e79ea32d8d057e1414", "query": "How was the dataset collected?"}
+{"id": "2002.01320__bc84c5a58c57038910f7720d7a784560054d3e1a", "query": "Which languages are part of the corpus?"}
+{"id": "2002.01320__29923a824c98b3ba85ced964a0e6a2af35758abe", "query": "How is the quality of the data empirically evaluated?"}
+{"id": "2002.01320__559c68802ee2bb8b11e2188127418ca3a6155ba7", "query": "Is the data in CoVoST annotated for dialect?"}
+{"id": "2002.01320__8dc707a0daf7bff61a97d9d854283e65c0c85064", "query": "Is Arabic one of the 11 languages in CoVost?"}
+{"id": "2002.01320__ffde866b1203a01580eb33237a0bb9da71c75ecf", "query": "How big is Augmented LibriSpeech dataset?"}
+{"id": "1605.07333__6cd8bad8a031ce6d802ded90f9754088e0c8d653", "query": "By how much does their best model outperform the state-of-the-art?"}
+{"id": "1605.07333__30eacb4595014c9c0e5ee9669103d003cfdfe1e5", "query": "Which dataset do they train their models on?"}
+{"id": "1605.07333__0f7867f888109b9e000ef68965df4dde2511a55f", "query": "How does their simple voting scheme work?"}
+{"id": "1605.07333__e2e977d7222654ee8d983fd8ba63b930e9a5a691", "query": "Which variant of the recurrent neural network do they use?"}
+{"id": "1605.07333__0cfe0e33fbb100751fc0916001a5a19498ae8cb5", "query": "How do they obtain the new context represetation?"}
+{"id": "2003.08385__35b3ce3a7499070e9b280f52e2cb0c29b0745380", "query": "Does the paper report the performance of the model for each individual language?"}
+{"id": "2003.08385__71ba1b09bb03f5977d790d91702481cc406b3767", "query": "What is the performance of the baseline?"}
+{"id": "2003.08385__612c3675b6c55b60ae6d24265ed8e20f62cb117e", "query": "Did they pefrorm any cross-lingual vs single language evaluation?"}
+{"id": "2003.08385__bd40f33452da7711b65faaa248aca359b27fddb6", "query": "What was the performance of multilingual BERT?"}
+{"id": "2003.08385__787c4d4628eac00dbceb1c96020bff0090edca46", "query": "What annotations are present in dataset?"}
+{"id": "1901.10133__559920ebe19e99e43418c2f0455a0ffdc8edaaa2", "query": "What is an unordered text document, do these arise in real-world corpora?"}
+{"id": "1901.10133__43f56301c5d2f50b6449b582652f2351cbe90e70", "query": "What kind of model do they use?"}
+{"id": "1901.10133__68cd8433a75eee7d100dbbfedebbf53873a21720", "query": "Do they release a data set?"}
+{"id": "1901.10133__0a01341ddca3fe4c8727be7cf5841091c6ca3d0b", "query": "Do they release code?"}
+{"id": "1901.10133__a8c862d8c5da3f060eedf3395a3d0a97fd8a12d8", "query": "Which languages do they evaluate on?"}
+{"id": "1911.00841__3c3807f226ba72fc41f59f0338f12a49a0c35605", "query": "Are the experts comparable to real-world users?"}
+{"id": "1911.00841__c70bafc35e27be9d1efae60596bc0dd390c124c0", "query": "Are the answers double (and not triple) annotated?"}
+{"id": "1911.00841__81d607fc206198162faa54a796717c2805282d9b", "query": "Who were the experts used for annotation?"}
+{"id": "1911.00841__51fe4d44887c5cc5fc98b65ca4cb5876f0a56dad", "query": "What type of neural model was used?"}
+{"id": "1911.00841__f0848e7a339da0828278f6803ed7990366c975f0", "query": "Were other baselines tested to compare with the neural baseline?"}
+{"id": "1605.03481__b85fc420eb2f77f6f14f375cc1fcc5155eb5c0a8", "query": "Does the paper clearly establish that the challenges listed here exist in this dataset and task?"}
+{"id": "1605.03481__792f6d76d2befba2af07198584aac1b189583ae4", "query": "Is this hashtag prediction task an established task, or something new?"}
+{"id": "1605.03481__127d5ddfabec5c58832e5865cbd8ed0978c25a13", "query": "What is the word-level baseline?"}
+{"id": "1605.03481__b91671715ad4fad56c67c28ce6f29e180fe08595", "query": "What other tasks do they test their method on?"}
+{"id": "1605.03481__a6d37b5975050da0b1959232ae756fc09e5f87e8", "query": "what is the word level baseline they compare to?"}
+{"id": "1908.07245__e82fa03f1638a8c59ceb62bb9a6b41b498950e1f", "query": "What is the state of the art system mentioned?"}
+{"id": "1908.07245__7ab9c0b4ceca1c142ff068f85015a249b14282d0", "query": "Do they incoprorate WordNet into the model?"}
+{"id": "1908.07245__00050f7365e317dc0487e282a4c33804b58b1fb3", "query": "Is SemCor3.0 reflective of English language data in general?"}
+{"id": "1908.07245__c5b0ed5db65051eebd858beaf303809aa815e8e5", "query": "Do they use large or small BERT?"}
+{"id": "1908.07245__10fb7dc031075946153baf0a0599e126de29e3a4", "query": "How does the neural network architecture accomodate an unknown amount of senses per word?"}
+{"id": "1901.01010__e438445cf823893c841b2bc26cdce32ccc3f5cbe", "query": "Which fonts are the best indicators of high quality?"}
+{"id": "1901.01010__12f7fac818f0006cf33269c9eafd41bbb8979a48", "query": "What kind of model do they use?"}
+{"id": "1901.01010__d5a8fd8bb48dd1f75927e874bdea582b4732a0cd", "query": "Did they release their data set of academic papers?"}
+{"id": "1901.01010__1097768b89f8bd28d6ef6443c94feb04c1a1318e", "query": "Do the methods that work best on academic papers also work best on Wikipedia?"}
+{"id": "1901.01010__fc1679c714eab822431bbe96f0e9cf4079cd8b8d", "query": "What is their system's absolute accuracy?"}
+{"id": "1901.01010__23e2971c962bb6486bc0a66ff04242170dd22a1d", "query": "Which is more useful, visual or textual features?"}
+{"id": "1901.01010__c9bc6f53b941863e801280343afa14248521ce43", "query": "Which languages do they use?"}
+{"id": "1901.01010__07b70b2b799b9efa630e8737df8b1dd1284f032c", "query": "How large is their data set?"}
+{"id": "1901.01010__71a0c4f19be4ce1b1bae58a6e8f2a586e125d074", "query": "Where do they get their ground truth quality judgments?"}
+{"id": "1809.02279__c2eb743c9d0baf1781c3c0df9533fab588250af3", "query": "Which models did they experiment with?"}
+{"id": "1809.02279__c35806cf68220b2b9bb082b62f493393b9bdff86", "query": "What were their best results on the benchmark datasets?"}
+{"id": "1809.02279__f7d0fa52017a642a9f70091a252857fccca31f12", "query": "What were the baselines?"}
+{"id": "1809.02279__01209a3bead7c87bcdc628be2a5a26b41abde9d1", "query": "Which datasets were used?"}
+{"id": "2002.01207__2740e3d7d33173664c1c5ab292c7ec75ff6e0802", "query": "what datasets were used?"}
+{"id": "2002.01207__db72a78a7102b5f0e75a4d9e1a06a3c2e7aabb21", "query": "what are the previous state of the art?"}
+{"id": "2002.01207__48bd71477d5f89333fa7ce5c4556e4d950fb16ed", "query": "what surface-level features are used?"}
+{"id": "2002.01207__76ed74788e3eb3321e646c48ae8bf6cdfe46dca1", "query": "what linguistics features are used?"}
+{"id": "1803.05223__ad1be65c4f0655ac5c902d17f05454c0d4c4a15d", "query": "what dataset statistics are provided?"}
+{"id": "1803.05223__2eb9280d72cde9de3aabbed993009a98a5fe0990", "query": "what is the size of their dataset?"}
+{"id": "1803.05223__154a721ccc1d425688942e22e75af711b423e086", "query": "what crowdsourcing platform was used?"}
+{"id": "1803.05223__84bad9a821917cb96584cf5383c6d2a035358d7c", "query": "how was the data collected?"}
+{"id": "1909.06162__c9305e5794b65b33399c22ac8e4e024f6b757a30", "query": "What is best performing model among author's submissions, what performance it had?"}
+{"id": "1909.06162__56b7319be68197727baa7d498fa38af0a8440fe4", "query": "What extracted features were most influencial on performance?"}
+{"id": "1909.06162__2268c9044e868ba0a16e92d2063ada87f68b5d03", "query": "Did ensemble schemes help in boosting peformance, by how much?"}
+{"id": "1909.06162__6b7354d7d715bad83183296ce2f3ddf2357cb449", "query": "Which basic neural architecture perform best by itself?"}
+{"id": "1909.06162__e949b28f6d1f20e18e82742e04d68158415dc61e", "query": "What participating systems had better results than ones authors submitted?"}
+{"id": "1909.06162__a1ac2a152710335519c9a907eec60d9f468b19db", "query": "What is specific to multi-granularity and multi-tasking neural arhiteture design?"}
+{"id": "1905.10851__ce6a3ca102a5ee62e86fc7def3b20b1f10d1eb25", "query": "Do they report results only on English data?"}
+{"id": "1905.10851__49eb52b3ec0647e165a5e41488088c80a20cc78f", "query": "What aspects of discussion are relevant to instructor intervention, according to the attention mechanism?"}
+{"id": "1905.10851__9bb7ae50bff91571a945c1af025ed2e67714a788", "query": "What was the previous state of the art for this task?"}
+{"id": "1905.10851__81dbe9a9ddaa5d02b02e01a306d898015a56ffb6", "query": "What type of latent context is used to predict instructor intervention?"}
+{"id": "1906.07701__348886b4762db063711ef8b7a10952375fbdcb57", "query": "Do they report results only on English dataset?"}
+{"id": "1906.07701__1ed49a8c07ef0ac15cfa6b7decbde6604decbd5b", "query": "What dataset does this approach achieve state of the art results on?"}
+{"id": "2002.07306__f9aa055bf73185ba939dfb03454384810eb17ad1", "query": "How much training data from the non-English language is used by the system?"}
+{"id": "2002.07306__d571e0b0f402a3d36fb30d70cdcd2911df883bc7", "query": "Is the system tested on low-resource languages?"}
+{"id": "2002.07306__ce2b921e4442a21555d65d8ce4ef7e3bde931dfc", "query": "What languages are the model transferred to?"}
+{"id": "2002.07306__2275b0e195cd9cb25f50c5c570da97a4cce5dca8", "query": "How is the model transferred to other languages?"}
+{"id": "2002.07306__37f8c034a14c7b4d0ab2e0ed1b827cc0eaa71ac6", "query": "What metrics are used for evaluation?"}
+{"id": "2002.07306__d01c51155e4719bf587d114bcd403b273c77246f", "query": "What datasets are used for evaluation?"}
+{"id": "1810.12091__9b4dc790e4ff49562992aae4fad3a38621fadd8b", "query": "what are the existing approaches?"}
+{"id": "1810.12091__a1dac888f63c9efaf159d9bdfde7c938636f07b1", "query": "what dataset is used in this paper?"}
+{"id": "1810.05241__1e4dbfc556cf237accb8b370de2f164fa723687b", "query": "How is keyphrase diversity measured?"}
+{"id": "1810.05241__fff5c24dca92bc7d5435a2600e6764f039551787", "query": "How was the StackExchange dataset collected?"}
+{"id": "1810.05241__b2ecfd5480a2a4be98730e2d646dfb84daedab17", "query": "What does the TextWorld ACG dataset contain?"}
+{"id": "1810.05241__a3efe43a72b76b8f5e5111b54393d00e6a5c97ab", "query": "What is the size of the StackExchange dataset?"}
+{"id": "1810.05241__f1e90a553a4185a4b0299bd179f4f156df798bce", "query": "What were the baselines?"}
+{"id": "1810.05241__19b7312cfdddb02c3d4eaa40301a67143a72a35a", "query": "What two metrics are proposed?"}
+{"id": "1805.01445__22744c3bc68f120669fc69490f8e539b09e34b94", "query": "Can the findings of this paper be generalized to a general-purpose task?"}
+{"id": "1805.01445__dcea88698949da4a1bd00277c06df06c33f6a5ff", "query": "Why does the proposed task a good proxy for the general-purpose sequence to sequence tasks?"}
+{"id": "1706.01875__d7b60abb0091246e29d1a9c28467de598e090c20", "query": "What was the baseline?"}
+{"id": "1706.01875__bdf93053b1b9b0a21f77ed370cf4d5a10df70e3e", "query": "What was their system's performance?"}
+{"id": "1706.01875__5a6926de13a8cc25ce687c22741ba97a6e63d4ee", "query": "What other political events are included in the database?"}
+{"id": "1706.01875__dcc1115aeaf87118736e86f3e3eb85bf5541281c", "query": "What classifier did they use?"}
+{"id": "1909.01362__c74185bced810449c5f438f11ed6a578d1e359b4", "query": "What labels for antisocial events are available in datasets?"}
+{"id": "1909.01362__88e5d37617e14d6976cc602a168332fc23644f19", "query": "What are two datasets model is applied to?"}
+{"id": "2004.01862__45f7c03a686b68179cadb1413c5f3c1d373328bd", "query": "What is the CORD-19 dataset?"}
+{"id": "2004.01862__a2015f02dfb376bf9b218d1c897018f4e70424d7", "query": "How large is the collection of COVID-19 literature?"}
+{"id": "1908.01294__f697d00a82750b14376fe20a5a2b249e98bebe9b", "query": "Which deep learning architecture do they use for sentence segmentation?"}
+{"id": "1908.01294__e0e379e546f1da9da874a2e90c79b41c60feb817", "query": "How do they utilize unlabeled data to improve model representations?"}
+{"id": "1906.01040__70148c8d0f345ea36200d5ba19d021924d98e759", "query": "What is the McGurk effect?"}
+{"id": "1906.01040__27cf16bc9ef71761b9df6217f00f39f21130ce15", "query": "Are humans and machine learning systems fooled by the same kinds of illusions?"}
+{"id": "1909.01383__627b8d7b5b985394428c974aca5ba0c1bbbba377", "query": "how many humans evaluated the results?"}
+{"id": "1909.01383__126ff22bfcc14a2f7e1a06a91ba7b646003e9cf0", "query": "what was the baseline?"}
+{"id": "1909.01383__7e4ef0a4debc048b244b61b4f7dc2518b5b466c0", "query": "what phenomena do they mention is hard to capture?"}
+{"id": "1909.01383__b68f72aed961d5ba152e9dc50345e1e832196a76", "query": "by how much did the BLEU score improve?"}
+{"id": "1705.05437__cf874cd9023d901e10aa8664b813d32501e7e4d2", "query": "What is NER?"}
+{"id": "1705.05437__42084c41343e5a6ae58a22e5bfc5ce987b5173de", "query": "Does the paper explore extraction from electronic health records?"}
+{"id": "2003.02249__b637d6393ef3af7462917b81861531022b291933", "query": "Does jiant involve datasets for the 50 NLU tasks?"}
+{"id": "2003.02249__8b9c12df9f89040f1485b3847a29f11b5c9262e0", "query": "Is jiant compatible with models in any programming language?"}
+{"id": "1910.03634__72e4e26d0dd79c590c28b10938952a9f9497ff1e", "query": "What models are used for painting embedding and what for language style transfer?"}
+{"id": "1910.03634__63b92dcc701ec77fdb3355ede5d37d2fbf057bcc", "query": "What applicability of their approach is demonstrated by the authors?"}
+{"id": "1910.03634__58ee0cbf1d8e3711c617b1cd3d7aca8620e26187", "query": "What limitations do the authors demnostrate of their model?"}
+{"id": "1910.03634__f71b52e00e0be80c926f153b9fe0a06dd93af11e", "query": "How does final model rate on Likert scale?"}
+{"id": "1910.03634__8db6f8714bda7f3781b4fbde5ebb3794f2a60cfe", "query": "How big is English poem description of the painting dataset?"}
+{"id": "1910.03634__54e945ea4b014e11ed4e1e61abc2aa9e68fea310", "query": "What is best BLEU score of language style transfer authors got?"}
+{"id": "2001.08868__df0257ab04686ddf1c6c4d9b0529a7632330b98e", "query": "How better does new approach behave than existing solutions?"}
+{"id": "2001.08868__568fb7989a133564d84911e7cb58e4d8748243ef", "query": "How is trajectory with how rewards extracted?"}
+{"id": "2001.08868__2c947447d81252397839d58c75ebcc71b34379b5", "query": "On what Text-Based Games are experiments performed?"}
+{"id": "2001.08868__c01784b995f6594fdb23d7b62f20a35ae73eaa77", "query": "How do the authors show that their learned policy generalize better than existing solutions to unseen games?"}
+{"id": "1910.12795__3415762847ed13acc3c90de60e3ef42612bc49af", "query": "How much is classification performance improved in experiments for low data regime and class-imbalance problems?"}
+{"id": "1910.12795__223dc2b9ea34addc0f502003c2e1c1141f6b36a7", "query": "What off-the-shelf reward learning algorithm from RL for joint data manipulation learning and model training is adapted?"}
+{"id": "1805.10824__e1ab11885f72b4658263a60751d956ba661c1d61", "query": "What subtasks did they participate in?"}
+{"id": "1805.10824__c85b6f9bafc4c64fc538108ab40a0590a2f5768e", "query": "What were the scores of their system?"}
+{"id": "1805.10824__8e52637026bee9061f9558178eaec08279bf7ac6", "query": "How was the training data translated?"}
+{"id": "1805.10824__0f6216b9e4e59252b0c1adfd1a848635437dfcdc", "query": "What dataset did they use?"}
+{"id": "1805.10824__22ccee453e37536ddb0c1c1d17b0dbac04c6c607", "query": "What other languages did they translate the data from?"}
+{"id": "1805.10824__d00bbeda2a45495e6261548710afa6b21ea32870", "query": "What semi-supervised learning is applied?"}
+{"id": "2003.04866__71b1af123fe292fd9950b8439db834212f0b0e32", "query": "How were the datasets annotated?"}
+{"id": "2003.04866__a616a3f0d244368ec588f04dfbc37d77fda01b4c", "query": "What are the 12 languages covered?"}
+{"id": "1704.04452__8e44c02c2d9fa56fb74ace35ee70a5add50b52ae", "query": "Does the corpus contain only English documents?"}
+{"id": "1704.04452__1522ccedbb1f668958f24cca070f640274bc2549", "query": "What type of evaluation is proposed for this task?"}
+{"id": "1704.04452__97466a37525536086ed5d6e5ed143df085682318", "query": "What baseline system is proposed?"}
+{"id": "1704.04452__e9cfbfdf30e48cffdeca58d4ac6fdd66a8b27d7a", "query": "How were crowd workers instructed to identify important elements in large document collections?"}
+{"id": "1704.04452__d6191c4643201262a770947fc95a613f57bedb6b", "query": "Which collections of web documents are included in the corpus?"}
+{"id": "1704.04452__ffeb67a61ecd09542b1c53c3e4c3abd4da0496a8", "query": "How do the authors define a concept map?"}
+{"id": "2003.11562__fc4ae12576ea3a85ea6d150b46938890d63a7d18", "query": "Is the LSTM baseline a sub-word model?"}
+{"id": "2003.11562__19cf7884c0c509c189b1e74fe92c149ff59e444b", "query": "How is pseudo-perplexity defined?"}
+{"id": "1608.08188__ecd5770cf8cb12cb34285e26ab834301c17c53e1", "query": "What is the model architecture used?"}
+{"id": "1608.08188__4a4ce942a7a6efd1fa1d6c91dedf7a89af64b729", "query": "How is the data used for training annotated?"}
+{"id": "1906.06849__5529f26f72ce47440c2a64248063a6d5892b9fde", "query": "what quantitative analysis is done?"}
+{"id": "1906.06849__f85ca6135b101736f5c16c5b5d40895280016023", "query": "what are the baselines?"}
+{"id": "1901.08079__5fa36dc8f7c4e65acb962fc484989d20b8fdaeec", "query": "Do they report results only on English data?"}
+{"id": "1901.08079__d98847340e46ffe381992f1a594e75d3fb8d385e", "query": "What machine learning and deep learning methods are used for RQE?"}
+{"id": "1805.06966__7006c66a15477b917656f435d66f63760d33a304", "query": "by how much did nus outperform abus?"}
+{"id": "1805.06966__a15bc19674d48cd9919ad1cf152bf49c88f4417d", "query": "what corpus is used to learn behavior?"}
+{"id": "1806.03125__440faf8d0af8291d324977ad0f68c8d661fe365e", "query": "Which dataset has been used in this work?"}
+{"id": "1806.03125__0ec56e15005a627d0b478a67fd627a9d85c3920e", "query": "What can word subspace represent?"}
+{"id": "1910.14076__a712718e6596ba946f29a99838d82f95b9ebb1ce", "query": "How big are improvements of small-scale unbalanced datasets when sentence representation is enhanced with topic information?"}
+{"id": "1910.14076__3116453e35352a3a90ee5b12246dc7f2e60cfc59", "query": "To what baseline models is proposed model compared?"}
+{"id": "1910.14076__dfca00be3284cc555a6a4eac4831471fb1f5875b", "query": "How big is dataset for testing?"}
+{"id": "1910.14076__a9a532399237b514c1227f2d6be8601474e669be", "query": "What existing dataset is re-examined and corrected for training?"}
+{"id": "1911.06118__26126068d72408555bcb52977cd669faf660bdf7", "query": "What are the qualitative experiments performed on benchmark datasets?"}
+{"id": "1911.06118__660284b0a21fe3801e64dc9e0e51da5400223fe3", "query": "How does this approach compare to other WSD approaches employing word embeddings?"}
+{"id": "1908.08717__c22394a3fb0dbf2fc7d3a70ad6435803f5a16ebd", "query": "What tasks did they use to evaluate performance for male and female speakers?"}
+{"id": "1908.08717__f85f2a532e7e700d9f8f9c09cd08d4e47b87bdd3", "query": "What is the goal of investigating NLP gender bias specifically in the news broadcast domain and Anchor role?"}
+{"id": "1908.08717__a253749e3b4c4f340778235f640ce694642a4555", "query": "Which corpora does this paper analyse?"}
+{"id": "1908.08717__1142784dc4e0e4c0b4eca1feaf1c10dc46dd5891", "query": "How many categories do authors define for speaker role?"}
+{"id": "1908.08717__777bb3dcdbc32e925df0f7ec3adb96f15dd3dc47", "query": "How big is imbalance in analyzed corpora?"}
+{"id": "1908.08717__2da4c3679111dd92a1d0869dae353ebe5989dfd2", "query": "What are four major corpora of French broadcast?"}
+{"id": "1907.03187__b7c3f3942a07c118e57130bc4c3ec4adc431d725", "query": "What did the best systems use for their model?"}
+{"id": "1907.03187__a5505e25ee9ae84090e1442034ddbb3cedabcf04", "query": "What were their results on the classification and regression tasks"}
+{"id": "1608.01884__1dc2da5078a7e5ea82ccd1c90d81999a922bc9bf", "query": "Do the authors conduct experiments on the tasks mentioned?"}
+{"id": "1608.01884__7fa3c2c0cf7f559d43e84076a9113a390c5ba03a", "query": "Did they collect their own datasets?"}
+{"id": "1608.01884__9a7ba5ed1779c664d2cac92494a43517d3e87c96", "query": "What data do they look at?"}
+{"id": "1608.01884__662870a90890c620a964720b2ca122a1139410ea", "query": "What language do they explore?"}
+{"id": "1705.01265__92d1a6df3041667dc662376938bc65527a5a1c3c", "query": "Do they report results only on English datasets?"}
+{"id": "1705.01265__12159f04e0427fe33fa05af6ba8c950f1a5ce5ea", "query": "Which hyperparameters were varied in the experiments on the four tasks?"}
+{"id": "1705.01265__a4a1fcef760b133e9aa876ac28145ad98a609927", "query": "Which other hyperparameters, other than number of clusters are typically evaluated in this type of research?"}
+{"id": "1705.01265__63bb2040fa107c5296351c2b5f0312336dad2863", "query": "How were the cluster extracted?"}
+{"id": "1906.10225__01f4a0a19467947a8f3bdd7ec9fac75b5222d710", "query": "what were the evaluation metrics?"}
+{"id": "1906.10225__7784d321ccc64db5141113b6783e4ba92fdd4b20", "query": "what are the state of the art methods?"}
+{"id": "1906.10225__218615a005f7f00606223005fef22c07057d9d77", "query": "what english datasets were used?"}
+{"id": "1906.10225__867290103f762e1ddfa6f2ea30dd0a327f595182", "query": "which chinese datasets were used?"}
+{"id": "1712.05999__907b3af3cfaf68fe188de9467ed1260e52ec6cf1", "query": "What were their distribution results?"}
+{"id": "1712.05999__56a8826cbee49560592b2d4b47b18ada236a12b9", "query": "How did they determine fake news tweets?"}
+{"id": "1712.05999__968b7c3553a668ba88da105eff067d57f393c63f", "query": "What is their definition of tweets going viral?"}
+{"id": "1712.05999__f03df5d99b753dc4833ef27b32bb95ba53d790ee", "query": "What are the characteristics of the accounts that spread fake news?"}
+{"id": "1712.05999__a8f51b4e334a917702422782329d97304a2fe139", "query": "What is the threshold for determining that a tweet has gone viral?"}
+{"id": "1712.05999__dca86fbe1d57b44986055b282a03c15ef7882e51", "query": "How is the ground truth for fake news established?"}
+{"id": "2001.05865__6f024d4c952fbb53b6f8cf27020659aa4d9a6590", "query": "What was the baseline?"}
+{"id": "2001.05865__d2a0142150cc3788475572f82458ef88087bd7ac", "query": "Which three discriminative models did they use?"}
+{"id": "1808.03738__27dbbd63c86d6ca82f251d4f2f030ed3e88f58fa", "query": "what NMT models did they compare with?"}
+{"id": "1808.03738__b9d07757e2d2c4be41823dd1ea3b9c7f115b5f72", "query": "Where does the ancient Chinese dataset come from?"}
+{"id": "1910.08293__808f0ad46ca4eb4ea5492f9e14ca043fe1e206cc", "query": "How many different characters were in dataset?"}
+{"id": "1910.08293__36ae003c7cb2a1bbfa90b89c671bc286bd3b3dfd", "query": "How does dataset model character's profiles?"}
+{"id": "1910.08293__f0b1d8c0a44dbe8d444a5dbe2d9c3d51e048a6f6", "query": "How big is the difference in performance between proposed model and baselines?"}
+{"id": "1910.08293__357eb9f0c07fa45e482d998a8268bd737beb827f", "query": "What baseline models are used?"}
+{"id": "1909.01296__ad08b215dca538930ef1f50b4e49cd25527028ad", "query": "Was PolyReponse evaluated against some baseline?"}
+{"id": "1909.01296__31101dc9937f108e27e08a5f34be44f0090b8b6b", "query": "What metric is used to evaluate PolyReponse system?"}
+{"id": "1909.01296__e4a315e9c190cf96493eefe04ce4ba6ae6894550", "query": "How does PolyResponse architecture look like?"}
+{"id": "1909.01296__6263b2cba18207474786b303852d2f0d7068d4b6", "query": "In what 8 languages is PolyResponse engine used for restourant search and booking system?"}
+{"id": "1902.09243__c1c44fd96c3fa6e16949ae8fa453e511c6435c68", "query": "Why masking words in the decoder is helpful?"}
+{"id": "1902.09243__d28d86524292506d4b24ae2d486725a6d57a3db3", "query": "What is the ROUGE score of the highest performing model?"}
+{"id": "1902.09243__feafcc1c4026d7f55a2c8ce7850d7e12030b5c22", "query": "How are the different components of the model trained? Is it trained end-to-end?"}
+{"id": "1902.09243__63488da6c7aff9e374561a24ba224e9ce7f65e40", "query": "When is this paper published?"}
+{"id": "1801.02073__c34e80fbbfda0f1786d3b00e06cef5ada78a3f3c", "query": "Can their indexing-based method be applied to create other QA datasets in other domains, and not just Wikipedia?"}
+{"id": "1801.02073__a9337636b52de375c852682a2561af2c1db5ec63", "query": "Do they employ their indexing-based method to create a sample of a QA Wikipedia dataset?"}
+{"id": "1801.02073__45a5961a4e1d1c22874c4918e5c98bd3c0a670b3", "query": "How many question types do they find in the datasets analyzed?"}
+{"id": "1801.02073__30e21f5bc1d2f80f422c56d62abca9cd3f2cd4a1", "query": "How do they analyze contextual similaries across datasets?"}
+{"id": "1801.06482__5c6fa86757410aee6f5a0762328637de03a569e9", "query": "What were their performance results?"}
+{"id": "1801.06482__7e38e0279a620d3df05ab9b5e2795044f18d4471", "query": "What cyberbulling topics did they address?"}
+{"id": "1909.05359__8b0abc1907c2bf3e0256f8cf85e0ba66a839bd92", "query": "Were any of the pipeline components based on deep learning models?"}
+{"id": "1909.05359__03ebb29c08375afc42a957c7b2dc1a42bed7b713", "query": "How is the effectiveness of this pipeline approach evaluated?"}
+{"id": "1603.08594__9cf070d6671ee4a6353f79a165aa648309e01295", "query": "What is the size of the parallel corpus used to train the model constraints?"}
+{"id": "1603.08594__87bc6f83f7f90df3c6c37659139b92657c3f7a38", "query": "How does enforcing agreement between parse trees work across different languages?"}
+{"id": "1703.07476__01e2d10178347d177519f792f86f25575106ddc7", "query": "What datasets are used to assess the performance of the system?"}
+{"id": "1703.07476__021bfb7e180d67112b74f05ecb3fa13acc036c86", "query": "How is the vocabulary of word-like or phoneme-like units automatically discovered?"}
+{"id": "1906.00346__d201b9992809142fe59ae74508bc576f8ca538ff", "query": "IS the graph representation supervised?"}
+{"id": "1906.00346__c4628d965983934d7a2a9797a2de6a411629d5bc", "query": "Is the G-BERT model useful beyond the task considered?"}
+{"id": "1909.08970__bd419f4094186a5ce74ba6ac1622b24e29e553f4", "query": "How well did the baseline perform?"}
+{"id": "1909.08970__11e8bd4abf5f8bdabad3e8f0691e6d0ad6c326af", "query": "What is the baseline?"}
+{"id": "1805.07133__1269c5d8f61e821ee0029080c5ba2500421d5fa6", "query": "what methods were used to reduce data sparsity effects?"}
+{"id": "1805.07133__e35a7f9513ff1cc0f0520f1d4ad9168a47dc18bb", "query": "what was the baseline?"}
+{"id": "1805.07133__b9ea841b817ba23281c95c7a769873b840dee8d5", "query": "did they collect their own data?"}
+{"id": "1805.07133__219af68afeaecabdfd279f439f10ba7c231736e4", "query": "what japanese-vietnamese dataset do they use?"}
+{"id": "1903.11283__a66a275a817f980c36e0b67d2e00bd823f63abf8", "query": "How do they measure style transfer success?"}
+{"id": "1903.11283__b6f466e0fdcb310ecd212fd90396d9d13e0c0504", "query": "Do they introduce errors in the data or does the data already contain them?"}
+{"id": "1903.11283__62ea141d0fb342dfb97c69b49d1c978665b93b3c", "query": "What error types is their model more reliable for?"}
+{"id": "1903.11283__a32c792a0cef03218bf66322245677fc2d5e5a31", "query": "How does their parallel data differ in terms of style?"}
+{"id": "1709.05036__0101ebfbaba75fd47868ad0c796ac44ebc19c566", "query": "How do they split text to obtain sentence levels?"}
+{"id": "1709.05036__50cb50657572e315fd452a89f3e0be465094b66f", "query": "Do they experiment with their proposed model on any other dataset other than MovieQA?"}
+{"id": "1706.00139__981fd79dd69581659cb1d4e2b29178e82681eb4d", "query": "What is the difference of the proposed model with a standard RNN encoder-decoder?"}
+{"id": "1706.00139__03e9ac1a2d90152cd041342a11293a1ebd33bcc3", "query": "Does the model evaluated on NLG datasets or dialog datasets?"}
+{"id": "1705.04153__ef396a34436072cb3c40b0c9bc9179fee4a168ae", "query": "What tasks do they experiment with?"}
+{"id": "1705.04153__04bde1d2b445f971e97bb46ade2d0290981c7a32", "query": "What is the meta knowledge specifically?"}
+{"id": "1912.01852__bfbd6040cb95b179118557352e8e3899ef25c525", "query": "Are there elements, other than pitch, that can potentially result in out of key converted singing?"}
+{"id": "1912.01852__d6e353e0231d09fd5dcba493544d53706f3fe1ab", "query": "How is the quality of singing voice measured?"}
+{"id": "1808.09029__7bd6a6ec230e1efb27d691762cc0674237dc7967", "query": "what data did they use?"}
+{"id": "1808.09029__6aaf12505add25dd133c7b0dafe8f4fe966d1f1d", "query": "what previous RNN models do they compare with?"}
+{"id": "2004.04721__73906462bd3415f23d6378590a5ba28709b17605", "query": "What are examples of these artificats?"}
+{"id": "2004.04721__5bc1dc6ebcb88fd0310b21d2a74939e35a4c1a11", "query": "What are the languages they use in their experiment?"}
+{"id": "2004.04721__88bf368491f9613767f696f84b4bb1f5a7d7cb48", "query": "Does the professional translation or the machine translation introduce the artifacts?"}
+{"id": "2004.04721__0737954caf66f2b4c898b356d2a3c43748b9706b", "query": "Do they recommend translating the premise and hypothesis together?"}
+{"id": "2004.04721__664b3eadc12c8dde309e8bbd59e9af961a433cde", "query": "Is the improvement over state-of-the-art statistically significant?"}
+{"id": "2004.04721__b3307d5b68c57a074c483636affee41054be06d1", "query": "What are examples of these artifacts?"}
+{"id": "2004.04721__bfc1de5fa4da2f0e301fd22aea19cf01e2bb5b31", "query": "What languages do they use in their experiments?"}
+{"id": "1905.07791__12d7055baf5bffb6e9e95e977c000ef2e77a4362", "query": "How much higher quality is the resulting annotated data?"}
+{"id": "1905.07791__498c0229f831c82a5eb494cdb3547452112a66a0", "query": "How do they match annotators to instances?"}
+{"id": "1905.07791__8c48c726bb17a17d70ab29db4d65a93030dd5382", "query": "How much data is needed to train the task-specific encoder?"}
+{"id": "1905.07791__89497e93980ab6d8c34a6d95ebf8c1e1d98ba43f", "query": "What kind of out-of-domain data?"}
+{"id": "1905.07791__06b5272774ec43ee5facfa7111033386f06cf448", "query": "Is an instance a sentence or an IE tuple?"}
+{"id": "2002.04181__08b57deb237f15061e4029b6718f1393fa26acce", "query": "Who are the crowdworkers?"}
+{"id": "2002.04181__9b7655d39c7a19a23eb8944568eb5618042b9026", "query": "Which toolkits do they use?"}
+{"id": "2002.04181__cd06d775f491b4a17c9d616a8729fd45aa2e79bf", "query": "Which sentiment class is the most accurately predicted by ELS systems?"}
+{"id": "2002.04181__1329280df5ee9e902b2742bde4a97bc3e6573ff3", "query": "Is datasets for sentiment analysis balanced?"}
+{"id": "2002.04181__58c6737070ef559e9220a8d08adc481fdcd53a24", "query": "What measures are used for evaluation?"}
+{"id": "1908.06264__0af16b164db20d8569df4ce688d5a62c861ace0b", "query": "what were the baselines?"}
+{"id": "1908.06264__78a4ec72d76f0a736a4a01369a42b092922203b6", "query": "what datasets were used?"}
+{"id": "1908.06264__6a14379fee26a39631aebd0e14511ce3756e42ad", "query": "What BERT models are used?"}
+{"id": "1908.06264__81588e0e207303c2867c896f3911a54a1ef7c874", "query": "What are the sources of the datasets?"}
+{"id": "1908.06264__dd09db5eb321083dba16c2550676e60682f9a0cd", "query": "What labels does the dataset have?"}
+{"id": "1709.10367__40c0f97c3547232d6aa039fcb330f142668dea4b", "query": "Do they evaluate on English only datasets?"}
+{"id": "1709.10367__777217e025132ddc173cf33747ee590628a8f62f", "query": "What experiments are used to demonstrate the benefits of this approach?"}
+{"id": "1709.10367__2dbf6fe095cd879a9bf40f110b7b72c8bdde9475", "query": "What hierarchical modelling approach is used?"}
+{"id": "1709.10367__7d483077ed7f2f504d59f4fc2f162741fa5ac23b", "query": "How do co-purchase patterns vary across seasons?"}
+{"id": "1709.10367__de830c534c23f103288c198eb19174c76bfd38a1", "query": "Which words are used differently across ArXiv?"}
+{"id": "1909.03582__b0d66760829f111b8fad0bd81ca331ddd943ef41", "query": "What is future work planed?"}
+{"id": "1909.03582__ae7c93646aa5f3206cd759904965b4d484d12f83", "query": "What is this method improvement over the best performing state-of-the-art?"}
+{"id": "1909.03582__d1ec42b2b5a3c956ff528543636e024bfde5e5ba", "query": "Which baselines are used for evaluation?"}
+{"id": "1909.03582__1dac4bc5af239024566fcb0f43bb9ff1c248ecec", "query": "Did they used dataset from another domain for evaluation?"}
+{"id": "1909.03582__3bf0306e9bd044f723e38170c13455877b2aeec3", "query": "How is sensationalism scorer trained?"}
+{"id": "1908.06267__2858620e0498db2f2224bfbed5263432f0570832", "query": "Which component is the least impactful?"}
+{"id": "1908.06267__545e92833b0ad4ba32eac5997edecf97a366a244", "query": "Which component has the greatest impact on performance?"}
+{"id": "1908.06267__cb12c19f9d14bef7b2f778892d9071eea2d6c63d", "query": "What is the state-of-the-art system?"}
+{"id": "1908.06267__9193006f359c53eb937deff1248ee3317978e576", "query": "Which datasets are used?"}
+{"id": "1908.06267__bc67b91dd73acded2d52fd4fee732b7a9722ea8b", "query": "What is the message passing framework?"}
+{"id": "1701.05574__49c32a2a64eb41381e5f12ccea4150cac9f3303d", "query": "What other evaluation metrics are looked at?"}
+{"id": "1701.05574__bbb77f2d6685c9257763ca38afaaef29044b4018", "query": "What is the best reported system?"}
+{"id": "1701.05574__22732cb9476e521452bf0538f3fdb94cf3867651", "query": "What kind of stylistic features are obtained?"}
+{"id": "1701.05574__4e748cb2b5e74d905d9b24b53be6cfdf326e8054", "query": "What traditional linguistics features did they use?"}
+{"id": "1701.05574__74b338d5352fe1a6fd592e38269a4c81fe79b866", "query": "What cognitive features are used?"}
+{"id": "1907.01468__d6ea7a30b0b61ae126b00b59d2a14fff2ef887bf", "query": "What approaches do they use towards text analysis?"}
+{"id": "1907.01468__f903396d943541a8cc65edefb04ca37814ed30dd", "query": "What dataset do they use for analysis?"}
+{"id": "1907.01468__ba28ce9a2f7e8524243adf288cc3f11055e667bb", "query": "Do they demonstrate why interdisciplinary insights are important?"}
+{"id": "1907.01468__975e60535724f4149c7488699a199ba2920a062c", "query": "What background do they have?"}
+{"id": "1907.01468__b970f48d30775d3468952795bc72976baab3438e", "query": "What kind of issues (that are not on the forefront of computational text analysis) do they tackle?"}

@@ -1,0 +1,47 @@
+{
+  "run": {
+    "name": "baseline_debug_depth2_nodes800",
+    "append_timestamp": false,
+    "out_dir": "artifacts/swaga_rag_results"
+  },
+  "drill": {
+    "top_r": 3,
+    "top_k": 2,
+    "tau_local": 0.35,
+    "tau_child": 0.45,
+    "margin": 0.05
+  },
+  "expand": {
+    "max_depth": 2,
+    "max_nodes": 800,
+    "allowed_relations": ["HAS_SUBSECTION", "HAS_CHUNK", "HAS_ITEM", "CAPTIONS", "LINKS_TO"]
+  },
+  "score": {
+    "mode": "full",
+    "w_text": 1.0,
+    "w_type": 0.3,
+    "w_level": 0.15,
+    "w_dist": 0.2,
+    "type_bonus": {
+      "list_item": 1.0,
+      "chunk": 0.6,
+      "section_title": 0.8,
+      "caption": 0.2
+    },
+    "level_bonus": {
+      "1": 0.1,
+      "2": 0.2,
+      "3": 0.3
+    },
+    "aggregation": "max"
+  },
+  "output": {
+    "top_k_text": 20,
+    "save_debug": true,
+    "debug": {
+      "top_k_nodes": 20,
+      "top_k_seeds": 10
+    }
+  }
+}
+

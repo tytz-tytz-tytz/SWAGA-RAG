@@ -1,0 +1,35 @@
+.venv/
+.venv*/
+venv/
+venv*/
+env/
+env*/
+.env
+.tmp/
+artifacts_dump/
+python-*.exe
+
+# artifacts & indexes (anchored to repo root so src/*/index/ packages are kept)
+/index/
+*.pkl
+artifacts/
+
+# large local data (keep paper repo lightweight)
+datasets/
+data/*
+!data/raw/
+!data/raw/**
+!data/eval/
+!data/eval/**
+!data/processed/
+!data/processed/graphrag_nodes.cleaned.json
+!data/processed/graphrag_edges.cleaned.json
+
+# python cache
+__pycache__/
+*.pyc
+
+# python build / packaging
+*.egg-info/
+dist/
+build/

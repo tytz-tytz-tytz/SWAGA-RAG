@@ -1,0 +1,4 @@
+method,match_mode,queries_evaluated,Recall@5,Recall@10,MRR,nDCG@10,context_noise,avg_retrieved_windows,missing_predictions
+mpnet,same_section,888,0.087434,0.089745,0.083652,0.078654,0.960934,3.432432,0
+bge,same_section,888,0.098483,0.101673,0.093892,0.088602,0.958195,3.503378,0
+e5,same_section,888,0.114176,0.115678,0.089077,0.091571,0.954129,3.399775,0

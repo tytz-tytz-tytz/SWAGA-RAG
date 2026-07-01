@@ -1,0 +1,48 @@
+{
+  "gold_path": "data\\eval\\qasper_validation_gold.jsonl",
+  "level": "window",
+  "k_context_noise": 10,
+  "skip_empty_gold": true,
+  "skipped_empty_gold": 117,
+  "queries_total_in_gold": 1005,
+  "queries_evaluated": 888,
+  "match_mode": "same_section",
+  "methods": {
+    "mpnet": {
+      "method": "mpnet",
+      "match_mode": "same_section",
+      "queries_evaluated": 888,
+      "Recall@5": 0.087434,
+      "Recall@10": 0.089745,
+      "MRR": 0.083652,
+      "nDCG@10": 0.078654,
+      "context_noise": 0.960934,
+      "avg_retrieved_windows": 3.432432,
+      "missing_predictions": 0
+    },
+    "bge": {
+      "method": "bge",
+      "match_mode": "same_section",
+      "queries_evaluated": 888,
+      "Recall@5": 0.098483,
+      "Recall@10": 0.101673,
+      "MRR": 0.093892,
+      "nDCG@10": 0.088602,
+      "context_noise": 0.958195,
+      "avg_retrieved_windows": 3.503378,
+      "missing_predictions": 0
+    },
+    "e5": {
+      "method": "e5",
+      "match_mode": "same_section",
+      "queries_evaluated": 888,
+      "Recall@5": 0.114176,
+      "Recall@10": 0.115678,
+      "MRR": 0.089077,
+      "nDCG@10": 0.091571,
+      "context_noise": 0.954129,
+      "avg_retrieved_windows": 3.399775,
+      "missing_predictions": 0
+    }
+  }
+}

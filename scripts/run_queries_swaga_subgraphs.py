@@ -9,20 +9,15 @@ from pathlib import Path
 from typing import Iterable, List, Any, Dict
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-SWAGA_REPO_ROOT = SCRIPT_DIR.parent
-BUGSY_SRC_DIR = SWAGA_REPO_ROOT.parent / "bugsy_pipeline" / "src"
+SRC_DIR = SCRIPT_DIR.parent / "src"
 
-# Put bugsy_pipeline/src FIRST so `swaga_rag` resolves to the modified package
-# (with run_query_subgraphs and SubgraphAssembler).
-if not BUGSY_SRC_DIR.exists():
-    raise FileNotFoundError(
-        f"bugsy_pipeline src not found at: {BUGSY_SRC_DIR}. "
-        "Expected sibling repo layout: parent/{SWAGA-RAG, bugsy_pipeline}."
-    )
-if str(BUGSY_SRC_DIR) not in sys.path:
-    sys.path.insert(0, str(BUGSY_SRC_DIR))
+# `swaga_rag` resolves to the in-repo package, which ships the chunk-window
+# assembly (run_query_subgraphs + SubgraphAssembler) natively — no external
+# checkout required.
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
 
 from _repo_paths import repo_path, resolve_repo_path  # noqa: E402
 from _common import iter_validated_queries
@@ -36,7 +31,7 @@ DEFAULT_CONFIG_PATH = repo_path("configs/judge_prep/rag/swaga-rag-subgraphs.json
 def extract_ranked_items_from_subgraphs(result: dict) -> List[Dict[str, Any]]:
     """
     Build output_items from the `subgraphs` field produced by
-    SWAGARAGPipeline.run_query_subgraphs (bugsy_pipeline version).
+    SWAGARAGPipeline.run_query_subgraphs.
 
     Each subgraph window becomes a single judge-visible chunk. The chunk_id is
     a stable composite of the parent section and the window range so judge
@@ -137,7 +132,7 @@ def is_debug_enabled(config: Dict[str, Any]) -> bool:
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description=(
-            "Run modified SWAGA-RAG (bugsy_pipeline variant) with subgraph "
+            "Run SWAGA-RAG with subgraph "
             "(chunk-window) assembly. Output_items are taken from the "
             "`subgraphs` field of run_query_subgraphs()."
         )
@@ -164,8 +159,8 @@ def main() -> None:
     if not hasattr(SWAGARAGPipeline, "run_query_subgraphs"):
         raise RuntimeError(
             f"Loaded SWAGARAGPipeline from {pipeline_module.__file__} does not "
-            "expose run_query_subgraphs. Check that bugsy_pipeline/src is on "
-            "sys.path BEFORE SWAGA-RAG/src."
+            "expose run_query_subgraphs. Expected the in-repo swaga_rag package "
+            "(SWAGA-RAG/src) with subgraph.py to be importable."
         )
 
     if not queries_path.exists():

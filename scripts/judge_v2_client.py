@@ -39,9 +39,6 @@ from _repo_paths import resolve_repo_path  # noqa: E402
 try:
     from dotenv import load_dotenv  # type: ignore
 
-    _BUGSY_ENV = resolve_repo_path(Path("..") / "bugsy_pipeline" / ".env")
-    if _BUGSY_ENV.exists():
-        load_dotenv(_BUGSY_ENV, override=False)
     _LOCAL_ENV = resolve_repo_path(".env")
     if _LOCAL_ENV.exists():
         load_dotenv(_LOCAL_ENV, override=False)
@@ -61,6 +58,7 @@ class JudgeConfig:
     api_key: str
     base_url: Optional[str]
     shuffle_seed: int
+    extra_body: Optional[Dict[str, Any]] = None  # e.g. {"enable_thinking": false}
 
     @classmethod
     def from_dict(cls, d: Dict[str, Any]) -> "JudgeConfig":
@@ -83,6 +81,7 @@ class JudgeConfig:
             api_key=api_key,
             base_url=base_url,
             shuffle_seed=int(d.get("shuffle_seed", 42)),
+            extra_body=d.get("extra_body") or None,
         )
 
 
@@ -242,20 +241,23 @@ class _AnthropicBackend(_Backend):
 
 class _OpenAIBackend(_Backend):
     def __init__(self, cfg: JudgeConfig, timeout_seconds: float) -> None:
+        import httpx
         from openai import AsyncOpenAI
 
-        # max_retries: SDK does exponential backoff with jitter on 429 /
-        # transient 5xx. Default is 2, which is not enough at concurrency=5
-        # for a single OpenAI tier-1 org sustained against gpt-4.1 TPM/RPM.
+        # trust_env=False: ignore environment proxies (e.g. a leftover
+        # all_proxy=socks4://... that httpx can't parse and that isn't needed —
+        # CometAPI is reachable directly). max_retries: SDK backoff on 429/5xx.
+        http_client = httpx.AsyncClient(trust_env=False, timeout=float(timeout_seconds))
         kwargs: Dict[str, Any] = {
             "api_key": cfg.api_key,
-            "timeout": float(timeout_seconds),
             "max_retries": 8,
+            "http_client": http_client,
         }
         if cfg.base_url:
             kwargs["base_url"] = cfg.base_url
         self.client = AsyncOpenAI(**kwargs)
         self.model = cfg.model
+        self.extra_body = cfg.extra_body or None
 
     async def call(
         self, system: str, user: str, temperature: float, max_tokens: int,
@@ -271,6 +273,10 @@ class _OpenAIBackend(_Backend):
             "max_tokens": max_tokens,
             "response_format": {"type": "json_object"},
         }
+        # Per-judge passthrough, e.g. thinking/reasoning disable for
+        # deepseek/qwen ({"enable_thinking": false} / {"thinking": {...}}).
+        if self.extra_body:
+            kwargs["extra_body"] = dict(self.extra_body)
         try:
             resp = await self.client.chat.completions.create(**kwargs)
         except Exception:
@@ -402,7 +408,7 @@ class JudgeClient:
                 + "\n\n[ВАЖНО] Твой предыдущий ответ был отклонён парсером. "
                 + f"Причина: {recovery_note}. "
                 + "Ответь ровно одним JSON-объектом со строго тремя ключами "
-                + "(relevance, noise, sufficiency), значения только \"A\", \"B\" или \"equal\". "
+                + "(relevance, cleanliness, sufficiency), значения только \"A\", \"B\" или \"equal\". "
                 + "Без какого-либо текста до или после JSON."
             )
         return base

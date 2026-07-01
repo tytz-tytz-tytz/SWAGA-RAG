@@ -1,0 +1,71 @@
+{
+  "n_pairs_with_expert": 90,
+  "judges": [
+    "deepseek_v4_pro",
+    "qwen3_5_plus",
+    "gemini_3_1_flash_lite"
+  ],
+  "per_judge_vs_expert": {
+    "deepseek_v4_pro": {
+      "per_axis_agreement": {
+        "relevance": 0.6,
+        "cleanliness": 0.6333333333333333,
+        "sufficiency": 0.6222222222222222
+      },
+      "mean_agreement": 0.6185185185185186,
+      "cleanliness_inversion": {
+        "direct_rate": 0.6333333333333333,
+        "inverted_rate": 0.3,
+        "inverted_suspected": false
+      }
+    },
+    "qwen3_5_plus": {
+      "per_axis_agreement": {
+        "relevance": 0.5888888888888889,
+        "cleanliness": 0.7111111111111111,
+        "sufficiency": 0.6
+      },
+      "mean_agreement": 0.6333333333333333,
+      "cleanliness_inversion": {
+        "direct_rate": 0.7111111111111111,
+        "inverted_rate": 0.2222222222222222,
+        "inverted_suspected": false
+      }
+    },
+    "gemini_3_1_flash_lite": {
+      "per_axis_agreement": {
+        "relevance": 0.6777777777777778,
+        "cleanliness": 0.6,
+        "sufficiency": 0.6777777777777778
+      },
+      "mean_agreement": 0.6518518518518519,
+      "cleanliness_inversion": {
+        "direct_rate": 0.6,
+        "inverted_rate": 0.28888888888888886,
+        "inverted_suspected": false
+      }
+    }
+  },
+  "majority_vs_expert": {
+    "per_axis_agreement": {
+      "relevance": 0.6222222222222222,
+      "cleanliness": 0.6222222222222222,
+      "sufficiency": 0.6222222222222222
+    },
+    "per_axis_counts": {
+      "relevance": {
+        "match": 28,
+        "total": 45
+      },
+      "cleanliness": {
+        "match": 28,
+        "total": 45
+      },
+      "sufficiency": {
+        "match": 28,
+        "total": 45
+      }
+    },
+    "mean_agreement": 0.6222222222222222
+  }
+}

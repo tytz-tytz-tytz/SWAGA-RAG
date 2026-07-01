@@ -25,6 +25,9 @@ data/*
 !data/processed/graphrag_nodes.cleaned.json
 !data/processed/graphrag_edges.cleaned.json
 
+# regenerable diagnostic join (queries+gold), kept out to stay lightweight
+data/eval/qasper_validation_joined.jsonl
+
 # python cache
 __pycache__/
 *.pyc

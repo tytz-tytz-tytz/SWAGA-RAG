@@ -1,0 +1,89 @@
+{
+  "gold_path": "data\\eval\\qasper_validation_gold.jsonl",
+  "k_context_noise": 10,
+  "skip_empty_gold": true,
+  "skipped_empty_gold": 117,
+  "queries_total_in_gold": 1005,
+  "queries_evaluated": 888,
+  "match_mode": "both",
+  "methods": {
+    "mpnet": {
+      "strict": {
+        "method": "mpnet",
+        "match_mode": "strict",
+        "queries_evaluated": 888,
+        "Recall@5": 0.06482,
+        "Recall@10": 0.083601,
+        "MRR": 0.067362,
+        "nDCG@10": 0.062333,
+        "context_noise": 0.97663,
+        "avg_retrieved_nodes": 8.434685,
+        "missing_predictions": 0
+      },
+      "same_section": {
+        "method": "mpnet",
+        "match_mode": "same_section",
+        "queries_evaluated": 888,
+        "Recall@5": 0.084125,
+        "Recall@10": 0.089745,
+        "MRR": 0.082908,
+        "nDCG@10": 0.167637,
+        "context_noise": 0.983453,
+        "avg_retrieved_nodes": 8.434685,
+        "missing_predictions": 0
+      }
+    },
+    "bge": {
+      "strict": {
+        "method": "bge",
+        "match_mode": "strict",
+        "queries_evaluated": 888,
+        "Recall@5": 0.072553,
+        "Recall@10": 0.094228,
+        "MRR": 0.075318,
+        "nDCG@10": 0.071121,
+        "context_noise": 0.977481,
+        "avg_retrieved_nodes": 8.935811,
+        "missing_predictions": 0
+      },
+      "same_section": {
+        "method": "bge",
+        "match_mode": "same_section",
+        "queries_evaluated": 888,
+        "Recall@5": 0.09304,
+        "Recall@10": 0.101673,
+        "MRR": 0.092434,
+        "nDCG@10": 0.188015,
+        "context_noise": 0.983725,
+        "avg_retrieved_nodes": 8.935811,
+        "missing_predictions": 0
+      }
+    },
+    "e5": {
+      "strict": {
+        "method": "e5",
+        "match_mode": "strict",
+        "queries_evaluated": 888,
+        "Recall@5": 0.091355,
+        "Recall@10": 0.10847,
+        "MRR": 0.074511,
+        "nDCG@10": 0.07622,
+        "context_noise": 0.973701,
+        "avg_retrieved_nodes": 8.709459,
+        "missing_predictions": 0
+      },
+      "same_section": {
+        "method": "e5",
+        "match_mode": "same_section",
+        "queries_evaluated": 888,
+        "Recall@5": 0.109237,
+        "Recall@10": 0.115678,
+        "MRR": 0.087864,
+        "nDCG@10": 0.200767,
+        "context_noise": 0.980614,
+        "avg_retrieved_nodes": 8.709459,
+        "missing_predictions": 0
+      }
+    }
+  }
+}

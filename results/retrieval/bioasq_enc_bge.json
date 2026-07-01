@@ -1,0 +1,10 @@
+{
+  "queries_evaluated": 280,
+  "Recall@5": 0.2492512122779427,
+  "Recall@10": 0.2936546857885591,
+  "MRR": 0.496968537414966,
+  "nDCG@10": 0.2846990963276343,
+  "context_noise": 0.817406462585034,
+  "avg_retrieved_nodes": 8.221428571428572,
+  "missing_predictions": 0
+}

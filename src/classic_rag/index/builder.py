@@ -7,6 +7,7 @@ import os
 
 from classic_rag.data.loaders import load_chunks_id_text
 from classic_rag.index.store import ClassicRAGIndex
+from rag_common.encoder_spec import encoder_spec
 
 try:
     from sentence_transformers import SentenceTransformer
@@ -65,9 +66,14 @@ def build_index(
     if verbose and model_path != model_name:
         print(f"[DenseIndex] model resolved to local dir: {model_path}")
     model = SentenceTransformer(model_path, device=device, cache_folder=cache_folder)
+    # Per-model passage prefix (e5/bge); empty for mpnet/MiniLM -> unchanged.
+    passage_prefix = encoder_spec(model_name).passage_prefix
+    enc_texts = [passage_prefix + t for t in texts] if passage_prefix else texts
+    if verbose and passage_prefix:
+        print(f"[DenseIndex] passage_prefix={passage_prefix!r}")
     t1 = time.perf_counter()
     emb = model.encode(
-        texts,
+        enc_texts,
         normalize_embeddings=True,
         batch_size=batch_size,
         show_progress_bar=show_progress_bar,

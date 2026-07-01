@@ -14,9 +14,17 @@ from huggingface_hub import snapshot_download
 from swaga_rag.data.loaders import load_ontology
 from swaga_rag.ontology.hierarchy import build_hierarchy
 from swaga_rag.index.store import save_index
+from rag_common.encoder_spec import DEFAULT_EMBED_MODEL, encoder_spec, model_slug
 
 
-MODEL_NAME = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+MODEL_NAME = DEFAULT_EMBED_MODEL  # backward-compatible default (mpnet)
+
+
+def default_out_dir(model_name: str) -> Path:
+    """mpnet -> legacy path; other encoders -> per-model directory."""
+    if model_name == DEFAULT_EMBED_MODEL:
+        return Path("artifacts/indexes/qasper")
+    return Path(f"artifacts/indexes/qasper__{model_slug(model_name)}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -28,9 +36,16 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument("--nodes", type=Path, default=Path("data/processed/qasper_nodes.cleaned.json"))
     p.add_argument("--edges", type=Path, default=Path("data/processed/qasper_edges.cleaned.json"))
-    p.add_argument("--out-dir", type=Path, default=Path("artifacts/indexes/qasper"))
+    p.add_argument("--model-name", type=str, default=MODEL_NAME,
+                   help="Encoder HF id (default: mpnet). e5/bge get query/passage prefixes.")
+    p.add_argument("--out-dir", type=Path, default=None,
+                   help="Index dir. Default: artifacts/indexes/qasper for mpnet, "
+                        "artifacts/indexes/qasper__<slug> otherwise.")
     p.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
     p.add_argument("--batch-size", type=int, default=128)
+    p.add_argument("--subtree-batch-size", type=int, default=0,
+                   help="Batch size for the long sections_subtree phase (<=512 tok). "
+                        "0 => use --batch-size. Lower it to avoid OOM at large --batch-size.")
     p.add_argument("--checkpoint-every", type=int, default=50, help="Save checkpoint every N batches.")
     p.add_argument("--resume", action="store_true", help="Resume from checkpoint if present.")
     p.add_argument("--hf-cache-dir", type=Path, default=Path("artifacts/cache/hf"))
@@ -108,8 +123,8 @@ def resolve_model_path(model_name: str, hf_cache_dir: Path) -> str:
     return str(local_model_dir)
 
 
-def encode_batch(model: SentenceTransformer, texts: list[str], batch_size: int):
-    safe = [t if (isinstance(t, str) and t.strip()) else " " for t in texts]
+def encode_batch(model: SentenceTransformer, texts: list[str], batch_size: int, passage_prefix: str = ""):
+    safe = [passage_prefix + (t if (isinstance(t, str) and t.strip()) else " ") for t in texts]
     return model.encode(
         safe,
         convert_to_numpy=True,
@@ -117,6 +132,44 @@ def encode_batch(model: SentenceTransformer, texts: list[str], batch_size: int):
         show_progress_bar=False,
         batch_size=batch_size,
     )
+
+
+def log_subtree_truncation(model: SentenceTransformer, sections: dict, limit: int | None = None, sample: int = 2500) -> None:
+    """Log the fraction of sections whose subtree_text exceeds the encoder's
+    max token length (drill-down quality proxy for the new encoder).
+
+    Estimated on a fixed-seed random sample of up to `sample` sections to keep
+    the tokenization pass cheap (full-corpus tokenization is slow)."""
+    import random
+    limit = int(limit or getattr(model, "max_seq_length", 0) or 512)
+    tok = model.tokenizer
+    texts = [t for s in sections.values() if (t := (getattr(s, "subtree_text", "") or "")).strip()]
+    population = len(texts)
+    if sample and population > sample:
+        texts = random.Random(0).sample(texts, sample)
+    total = len(texts)
+    over = []
+    for txt in texts:
+        n = len(tok(txt, add_special_tokens=True, truncation=False)["input_ids"])
+        if n > limit:
+            over.append(n)
+    frac = (len(over) / total) if total else 0.0
+    mean_over = (sum(over) / len(over)) if over else 0.0
+    print(
+        f"[TRUNC] subtree_text > {limit} tok: {len(over)}/{total} sampled "
+        f"(of {population}) -> {frac*100:.1f}%; mean tokens among truncated={mean_over:.0f}"
+    )
+
+
+def _overall_suffix(overall_offset, overall_total, overall_t0, done) -> str:
+    """Whole-index progress across all 3 embedding phases."""
+    if overall_offset is None or not overall_total or overall_t0 is None:
+        return ""
+    ovr = overall_offset + done
+    elapsed = max(time.perf_counter() - overall_t0, 1e-9)
+    rate = ovr / elapsed
+    eta = (overall_total - ovr) / max(rate, 1e-9)
+    return f"  ||  [OVERALL {ovr}/{overall_total} {ovr/overall_total*100:.0f}% | {rate:.1f} it/s | ETA {eta/60:.0f} min]"
 
 
 def checkpoint_save(
@@ -153,6 +206,10 @@ def run_phase_sections(
     text_nodes: dict[str, Any],
     phase: str,
     start_index: int = 0,
+    passage_prefix: str = "",
+    overall_offset=None,
+    overall_total=None,
+    overall_t0=None,
 ) -> None:
     total = len(section_ids)
     batch_counter = 0
@@ -163,7 +220,7 @@ def run_phase_sections(
             texts = [sections[sid].local_text for sid in ids]
         else:
             texts = [sections[sid].subtree_text for sid in ids]
-        vecs = encode_batch(model, texts, batch_size=batch_size)
+        vecs = encode_batch(model, texts, batch_size=batch_size, passage_prefix=passage_prefix)
         for sid, vec in zip(ids, vecs):
             if phase == "sections_local":
                 sections[sid].E_local = vec
@@ -180,6 +237,7 @@ def run_phase_sections(
             print(
                 f"[{phase}] {done}/{total} ({pct:.1f}%) | "
                 f"{speed:.1f} items/s | ETA {eta_sec/60:.1f} min"
+                + _overall_suffix(overall_offset, overall_total, overall_t0, done)
             )
         if batch_counter % checkpoint_every == 0:
             checkpoint_save(
@@ -203,6 +261,10 @@ def run_phase_text_nodes(
     graph_adj: dict[str, Any],
     sections: dict[str, Any],
     start_index: int = 0,
+    passage_prefix: str = "",
+    overall_offset=None,
+    overall_total=None,
+    overall_t0=None,
 ) -> None:
     total = len(node_ids)
     batch_counter = 0
@@ -210,7 +272,7 @@ def run_phase_text_nodes(
     for i in range(start_index, total, batch_size):
         ids = node_ids[i : i + batch_size]
         texts = [text_nodes[nid].text for nid in ids]
-        vecs = encode_batch(model, texts, batch_size=batch_size)
+        vecs = encode_batch(model, texts, batch_size=batch_size, passage_prefix=passage_prefix)
         for nid, vec in zip(ids, vecs):
             text_nodes[nid].embedding = vec
         batch_counter += 1
@@ -224,6 +286,7 @@ def run_phase_text_nodes(
             print(
                 f"[text_nodes] {done}/{total} ({pct:.1f}%) | "
                 f"{speed:.1f} items/s | ETA {eta_sec/60:.1f} min"
+                + _overall_suffix(overall_offset, overall_total, overall_t0, done)
             )
         if batch_counter % checkpoint_every == 0:
             checkpoint_save(
@@ -246,8 +309,13 @@ def main() -> None:
     print(f"[ENV] device={device}")
     print(f"[ENV] HF_HOME={os.environ.get('HF_HOME')}")
 
-    out_dir = args.out_dir
+    spec = encoder_spec(args.model_name)
+    passage_prefix = spec.passage_prefix
+    print(f"[MODEL] name={args.model_name} passage_prefix={passage_prefix!r} query_prefix={spec.query_prefix!r}")
+
+    out_dir = args.out_dir or default_out_dir(args.model_name)
     out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"[OUT] index dir = {out_dir}")
     ckpt_dir = out_dir / "_checkpoint"
 
     if args.resume and (ckpt_dir / "progress.json").exists():
@@ -275,9 +343,18 @@ def main() -> None:
         node_ids = node_ids[: args.max_text_nodes]
         print(f"[SMOKE] limiting text_nodes to {len(node_ids)}")
 
-    model_path = resolve_model_path(MODEL_NAME, args.hf_cache_dir)
+    model_path = resolve_model_path(args.model_name, args.hf_cache_dir)
     print(f"[MODEL] Loading {model_path} on {device}")
     model = SentenceTransformer(model_path, device=device, cache_folder=str(args.hf_cache_dir))
+
+    # Drill-down quality proxy: how much subtree text the encoder truncates.
+    log_subtree_truncation(model, sections)
+
+    # Whole-index progress accounting (3 phases: local, subtree, text_nodes).
+    n_sec = len(section_ids)
+    overall_total = 2 * n_sec + len(node_ids)
+    overall_t0 = time.perf_counter()
+    print(f"[OVERALL] total embeddings to compute: {overall_total} (sections x2 + text_nodes)")
 
     # Continue from checkpoint phase.
     if phase == "sections_local":
@@ -292,22 +369,31 @@ def main() -> None:
             text_nodes=text_nodes,
             phase="sections_local",
             start_index=start_index,
+            passage_prefix=passage_prefix,
+            overall_offset=0,
+            overall_total=overall_total,
+            overall_t0=overall_t0,
         )
         phase = "sections_subtree"
         start_index = 0
 
     if phase == "sections_subtree":
+        subtree_bs = args.subtree_batch_size or args.batch_size
         run_phase_sections(
             model=model,
             sections=sections,
             section_ids=section_ids,
-            batch_size=args.batch_size,
+            batch_size=subtree_bs,
             checkpoint_every=args.checkpoint_every,
             ckpt_dir=ckpt_dir,
             graph_adj=graph_adj,
             text_nodes=text_nodes,
             phase="sections_subtree",
             start_index=start_index,
+            passage_prefix=passage_prefix,
+            overall_offset=n_sec,
+            overall_total=overall_total,
+            overall_t0=overall_t0,
         )
         phase = "text_nodes"
         start_index = 0
@@ -323,11 +409,15 @@ def main() -> None:
             graph_adj=graph_adj,
             sections=sections,
             start_index=start_index,
+            passage_prefix=passage_prefix,
+            overall_offset=2 * n_sec,
+            overall_total=overall_total,
+            overall_t0=overall_t0,
         )
 
     # Final full save in standard format.
     print("[SAVE] Saving final index...")
-    save_index(str(out_dir), sections, text_nodes, graph_adj)
+    save_index(str(out_dir), sections, text_nodes, graph_adj, model_name=args.model_name)
     checkpoint_save(
         ckpt_dir,
         sections,

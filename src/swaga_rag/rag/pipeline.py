@@ -6,6 +6,7 @@ from ..index.embeddings import EmbeddingModel
 from .drill import DrillSelector, DrillConfig, cosine_sim
 from .expand import GraphExpander
 from .score import NodeScorer, ScoreConfig
+from .subgraph import SubgraphAssembler, SubgraphConfig
 
 
 class OntologyRAGPipeline:
@@ -64,6 +65,15 @@ class OntologyRAGPipeline:
         debug_cfg = output_cfg.get("debug", {}) if isinstance(output_cfg.get("debug", {}), dict) else {}
         self.debug_top_k_nodes: int = int(debug_cfg.get("top_k_nodes", 20))
         self.debug_top_k_seeds: int = int(debug_cfg.get("top_k_seeds", 10))
+
+        # Subgraph (chunk-window) assembly configuration
+        subgraph_cfg_dict = config.get("subgraph", {}) if isinstance(config.get("subgraph", {}), dict) else {}
+        self.subgraph_cfg = SubgraphConfig(**subgraph_cfg_dict)
+        self._subgraph_assembler = SubgraphAssembler(
+            sections=self.sections,
+            text_nodes=self.text_nodes,
+            cfg=self.subgraph_cfg,
+        )
 
     # =============================================================
     # FULL SECTION MODE (LLM-ready output)
@@ -148,6 +158,19 @@ class OntologyRAGPipeline:
             return (-item["score"], order)
 
         return sorted(output, key=section_sort_key)
+
+    # =============================================================
+    # SUBGRAPH MODE (chunk-window around anchors)
+    # =============================================================
+    def run_query_subgraphs(self, query: str) -> Dict[str, Any]:
+        """
+        Same retrieval pipeline as ``run_query``, but the final payload also
+        carries ``subgraphs``: contiguous chunk windows assembled around each
+        ranked anchor chunk via HAS_CHUNK siblings within the parent section.
+        """
+        result = self.run_query(query)
+        result["subgraphs"] = self._subgraph_assembler.assemble(result.get("text_nodes", []))
+        return result
 
     # =============================================================
     # DEBUG HELPERS

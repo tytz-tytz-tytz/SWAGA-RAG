@@ -45,12 +45,21 @@ class DrillConfig:
         margin: float = 0.05,
         top_k: int = 2,
         top_r: int = 3,
+        threshold_mode: str = "absolute",
+        rank_top_p: float = 0.5,
+        **_: object,
     ):
         self.tau_local = tau_local
         self.tau_child = tau_child
         self.margin = margin
         self.top_k = top_k
         self.top_r = top_r
+        # threshold_mode:
+        #   "absolute"   — compare raw cosine to tau_* (default; unchanged behaviour)
+        #   "percentile" — per-query min-max normalize section scores before tau_*
+        #   "rank"       — descend into the top rank_top_p fraction of children
+        self.threshold_mode = str(threshold_mode)
+        self.rank_top_p = float(rank_top_p)
 
 
 class DrillSelector:
@@ -69,6 +78,35 @@ class DrillSelector:
     def __init__(self, sections: Dict[str, Section], config: DrillConfig):
         self.sections = sections
         self.cfg = config
+        # per-query min-max bounds for percentile mode (set in select_seeds)
+        self._qmin = 0.0
+        self._qmax = 1.0
+
+    def _norm(self, x: float) -> float:
+        """Percentile mode: rescale a raw cosine to the per-query [min,max]
+        range before threshold comparison. Absolute/rank: identity."""
+        if self.cfg.threshold_mode == "percentile" and self._qmax > self._qmin:
+            return (x - self._qmin) / (self._qmax - self._qmin)
+        return x
+
+    def _children_to_descend(self, child_scores):
+        """Mode-aware selection of children to recurse into.
+
+        absolute/percentile: gate on the best child's (normalized) subtree
+          score vs tau_child, then take top_k.
+        rank: take the top ``rank_top_p`` fraction of children by subtree score
+          (no tau gate).
+        """
+        if not child_scores:
+            return []
+        ordered = sorted(child_scores, key=lambda x: x[1], reverse=True)
+        if self.cfg.threshold_mode == "rank":
+            import math
+            k = max(1, math.ceil(self.cfg.rank_top_p * len(ordered)))
+            return [c for c, _ in ordered[:k]]
+        if self._norm(ordered[0][1]) < self.cfg.tau_child:
+            return []
+        return [c for c, _ in ordered[: self.cfg.top_k]]
 
     # -------------------------------------------------------------
     # STEP 1 — Rank top-level sections by subtree similarity
@@ -119,21 +157,18 @@ class DrillSelector:
         # CASE 1 — Section has no meaningful local text
         # ---------------------------------------------------------
         if not sec.local_text or not sec.local_text.strip():
-            # If no child subtree is relevant, stop drilling
-            if score_best_child < cfg.tau_child:
-                return
-
-            # Otherwise, continue drilling into top-k children
-            child_scores.sort(key=lambda x: x[1], reverse=True)
-            for c, _ in child_scores[: cfg.top_k]:
+            for c in self._children_to_descend(child_scores):
                 self.drill_section(c, query_emb, seeds)
             return
 
         # ---------------------------------------------------------
         # CASE 2 — Section has local text
         # ---------------------------------------------------------
+        # Seed if the (mode-normalized) local score clears tau_local and is not
+        # much worse than the best child (margin comparison stays on raw scores
+        # — the δ margin is deliberately unchanged across threshold modes).
         is_seed = (
-            score_local >= cfg.tau_local
+            self._norm(score_local) >= cfg.tau_local
             and score_local >= score_best_child - cfg.margin
         )
 
@@ -141,14 +176,9 @@ class DrillSelector:
             seeds.add(sec.id)
             return
 
-        # If local text is not selected, but subtree is relevant,
-        # continue drilling into children
-        if score_best_child >= cfg.tau_child:
-            child_scores.sort(key=lambda x: x[1], reverse=True)
-            for c, _ in child_scores[: cfg.top_k]:
-                self.drill_section(c, query_emb, seeds)
-
-        # Otherwise, stop drilling this branch
+        # Otherwise continue drilling into the mode-selected children.
+        for c in self._children_to_descend(child_scores):
+            self.drill_section(c, query_emb, seeds)
         return
 
     # -------------------------------------------------------------
@@ -163,6 +193,18 @@ class DrillSelector:
         3) Perform recursive drill-down from each root
         4) Return the collected set of seed section IDs
         """
+
+        if self.cfg.threshold_mode == "percentile":
+            vals = []
+            for s in self.sections.values():
+                vl = cosine_sim(query_emb, s.E_local)
+                vs = cosine_sim(query_emb, s.E_subtree)
+                if vl > -1.0:
+                    vals.append(vl)
+                if vs > -1.0:
+                    vals.append(vs)
+            if vals:
+                self._qmin, self._qmax = min(vals), max(vals)
 
         lvl1_ranked = self.rank_l1_sections(query_emb)
         roots = lvl1_ranked[: self.cfg.top_r]

@@ -9,7 +9,20 @@
 
 Structured Walk with Adaptive Granularity Approach for RAG — метод структурно-ориентированного извлечения контекста, в котором retrieval выполняется с учётом иерархии разделов и связей между элементами документа.
 
-Репозиторий содержит исходный код метода, реализации baseline-подходов и воспроизводимый экспериментальный пайплайн, на результаты которого ссылается текст выпускной квалификационной работы (главы 4–5). Это **исследовательский репозиторий метода и его экспериментальной оценки**: end-to-end мультиагентный пайплайн генерации Playwright-тестов, использующий SWAGA-RAG как встроенный runtime, размещён в отдельном репозитории [`bugsy_pipeline`](#связь-с-bugsy_pipeline).
+Репозиторий содержит исходный код метода, реализации baseline-подходов и воспроизводимый экспериментальный пайплайн, на результаты которого ссылается текст статьи. Это **исследовательский репозиторий метода и его экспериментальной оценки** — он самодостаточен и не требует внешних компонентов для воспроизведения результатов.
+
+## Результаты и воспроизводимость
+
+- **Готовые результаты** (лёгкие, версионируемые) — в [`results/`](results/): retrieval-метрики
+  (BM25 / dense / SWAGA-chunks / windows по корпусам и энкодерам, first-stage и
+  threshold-оси) и парная LLM-оценка (150 запросов: win/tie/loss, согласованность
+  судей, калибровка). Сводка и трактовка — [`results/README.md`](results/README.md).
+- **Как воспроизвести** — [`REPRODUCE.md`](REPRODUCE.md) и [`docs/windows_benchmarks.md`](docs/windows_benchmarks.md).
+- Оценка расширена относительно первоначальной: **сменные энкодеры** (mpnet / bge /
+  e5 / S-PubMedBert с query/passage-префиксами), **честный dense-baseline на том же
+  энкодере**, **dense/BM25 first-stage** и **percentile/rank пороги** drill-down,
+  обновлённая панель LLM-судей (CometAPI). Тяжёлые артефакты (индексы, кэши моделей,
+  датасеты, пофайловые прогоны) не версионируются — см. `.gitignore`.
 
 ---
 
@@ -45,9 +58,9 @@ Structured Walk with Adaptive Granularity Approach for RAG — метод стр
 
 | Корпус | Режим retrieval | Конфигурация SWAGA | Разметка | Протокол оценки |
 |--------|-----------------|--------------------|----------|-----------------|
-| Пользовательская документация (30 запросов) | retrieval в иерархически структурированной документации | `swaga_windows` + `swaga_chunks` | — | парный LLM-as-judge |
-| Qasper (888 запросов) | single-document, слабая иерархия | `swaga_chunks` | paragraph-level | Recall@k / MRR / nDCG |
-| BioASQ (280 вопросов) | multi-document (отбор документов + локализация) | `swaga_chunks`, гибрид `BM25 + SWAGA-RAG` | snippet-level | Recall@k / MRR / nDCG / context noise |
+| Пользовательская документация (150 запросов) | retrieval в иерархически структурированной документации | `swaga_windows` + `swaga_chunks` (единый конфиг) | — | парный LLM-as-judge |
+| Qasper (888 запросов) | single-document, слабая иерархия | `swaga_chunks` + `swaga_windows`, гибрид с first-stage | paragraph-level | Recall@k / MRR / nDCG |
+| BioASQ (280 вопросов) | multi-document (отбор документов + локализация) | `swaga_chunks` + `swaga_windows`, гибрид `{BM25,dense} + SWAGA-RAG` | snippet-level | Recall@k / MRR / nDCG / context noise |
 
 ### Сравниваемые методы
 
@@ -62,30 +75,34 @@ Structured Walk with Adaptive Granularity Approach for RAG — метод стр
 
 ### Протокол оценки
 
-**Пользовательская документация** — парные сравнения LLM-as-judge по трём осям: *релевантность*, *чистота*, *достаточность*. Контроль смещений: обе перестановки предъявления (нейтрализация position bias), рандомизированный порядок с фиксированным seed, **три независимых судьи из разных семейств** (Claude Haiku 4.5, GPT-4.1, Gemini 2.5 Flash, температура 0). Итог по паре — большинство голосов (≥4 из 6: 3 судьи × 2 перестановки).
+**Пользовательская документация** — парные сравнения LLM-as-judge по трём осям: *релевантность*, *чистота*, *достаточность*. Контроль смещений: обе перестановки предъявления (нейтрализация position bias), фиксированный seed порядка, **три независимых судьи из разных семейств** (DeepSeek-V4-Pro, Qwen3.5-Plus, Gemini-3.1-Flash-Lite через шлюз CometAPI; температура 0, reasoning off). Итог по паре — большинство голосов (≥4 из 6: 3 судьи × 2 перестановки, с инверсией BA-перестановки).
 
 **Benchmark-корпуса** — стандартные retrieval-метрики Recall@k, MRR, nDCG@k (для BioASQ дополнительно context noise@k). Результаты на трёх корпусах не агрегируются в единую метрику из-за различий в задачах и разметке.
 
 ### Ключевые результаты
 
-**Пользовательская документация** (доли win SWAGA / tie / win baseline, агрегировано по трём осям):
+**Пользовательская документация** (150 запросов; доли win SWAGA / tie / win baseline, overall = усреднение по трём осям). Прогон изолирует ровно один фактор: `swaga_chunks` и `swaga_windows` считаются на **идентичном** конфиге drill/expand/score (различие только в оконной упаковке), а все embedding-методы — на одном энкодере (mpnet), `dense` пересобран на тех же чанках со сменой лишь энкодера; BM25 — лексический.
 
 | Сравнение | win SWAGA | tie | win baseline |
 |-----------|:---------:|:---:|:------------:|
-| `swaga_windows` vs BM25 | 0.49 | 0.17 | 0.34 |
-| `swaga_windows` vs Dense | 0.58 | 0.07 | 0.36 |
-| `swaga_windows` vs BM25 + heuristic | 0.41 | 0.11 | 0.48 |
-| `swaga_windows` vs Dense + heuristic | 0.48 | 0.07 | 0.46 |
+| `swaga_windows` vs BM25 | 0.73 | 0.07 | 0.20 |
+| `swaga_windows` vs Dense | 0.82 | 0.04 | 0.14 |
+| `swaga_windows` vs BM25 + heuristic | 0.69 | 0.07 | 0.24 |
+| `swaga_windows` vs Dense + heuristic | 0.70 | 0.07 | 0.23 |
 
-Финальная конфигурация устойчиво превосходит классические baseline (BM25, Dense) и конкурентоспособна с эвристически усиленными вариантами — при этом не требует ручной подстройки эвристик под корпус.
+Финальная конфигурация устойчиво превосходит и классические baseline (BM25, Dense), и их эвристически усиленные варианты — без ручной подстройки эвристик под корпус.
 
-**Вклад этапа формирования окон** (`swaga_windows` vs `swaga_chunks`, те же 30 запросов): **70% побед против 26%** в агрегированной оценке, с наиболее выраженным эффектом по оси чистоты (87% против 13%). Этап окон не добавляет новой информации, но передаёт отобранные узлы в форме, согласованной с локальной логикой документа.
+**Вклад этапа формирования окон** (`swaga_windows` vs `swaga_chunks` при идентичном retrieval): **90% побед против 0%** (tie 10%) в overall, с наиболее выраженным эффектом по чистоте (94% против 1%). Так как единственное различие между конфигурациями — оконная упаковка, этот выигрыш целиком относится к ней: окна не добавляют новой информации, но передают отобранные узлы в форме, согласованной с локальной логикой документа. Согласованность судей: inter-judge 0.73, permutation consistency 0.65–0.87.
 
-**Qasper** (контрольный сценарий, слабая иерархия): лучший baseline — BM25 (Recall@10 strict 0.123); чистый SWAGA-RAG уступает, но гибрид `BM25 + SWAGA-RAG` улучшает результат (Recall@10 0.084; nDCG@10 same_section 0.168 > BM25 0.138) — структура полезна для уточнённого ранжирования внутри уже найденной области.
+**Энкодер — главный рычаг на бенчмарках, и он поднимает все методы**: Qasper hybrid-chunks strict Recall@10 mpnet 0.084 → bge 0.094 → **e5 0.108**; BioASQ Recall@10 mpnet 0.237 → pubmedbert 0.259 → **bge 0.294**. Поэтому dense-baseline считается на **том же энкодере**, что SWAGA-индекс (иначе «прирост» смешивается со сменой модели).
 
-**BioASQ** (multi-document): SWAGA-RAG даёт лучший MRR в standalone (0.468 против 0.387 у BM25), а гибрид — максимальный MRR (0.494) при минимальном context noise (0.839). Метод эффективен как компонент многостадийного пайплайна: BM25 решает глобальный поиск, SWAGA-RAG — структурную локализацию.
+**Qasper** (single-document, слабая иерархия): на сильном энкодере dense — сильный baseline по recall (dense·e5 Recall@10 **0.134**), но SWAGA полезен для **уточнённого ранжирования** внутри найденной области — same_section nDCG@10 hybrid·e5 **0.201** (окна **0.221**) против dense 0.148 / BM25 0.138.
 
-**Абляционный анализ** (16 конфигураций, диагностика overlap@20 / Jaccard@20 + парный LLM-as-judge): большинство параметров влияют на ранжирование лишь количественно. Режимную перестройку дают три абляции — `stable_drill_narrow` (baseline 55.6%), `stable_text_only` (75%), `stable_no_dist` (**100%**). Ключевые компоненты метода — структурная локализация (drill-down) и учёт графовой дистанции.
+**BioASQ** (multi-document): dense·bge даёт лучший recall (Recall@10 **0.362**), а SWAGA-гибрид — лучшую раннюю точность: MRR hybrid·bge до **0.540** против dense 0.430. First-stage корпусно-зависим по принципу: single-doc Qasper → BM25-first, multi-doc BioASQ → dense-first.
+
+**Абляции** (16 конфигураций, диагностика overlap@20 / Jaccard@20): большинство параметров влияют на выдачу лишь количественно; режимную перестройку дают отключение структурной локализации (drill-down) и графовой дистанции — это несущие компоненты метода.
+
+**Итог трактовки**: SWAGA-RAG — precision/локализующий компонент поверх сильной первой стадии. Его вклад — не «сырой» recall (там лидирует сильный dense-энкодер), а точность ранжирования (MRR / same-section nDCG) и качество контекста для чтения/генерации (LLM-судья). Полные таблицы по энкодерам, first-stage и окнам — в [`results/`](results/).
 
 ---
 
@@ -127,7 +144,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\bootstrap_env.ps1
 
 Скрипт создаёт виртуальное окружение и устанавливает пакет в editable-режиме. Запускать скрипты следует интерпретатором окружения (`venv\Scripts\python.exe`). Пути по умолчанию разрешаются относительно корня репозитория.
 
-LLM-судьи требуют ключей в `.env` (см. `.env.example`: `OPENAI_API_KEY`, `COMETAPI_API_KEY`). Без ключей доступны только retrieval-прогоны и benchmark-метрики; парная LLM-оценка не выполняется.
+LLM-судьи требуют ключа `COMETAPI_KEY` (см. `.env.example`; можно задать и как переменную окружения). Без ключа доступны только retrieval-прогоны и benchmark-метрики; парная LLM-оценка не выполняется.
 
 ---
 
@@ -155,13 +172,19 @@ venv\Scripts\python.exe scripts\run_queries_swaga.py --config configs\ablations\
 venv\Scripts\python.exe scripts\run_param_experiments.py --configs_dir configs\ablations
 ```
 
-### 4. Артефакты слепой LLM-оценки
+### 4. Парная LLM-оценка (judge_v2)
+
+Чистый конфиг без конфаундов — `configs/judge_v2_clean/` (единый drill/expand/score для `swaga_chunks`/`swaga_windows`, dense на mpnet). Унификация под token budget → сборка пар → судейство → агрегация:
 
 ```powershell
-venv\Scripts\python.exe scripts\build_judge_payloads.py --config configs\judge_prep\rag\rag_5way.json
-venv\Scripts\python.exe scripts\build_judge_prompts.py
-venv\Scripts\python.exe scripts\build_judge_reports.py
+venv\Scripts\python.exe scripts\judge_v2_unify.py      --methods_config configs\judge_v2_clean\methods.json --out_dir artifacts\judge_v2_clean\unified
+venv\Scripts\python.exe scripts\judge_v2_make_pairs.py --methods_config configs\judge_v2_clean\methods.json --unified_dir artifacts\judge_v2_clean\unified --out_path artifacts\judge_v2_clean\pairs_full150.jsonl
+$env:COMETAPI_KEY="<KEY>"
+venv\Scripts\python.exe scripts\judge_v2_full_run.py   --pairs artifacts\judge_v2_clean\pairs_full150.jsonl --out_dir artifacts\judge_v2_clean\full_run
+venv\Scripts\python.exe scripts\judge_v2_aggregate.py  --pairs artifacts\judge_v2_clean\pairs_full150.jsonl --full_dir artifacts\judge_v2_clean\full_run --out_dir artifacts\judge_v2_clean\agg
 ```
+
+Полный runbook (включая ретрив-прогоны 6 методов) — в [`REPRODUCE.md`](REPRODUCE.md).
 
 ### Benchmark-корпуса
 
@@ -184,20 +207,6 @@ venv\Scripts\python.exe -m pytest -q
 - Крупные артефакты не версионируются в Git: `artifacts/`, локальные окружения, кэши, тяжёлые `datasets/` и `data/*`. Лёгкие входы оценки под `data/eval/` и графовые файлы под `data/raw/` и `data/processed/` — версионируются.
 
 Доказательная база состоит из артефактов, выведенных из публичной пользовательской документации. Эталонные тест-планы команды тестирования (NDA) в репозиторий не включены.
-
----
-
-## Связь с `bugsy_pipeline`
-
-SWAGA-RAG — самостоятельный метод и его экспериментальная оценка. Мультиагентный пайплайн генерации Playwright-тестов из пользовательской документации (`bugsy_pipeline`) использует SWAGA-RAG как встроенный (vendored) retrieval-runtime на стадиях извлечения контекста. Таким образом, данный репозиторий отвечает за **метод и его апробацию**, а `bugsy_pipeline` — за **прикладной end-to-end пайплайн ВКР**, опирающийся на этот метод.
-
-Рекомендуемая раскладка для совместной работы — клонировать оба репозитория в общий родительский каталог:
-
-```text
-parent/
-├── bugsy_pipeline/
-└── SWAGA-RAG/
-```
 
 ---
 

@@ -9,15 +9,24 @@ from pathlib import Path
 from statistics import mean
 from typing import Any
 
+import numpy as np
+
 from bm25_rag.index.builder import load_index as load_bm25_index
 from bm25_rag.rag.retrieve import retrieve_with_scores
+from classic_rag.index.builder import load_index as load_dense_index
 from swaga_rag.data.models import Section, TextNode, Edge
 from swaga_rag.index.embeddings import EmbeddingModel
-from swaga_rag.index.store import load_index as load_ontology_index
+from swaga_rag.index.store import assert_index_compatible, load_index as load_ontology_index
 from swaga_rag.rag.drill import DrillSelector
 from swaga_rag.rag.expand import GraphExpander
 from swaga_rag.rag.pipeline import SWAGARAGPipeline
 from swaga_rag.rag.score import NodeScorer
+from swaga_rag.rag.subgraph import (
+    SubgraphAssembler,
+    SubgraphConfig,
+    window_output_items,
+    windows_to_ranked_ids,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -57,6 +66,56 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--bm25-top-n-chunks", type=int, default=50)
     parser.add_argument("--bm25-top-m-docs", type=int, default=5)
     parser.add_argument("--final-top-k", type=int, default=10)
+    parser.add_argument(
+        "--model",
+        type=str,
+        default=None,
+        help="Query encoder HF id (default: mpnet / $SWAGA_EMBED_MODEL). Must "
+             "match the encoder the --index-dir was built with (asserted).",
+    )
+    parser.add_argument(
+        "--first-stage",
+        type=str,
+        default="bm25",
+        choices=["bm25", "dense"],
+        help="Candidate-document recall stage: BM25 (lexical) or dense (--dense-index).",
+    )
+    parser.add_argument(
+        "--dense-index",
+        type=Path,
+        default=None,
+        help="ClassicRAGIndex .pkl for --first-stage dense (same encoder as --model).",
+    )
+    parser.add_argument(
+        "--threshold-mode",
+        type=str,
+        default="absolute",
+        choices=["absolute", "percentile", "rank"],
+        help="Drill-down thresholding (overrides config drill.threshold_mode).",
+    )
+    parser.add_argument("--rank-top-p", type=float, default=0.5,
+                        help="Fraction of children to descend (--threshold-mode rank).")
+    parser.add_argument(
+        "--windows",
+        action="store_true",
+        help=(
+            "Assemble SWAGA-RAG chunk-windows around the ranked anchor chunks "
+            "(swaga_windows configuration) instead of emitting bare chunks. "
+            "predicted_chunk_ids/output_ids are the member chunk ids of the "
+            "windows (variant A); output_items keep window metadata (variant C)."
+        ),
+    )
+    parser.add_argument(
+        "--windows-order",
+        type=str,
+        choices=["doc", "anchors_first"],
+        default="doc",
+        help=(
+            "Ranking of expanded window chunk ids in output_ids (only with "
+            "--windows). 'doc': windows by score, chunks in document order. "
+            "'anchors_first': anchor chunks first, then the rest."
+        ),
+    )
     parser.add_argument(
         "--device",
         type=str,
@@ -236,9 +295,10 @@ def run_restricted_ontology_query(
     embedding_model: EmbeddingModel,
     config: dict[str, Any],
     final_top_k: int,
-) -> list[dict[str, Any]]:
+    subgraph_cfg: SubgraphConfig | None = None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]] | None]:
     if not candidate_pmcids:
-        return []
+        return [], (None if subgraph_cfg is None else [])
 
     filtered_sections, filtered_text_nodes, filtered_graph_adj, _ = build_filtered_views(
         candidate_pmcids=candidate_pmcids,
@@ -249,7 +309,7 @@ def run_restricted_ontology_query(
         doc_to_text_nodes=doc_to_text_nodes,
     )
     if not filtered_sections or not filtered_text_nodes:
-        return []
+        return [], (None if subgraph_cfg is None else [])
 
     query_emb = embedding_model.encode(query)
 
@@ -269,7 +329,7 @@ def run_restricted_ontology_query(
     if not seed_ids:
         seed_ids = [pmcid for pmcid in candidate_pmcids if pmcid in filtered_sections]
     if not seed_ids:
-        return []
+        return [], (None if subgraph_cfg is None else [])
 
     expander = GraphExpander(
         graph_adj=filtered_graph_adj,
@@ -303,7 +363,17 @@ def run_restricted_ontology_query(
                 "score": float(score),
             }
         )
-    return out
+
+    if subgraph_cfg is None:
+        return out, None
+
+    assembler = SubgraphAssembler(
+        sections=filtered_sections,
+        text_nodes=filtered_text_nodes,
+        cfg=subgraph_cfg,
+    )
+    windows = assembler.assemble(out)
+    return out, windows
 
 
 def main() -> None:
@@ -311,9 +381,31 @@ def main() -> None:
 
     queries = list(load_jsonl(args.queries))
     config = load_config(args.config)
+    drill_cfg = config.setdefault("drill", {})
+    drill_cfg["threshold_mode"] = args.threshold_mode
+    drill_cfg["rank_top_p"] = args.rank_top_p
+    subgraph_cfg = None
+    if args.windows:
+        subgraph_section = config.get("subgraph", {})
+        if not isinstance(subgraph_section, dict):
+            subgraph_section = {}
+        subgraph_cfg = SubgraphConfig(**subgraph_section)
     bm25_index = load_bm25_index(args.bm25_index)
     sections, text_nodes, graph_adj = load_ontology_index(str(args.index_dir))
-    embedding_model = EmbeddingModel(device=args.device)
+    embedding_model = EmbeddingModel(model_name=args.model, device=args.device)
+    assert_index_compatible(str(args.index_dir), embedding_model)
+
+    dense_index = None
+    if args.first_stage == "dense":
+        if args.dense_index is None:
+            raise SystemExit("--first-stage dense requires --dense-index")
+        dense_index = load_dense_index(args.dense_index)
+        if str(dense_index.model_name) != str(embedding_model.model_name):
+            raise SystemExit(
+                f"dense-index encoder '{dense_index.model_name}' != query model "
+                f"'{embedding_model.model_name}' — use the matching dense index."
+            )
+        print(f"[first-stage] dense ({dense_index.model_name}, {len(dense_index.ids)} chunks)")
 
     doc_to_sections, doc_to_text_nodes, _section_to_doc, _text_node_to_doc = build_doc_maps(
         sections=sections,
@@ -341,18 +433,24 @@ def main() -> None:
 
             processed_queries += 1
 
-            bm25_hits = retrieve_with_scores(
-                bm25_index,
-                question,
-                top_k=args.bm25_top_n_chunks,
-            )
-            bm25_top_chunk_ids = [chunk_id for chunk_id, _text, _score in bm25_hits]
+            if args.first_stage == "dense":
+                qv = np.asarray(embedding_model.encode(question), dtype=np.float32)
+                scores = dense_index.embeddings @ qv
+                top = np.argsort(-scores)[: args.bm25_top_n_chunks]
+                bm25_top_chunk_ids = [dense_index.ids[int(i)] for i in top]
+            else:
+                bm25_hits = retrieve_with_scores(
+                    bm25_index,
+                    question,
+                    top_k=args.bm25_top_n_chunks,
+                )
+                bm25_top_chunk_ids = [chunk_id for chunk_id, _text, _score in bm25_hits]
             bm25_top_pmcids = ordered_unique(
                 [infer_pmcid_from_chunk_id(chunk_id) for chunk_id in bm25_top_chunk_ids],
                 args.bm25_top_m_docs,
             )
 
-            final_items = run_restricted_ontology_query(
+            final_items, windows = run_restricted_ontology_query(
                 query=question,
                 candidate_pmcids=bm25_top_pmcids,
                 sections=sections,
@@ -363,10 +461,27 @@ def main() -> None:
                 embedding_model=embedding_model,
                 config=config,
                 final_top_k=args.final_top_k,
+                subgraph_cfg=subgraph_cfg,
             )
 
-            predicted_chunk_ids = [item["chunk_id"] for item in final_items]
-            predicted_node_ids = [item["node_id"] for item in final_items]
+            if subgraph_cfg is not None:
+                windows = windows or []
+                # Variant A: expand windows into ranked member chunk ids.
+                predicted_chunk_ids = windows_to_ranked_ids(windows, order=args.windows_order)
+                predicted_node_ids = predicted_chunk_ids
+                # Variant C: keep full window metadata in output_items.
+                output_items = window_output_items(windows)
+            else:
+                predicted_chunk_ids = [item["chunk_id"] for item in final_items]
+                predicted_node_ids = [item["node_id"] for item in final_items]
+                output_items = [
+                    {
+                        "chunk_id": item["chunk_id"],
+                        "text": item["text"],
+                        "score": item["score"],
+                    }
+                    for item in final_items
+                ]
 
             candidate_doc_counts.append(len(bm25_top_pmcids))
             final_prediction_counts.append(len(predicted_chunk_ids))
@@ -383,6 +498,7 @@ def main() -> None:
                 "id": question_id,
                 "query": question,
                 "output_ids": predicted_chunk_ids,
+                "output_items": output_items,
             }
             output_handle.write(json.dumps(output_row, ensure_ascii=False) + "\n")
 

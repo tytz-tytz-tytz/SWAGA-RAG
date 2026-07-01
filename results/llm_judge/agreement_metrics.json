@@ -1,0 +1,92 @@
+{
+  "inter_judge_agreement": {
+    "per_axis_rate": {
+      "relevance": 0.7314540059347181,
+      "cleanliness": 0.712166172106825,
+      "sufficiency": 0.7381305637982196
+    },
+    "per_axis_counts": {
+      "relevance": {
+        "all_agree": 1972,
+        "total": 2696
+      },
+      "cleanliness": {
+        "all_agree": 1920,
+        "total": 2696
+      },
+      "sufficiency": {
+        "all_agree": 1990,
+        "total": 2696
+      }
+    },
+    "mean_rate": 0.7272502472799208
+  },
+  "permutation_consistency_per_judge": {
+    "deepseek_v4_pro": {
+      "per_axis_rate": {
+        "relevance": 0.6074074074074074,
+        "cleanliness": 0.7288888888888889,
+        "sufficiency": 0.6177777777777778
+      },
+      "per_axis_counts": {
+        "relevance": {
+          "consistent": 820,
+          "total": 1350
+        },
+        "cleanliness": {
+          "consistent": 984,
+          "total": 1350
+        },
+        "sufficiency": {
+          "consistent": 834,
+          "total": 1350
+        }
+      },
+      "mean_rate": 0.6513580246913581
+    },
+    "qwen3_5_plus": {
+      "per_axis_rate": {
+        "relevance": 0.8785185185185185,
+        "cleanliness": 0.8533333333333334,
+        "sufficiency": 0.88
+      },
+      "per_axis_counts": {
+        "relevance": {
+          "consistent": 1186,
+          "total": 1350
+        },
+        "cleanliness": {
+          "consistent": 1152,
+          "total": 1350
+        },
+        "sufficiency": {
+          "consistent": 1188,
+          "total": 1350
+        }
+      },
+      "mean_rate": 0.8706172839506173
+    },
+    "gemini_3_1_flash_lite": {
+      "per_axis_rate": {
+        "relevance": 0.7466567607726597,
+        "cleanliness": 0.7734026745913819,
+        "sufficiency": 0.7652303120356612
+      },
+      "per_axis_counts": {
+        "relevance": {
+          "consistent": 1005,
+          "total": 1346
+        },
+        "cleanliness": {
+          "consistent": 1041,
+          "total": 1346
+        },
+        "sufficiency": {
+          "consistent": 1030,
+          "total": 1346
+        }
+      },
+      "mean_rate": 0.7617632491332342
+    }
+  }
+}

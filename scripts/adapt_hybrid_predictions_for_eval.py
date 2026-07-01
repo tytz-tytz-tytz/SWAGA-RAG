@@ -53,14 +53,20 @@ def main() -> None:
 
             normalized_output_ids = [str(x) for x in output_ids if str(x).strip()]
 
+            # Preserve rich output_items (e.g. window metadata: window_node_ids,
+            # anchor_node_ids) when the producer emitted them, so window-level
+            # evaluation (variant C) keeps working. Fall back to bare chunk ids.
+            source_items = row.get("output_items")
+            if isinstance(source_items, list) and source_items:
+                output_items = source_items
+            else:
+                output_items = [{"chunk_id": chunk_id} for chunk_id in normalized_output_ids]
+
             out_row = {
                 "id": qid,
                 "query": query,
                 "output_ids": normalized_output_ids,
-                "output_items": [
-                    {"chunk_id": chunk_id}
-                    for chunk_id in normalized_output_ids
-                ],
+                "output_items": output_items,
             }
 
             out_path = args.out_dir / f"{qid}.json"

@@ -1,0 +1,4 @@
+method,match_mode,queries_evaluated,Recall@5,Recall@10,MRR,nDCG@10,context_noise,avg_retrieved_windows,missing_predictions
+mpnet,strict,280,0.216113,0.216113,0.508929,0.245738,0.685859,3.325,0
+pubmed,strict,280,0.267169,0.267169,0.534226,0.27489,0.666488,3.282143,0
+bge,strict,280,0.316049,0.316049,0.59494,0.32235,0.619422,3.385714,0

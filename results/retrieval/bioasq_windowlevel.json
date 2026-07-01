@@ -1,0 +1,48 @@
+{
+  "gold_path": "C:\\Users\\alexs\\spbu\\SWAGA-RAG\\data\\artifacts\\bioasq_retrieval_eval.jsonl",
+  "level": "window",
+  "k_context_noise": 10,
+  "skip_empty_gold": true,
+  "skipped_empty_gold": 0,
+  "queries_total_in_gold": 280,
+  "queries_evaluated": 280,
+  "match_mode": "strict",
+  "methods": {
+    "mpnet": {
+      "method": "mpnet",
+      "match_mode": "strict",
+      "queries_evaluated": 280,
+      "Recall@5": 0.216113,
+      "Recall@10": 0.216113,
+      "MRR": 0.508929,
+      "nDCG@10": 0.245738,
+      "context_noise": 0.685859,
+      "avg_retrieved_windows": 3.325,
+      "missing_predictions": 0
+    },
+    "pubmed": {
+      "method": "pubmed",
+      "match_mode": "strict",
+      "queries_evaluated": 280,
+      "Recall@5": 0.267169,
+      "Recall@10": 0.267169,
+      "MRR": 0.534226,
+      "nDCG@10": 0.27489,
+      "context_noise": 0.666488,
+      "avg_retrieved_windows": 3.282143,
+      "missing_predictions": 0
+    },
+    "bge": {
+      "method": "bge",
+      "match_mode": "strict",
+      "queries_evaluated": 280,
+      "Recall@5": 0.316049,
+      "Recall@10": 0.316049,
+      "MRR": 0.59494,
+      "nDCG@10": 0.32235,
+      "context_noise": 0.619422,
+      "avg_retrieved_windows": 3.385714,
+      "missing_predictions": 0
+    }
+  }
+}

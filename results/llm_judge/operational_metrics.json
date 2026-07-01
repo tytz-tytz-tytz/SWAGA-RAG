@@ -1,0 +1,49 @@
+{
+  "per_judge": {
+    "deepseek_v4_pro": {
+      "total_calls": 2700,
+      "ok": 2700,
+      "failed": 0,
+      "retry": 0,
+      "input_tokens": 8147016,
+      "output_tokens": 60366,
+      "total_tokens": 8207382,
+      "latency_ms": 12303776,
+      "cost_usd_estimated": 3.439383167999999
+    },
+    "qwen3_5_plus": {
+      "total_calls": 2700,
+      "ok": 2700,
+      "failed": 0,
+      "retry": 0,
+      "input_tokens": 7340710,
+      "output_tokens": 61485,
+      "total_tokens": 7402195,
+      "latency_ms": 9218535,
+      "cost_usd_estimated": 3.010066
+    },
+    "gemini_3_1_flash_lite": {
+      "total_calls": 2700,
+      "ok": 2696,
+      "failed": 4,
+      "retry": 4,
+      "input_tokens": 7226974,
+      "output_tokens": 53920,
+      "total_tokens": 7280894,
+      "latency_ms": 5038586,
+      "cost_usd_estimated": 1.5100988000000026
+    }
+  },
+  "totals": {
+    "total_calls": 8100,
+    "ok": 8096,
+    "failed": 4,
+    "retry": 4,
+    "input_tokens": 22714700,
+    "output_tokens": 175771,
+    "total_tokens": 22890471,
+    "latency_ms": 26560897,
+    "cost_usd_estimated": 7.959547968000002
+  },
+  "cost_disclaimer": "cost_usd_estimated is computed from public per-provider pricing declared in configs/judge_v2/judges.json. For judges routed through CometAPI (anthropic_haiku, gemini_2_5_flash) the actual billed amount may differ from this estimate due to the gateway markup."
+}

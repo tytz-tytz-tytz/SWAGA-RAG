@@ -11,6 +11,7 @@ from sentence_transformers import SentenceTransformer
 from huggingface_hub import snapshot_download
 
 from classic_rag.index.builder import load_index
+from rag_common.encoder_spec import encoder_spec
 
 
 def parse_args() -> argparse.Namespace:
@@ -102,11 +103,16 @@ def main() -> None:
         print(f"[Dense] model resolved to local dir: {model_path}")
     model = SentenceTransformer(model_path, device=device, cache_folder=str(args.cache_dir))
 
+    # Per-model query prefix (e5/bge); empty for mpnet/MiniLM -> unchanged.
+    query_prefix = encoder_spec(index.model_name).query_prefix
+    if query_prefix:
+        print(f"[Dense] query_prefix={query_prefix!r}")
+
     queries = list(iter_queries(args.queries_path))
     print(f"[Dense] loaded queries={len(queries)}")
 
     def retrieve_fn(qtext: str):
-        qvec = model.encode([qtext], normalize_embeddings=True, show_progress_bar=False)
+        qvec = model.encode([query_prefix + qtext], normalize_embeddings=True, show_progress_bar=False)
         qvec = np.asarray(qvec, dtype=np.float32)
         items = retrieve_items_from_query_vec(index, qvec, args.top_k)
         return [(it["chunk_id"], it["text"], it["score"]) for it in items]
